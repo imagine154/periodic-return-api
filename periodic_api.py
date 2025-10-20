@@ -15,10 +15,16 @@ schemes_df = pd.read_csv("schemeswithcodes.csv")
 def get_scheme_list():
     q = request.args.get("q", "").lower().strip()
     if q:
-        filtered = schemes_df[schemes_df["schemeName"].str.lower().str.contains(q)]
+        filtered = schemes_df[schemes_df["schemeName"].str.lower().str.contains(q, na=False)]
     else:
         filtered = schemes_df.head(20)
-    result = filtered.head(50).to_dict(orient="records")
+
+    # Replace NaN or non-serializable values with None
+    clean_df = filtered.where(pd.notnull(filtered), None)
+
+    # Convert to JSON-safe dict
+    result = clean_df.head(50).to_dict(orient="records")
+
     return jsonify(result)
 
 @app.route("/api/periodic_returns", methods=["GET"])
