@@ -12,6 +12,8 @@ INPUT_FILE = "schemes.txt"
 OUTPUT_FILE = "sip_periodic_returns.csv"
 MFAPI_BASE = "https://api.mfapi.in/mf/"
 HTTP_HEADERS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+
+# Period definitions (in days)
 PERIODS = {
     "1M": 30,
     "3M": 90,
@@ -28,11 +30,7 @@ PERIODS = {
 # XIRR Function
 # -------------------------
 def xirr(cashflows, dates, guess=0.1):
-    """
-    Compute XIRR using Newton-Raphson on irregular cashflows.
-    cashflows: list of numbers (positive for inflow, negative for outflow)
-    dates: list of datetime.date / datetime.datetime objects with same length
-    """
+    """Compute XIRR using Newton-Raphson method."""
     def npv(rate):
         return sum([
             cf / ((1 + rate) ** ((d - dates[0]).days / 365.0))
@@ -60,7 +58,7 @@ def xirr(cashflows, dates, guess=0.1):
 # Fetch NAV History
 # -------------------------
 def fetch_nav_history(amfi_code):
-    """Fetch NAV history from mfapi.in safely. Returns (df, scheme_name) or (None, None)."""
+    """Fetch NAV history from mfapi.in safely. Returns (df, scheme_name)."""
     try:
         url = f"{MFAPI_BASE}{amfi_code}"
         response = requests.get(url, headers=HTTP_HEADERS, timeout=10)
@@ -76,22 +74,16 @@ def fetch_nav_history(amfi_code):
 
         nav_data = data["data"]
         df = pd.DataFrame(nav_data)
-        # parse and coerce
         df["date"] = pd.to_datetime(df["date"], format="%d-%m-%Y", errors="coerce")
         df["nav"] = pd.to_numeric(df["nav"], errors="coerce")
         df = df.dropna(subset=["date", "nav"])
+        df = df[df["nav"] > 0]
         if df.empty:
             print(f"⚠️ NAV parsing produced empty DataFrame for {amfi_code}")
             return None, None
 
         df = df.sort_values("date").reset_index(drop=True)
         df = df.set_index("date")
-
-        # ensure nav positive
-        df = df[df["nav"] > 0]
-        if df.empty:
-            print(f"⚠️ All NAVs are non-positive for {amfi_code}")
-            return None, None
 
         scheme_name = data.get("meta", {}).get("scheme_name") or f"Scheme {amfi_code}"
         return df, scheme_name
@@ -100,7 +92,7 @@ def fetch_nav_history(amfi_code):
         print(f"❌ Network error fetching {amfi_code}: {e}")
         return None, None
     except ValueError as e:
-        print(f"❌ JSON decode / value error for {amfi_code}: {e}")
+        print(f"❌ JSON decode error for {amfi_code}: {e}")
         return None, None
     except Exception as e:
         print(f"❌ Unexpected error fetching {amfi_code}: {e}")
@@ -111,22 +103,15 @@ def fetch_nav_history(amfi_code):
 # SIP Simulation
 # -------------------------
 def simulate_sip(nav_df, start_date, end_date):
-    """
-    Simulate monthly SIP from start_date to end_date on SIP_DAY each month.
-    nav_df: DataFrame indexed by date with column 'nav' (index is Timestamp)
-    Returns: (total_invested, current_value, dates, cashflows) or (None, None, None, None)
-    """
+    """Simulate monthly SIP investment between start_date and end_date."""
     if nav_df is None or nav_df.empty:
         return None, None, None, None
 
-    # build list of month-start datetimes from start to end
-    # ensure start_date is date or datetime
     start_month = start_date.replace(day=1)
     months = pd.date_range(start=start_month, end=end_date, freq="MS")
 
     sip_dates = []
     for m in months:
-        # try to set SIP_DAY, if invalid (e.g. Feb 30) use last day of month
         year = m.year
         month = m.month
         try:
@@ -143,14 +128,11 @@ def simulate_sip(nav_df, start_date, end_date):
     dates = []
 
     for d in sip_dates:
-        # find first available NAV on or after SIP date
         df_sel = nav_df[nav_df.index >= d]
         if df_sel.empty:
-            # no nav after this SIP date - skip
             continue
         nav = float(df_sel["nav"].iloc[0])
         if nav <= 0:
-            # skip invalid nav
             continue
         units.append(SIP_AMOUNT / nav)
         cashflows.append(-SIP_AMOUNT)
@@ -164,7 +146,7 @@ def simulate_sip(nav_df, start_date, end_date):
     latest_nav = float(nav_df["nav"].iloc[-1])
     current_value = total_units * latest_nav
 
-    # Add redemption (positive inflow) at last available NAV date
+    # redemption inflow
     cashflows.append(current_value)
     dates.append(nav_df.index[-1].to_pydatetime())
 
@@ -172,12 +154,13 @@ def simulate_sip(nav_df, start_date, end_date):
 
 
 # -------------------------
-# Calculate Returns for Periods
+# Calculate Periodic Returns
 # -------------------------
 def calculate_periodic_returns(df):
     """
-    Calculate periodic SIP-style returns for 1Y, 3Y, 5Y, 10Y safely.
-    Returns dict like {'1Y': 12.34, '3Y': 15.67, ...}
+    Calculate periodic returns:
+    - Absolute for <= 1Y (1M, 3M, 6M, 1Y)
+    - Annualized CAGR for > 1Y (3Y, 5Y, 7Y, 10Y)
     """
     try:
         if df is None or df.empty:
@@ -187,7 +170,15 @@ def calculate_periodic_returns(df):
         end_date = df.index[-1]
         end_nav = float(df["nav"].iloc[-1])
 
-        # Helper to calculate CAGR safely given a start_date in index
+        def safe_absolute(start_date_index):
+            try:
+                start_nav = float(df.loc[start_date_index, "nav"])
+                if start_nav <= 0:
+                    return None
+                return ((end_nav - start_nav) / start_nav) * 100
+            except Exception:
+                return None
+
         def safe_cagr(start_date_index):
             try:
                 start_nav = float(df.loc[start_date_index, "nav"])
@@ -200,23 +191,23 @@ def calculate_periodic_returns(df):
             except Exception:
                 return None
 
-        # for each multi-year period, find first available date on/after the requested start
-        for years in [1, 3, 5, 10]:
-            start_date_candidate = end_date - timedelta(days=years * 365)
-            # select data on or after the candidate start date
+        for label, days in PERIODS.items():
+            start_date_candidate = end_date - timedelta(days=days)
             df_range = df[df.index >= start_date_candidate]
             if df_range.empty:
-                # no data for this period
+                results[label] = None
                 continue
-            # require a minimum number of observations for robustness (approx trading days)
-            if len(df_range) < 200:
-                # skip if too short history for this multi-year calc
-                continue
+
             start_index = df_range.index[0]
-            cagr = safe_cagr(start_index)
-            if cagr is not None:
-                results[f"{years}Y"] = round(cagr, 2)
-        results = {k: (round(v, 2) if pd.notnull(v) else None) for k, v in results.items()}
+
+            # Use absolute for <=1Y else CAGR
+            if days <= 365:
+                val = safe_absolute(start_index)
+            else:
+                val = safe_cagr(start_index)
+
+            results[label] = round(val, 2) if val is not None and not pd.isna(val) else None
+
         return results
 
     except Exception as e:
@@ -225,7 +216,7 @@ def calculate_periodic_returns(df):
 
 
 # -------------------------
-# Main
+# Main - CLI or Batch Run
 # -------------------------
 def main():
     if not os.path.exists(INPUT_FILE):
@@ -243,13 +234,12 @@ def main():
             print(f"⚠️ No NAV data for {amfi_code} - skipping.")
             continue
 
-        # Calculate periodic returns (1Y,3Y,5Y,10Y)
+        # Calculate periodic returns
         per_results = calculate_periodic_returns(nav_df)
 
-        # Optionally calculate SIP XIRR for a few windows (example 1Y,3Y)
+        # Example SIP XIRR for 1Y
         sip_results = {}
         try:
-            # Example: compute SIP xirr for 1Y period if enough data
             end_date = nav_df.index[-1]
             start_1y = end_date - timedelta(days=365)
             df_1y = nav_df[nav_df.index >= start_1y]
@@ -257,7 +247,6 @@ def main():
                 sim = simulate_sip(nav_df, start_1y.to_pydatetime(), end_date.to_pydatetime())
                 if sim[0] is not None:
                     invested, value, dates, cashflows = sim
-                    # xirr expects cashflows and datetime dates
                     try:
                         irr = xirr(cashflows, dates)
                         sip_results["1Y_SIP_XIRR_%"] = round(irr * 100, 2)
