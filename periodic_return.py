@@ -216,7 +216,7 @@ def calculate_periodic_returns(df):
             cagr = safe_cagr(start_index)
             if cagr is not None:
                 results[f"{years}Y"] = round(cagr, 2)
-
+        results = {k: (round(v, 2) if pd.notnull(v) else None) for k, v in results.items()}
         return results
 
     except Exception as e:
