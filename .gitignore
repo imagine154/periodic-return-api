@@ -1,0 +1,45 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE / IntelliJ specific
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+
+# Python environments
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local configs
+*.local
+*.env
+.env
+
+# Render or deployment temp files
+*.sqlite3
+token.json
+
+# Data or generated files
+schemeswithcodes_backup.csv
+test_results.csv
