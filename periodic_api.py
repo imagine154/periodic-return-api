@@ -1,72 +1,65 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 import pandas as pd
 from periodic_return import fetch_nav_history, calculate_periodic_returns
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
-# Load the master fund data
+# Load enhanced dataset
 schemes_df = pd.read_csv("schemeswithcodes.csv")
 
-
-@app.route("/api/filters", methods=["GET"])
-def get_filters():
-    """Return unique filter values for dropdowns"""
-    filters = {
-        "AMC": sorted(schemes_df["AMC"].dropna().unique().tolist()),
-        "schemeCategory": sorted(schemes_df["schemeCategory"].dropna().unique().tolist()),
-        "schemeSubCategory": sorted(schemes_df["schemeSubCategory"].dropna().unique().tolist()),
-        "Plan": ["Direct", "Regular"],
-        "Option": ["Growth", "IDCW"]
-    }
-    return jsonify(filters)
-
+# Add derived column for instrument type
+schemes_df["instrumentType"] = schemes_df["schemeSubCategory"].apply(
+    lambda x: "ETF" if "ETF" in str(x).upper() else "Mutual Fund"
+)
 
 @app.route("/api/schemes", methods=["GET"])
 def get_scheme_list():
-    """Return list of schemes based on filters and search query"""
     q = request.args.get("q", "").lower().strip()
-    amc = request.args.getlist("amc")
-    category = request.args.getlist("category")
-    subcategory = request.args.getlist("subcategory")
-    plan = request.args.getlist("plan")
-    option = request.args.getlist("option")
+    selected_type = request.args.get("type", "Mutual Fund")
+    amc_filter = request.args.getlist("amc")
+    cat_filter = request.args.getlist("category")
+    subcat_filter = request.args.getlist("subcategory")
+    plan_filter = request.args.getlist("plan")
+    option_filter = request.args.getlist("option")
 
-    filtered = schemes_df.copy()
+    df = schemes_df.copy()
 
-    if amc:
-        filtered = filtered[filtered["AMC"].isin(amc)]
-    if category:
-        filtered = filtered[filtered["schemeCategory"].isin(category)]
-    if subcategory:
-        filtered = filtered[filtered["schemeSubCategory"].isin(subcategory)]
-    if plan:
-        filtered = filtered[filtered["Plan"].isin(plan)]
-    if option:
-        filtered = filtered[filtered["Option"].isin(option)]
+    # Filter by type
+    if selected_type != "Both":
+        df = df[df["instrumentType"] == selected_type]
+
+    # Apply dropdown filters
+    if amc_filter:
+        df = df[df["AMC"].isin(amc_filter)]
+    if cat_filter:
+        df = df[df["schemeCategory"].isin(cat_filter)]
+    if subcat_filter:
+        df = df[df["schemeSubCategory"].isin(subcat_filter)]
+    if plan_filter:
+        df = df[df["Plan"].isin(plan_filter)]
+    if option_filter:
+        df = df[df["Option"].isin(option_filter)]
+
+    # Search fund name
     if q:
-        filtered = filtered[filtered["schemeName"].str.lower().str.contains(q)]
+        df = df[df["schemeName"].str.lower().str.contains(q)]
 
-    result = filtered.head(100).to_dict(orient="records")
-    return jsonify(result)
-
+    return jsonify(df.head(100).to_dict(orient="records"))
 
 @app.route("/api/periodic_returns", methods=["GET"])
 def get_periodic_returns():
-    """Calculate periodic returns for given AMFI codes"""
-    amfi_codes = request.args.getlist("code")
-    results = []
+    amfi_code = request.args.get("code")
+    if not amfi_code:
+        return jsonify({"error": "Missing 'code' param"}), 400
 
-    for code in amfi_codes:
-        df, scheme_name = fetch_nav_history(code)
-        if df is None or df.empty:
-            continue
-        perf = calculate_periodic_returns(df)
-        results.append({"scheme_name": scheme_name, "code": code, "returns": perf})
+    nav_df, scheme_name = fetch_nav_history(amfi_code)
+    if nav_df is None or nav_df.empty:
+        return jsonify({"error": "Invalid or no NAV data found"}), 404
 
-    return jsonify(results)
-
+    results = calculate_periodic_returns(nav_df)
+    return jsonify({"scheme_name": scheme_name, "code": amfi_code, "results": results})
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
