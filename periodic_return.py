@@ -171,6 +171,7 @@ def calculate_periodic_returns(df):
         end_nav = float(df["nav"].iloc[-1])
 
         def safe_absolute(start_date_index):
+            """Absolute returns for short-term durations."""
             try:
                 start_nav = float(df.loc[start_date_index, "nav"])
                 if start_nav <= 0:
@@ -180,6 +181,7 @@ def calculate_periodic_returns(df):
                 return None
 
         def safe_cagr(start_date_index):
+            """CAGR returns for long-term durations."""
             try:
                 start_nav = float(df.loc[start_date_index, "nav"])
                 if start_nav <= 0 or end_nav <= 0:
@@ -199,14 +201,8 @@ def calculate_periodic_returns(df):
                 continue
 
             start_index = df_range.index[0]
-
-            # Use absolute for <=1Y else CAGR
-            if days <= 365:
-                val = safe_absolute(start_index)
-            else:
-                val = safe_cagr(start_index)
-
-            results[label] = round(val, 2) if val is not None and not pd.isna(val) else None
+            val = safe_absolute(start_index) if days <= 365 else safe_cagr(start_index)
+            results[label] = round(val, 2) if val is not None else None
 
         return results
 
@@ -219,6 +215,7 @@ def calculate_periodic_returns(df):
 # Main - CLI or Batch Run
 # -------------------------
 def main():
+    """Standalone CLI execution to compute periodic returns for test file."""
     if not os.path.exists(INPUT_FILE):
         print(f"❌ Create {INPUT_FILE} with one AMFI code per line (e.g. 119551).")
         return
