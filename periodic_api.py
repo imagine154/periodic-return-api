@@ -66,11 +66,23 @@ def get_metadata():
 def get_scheme_list():
     q = request.args.get("q", "").lower().strip()
     selected_type = request.args.get("type", "Mutual Fund")
-    amc_filter = request.args.getlist("amc")
-    cat_filter = request.args.getlist("category")
-    subcat_filter = request.args.getlist("subcategory")
-    plan_filter = request.args.getlist("plan")
-    option_filter = request.args.getlist("option")
+
+    def parse_multi_param(param_name):
+        values = request.args.getlist(param_name)
+        parsed = []
+        for v in values:
+            if "," in v:
+                parsed.extend([x.strip() for x in v.split(",") if x.strip()])
+            elif v.strip():
+                parsed.append(v.strip())
+        return parsed
+
+    amc_filter = parse_multi_param("amc")
+    cat_filter = parse_multi_param("category")
+    subcat_filter = parse_multi_param("subcategory")
+    plan_filter = parse_multi_param("plan")
+    option_filter = parse_multi_param("option")
+
     limit = int(request.args.get("limit", 500))  # safety limit
 
     df = schemes_df
