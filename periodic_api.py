@@ -7,7 +7,19 @@ from periodic_return import fetch_nav_history, calculate_periodic_returns
 import os
 
 app = Flask(__name__)
-CORS(app)
+# With this:
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://smartequityinvest.in",
+            "https://www.smartequityinvest.in",
+            "http://localhost:5000",
+            "http://127.0.0.1:5000"
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"]
+    }
+})
 Compress(app)  # enable gzip compression
 
 # ---------------------------------------------
