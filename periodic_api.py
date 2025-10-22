@@ -164,6 +164,34 @@ def get_scheme_names():
         df = df[df["instrumentType"] == selected_type]
     result = df[["schemeCode", "schemeName"]].to_dict(orient="records")
     return jsonify(result)
+@app.route("/api/dependent_filters", methods=["GET"])
+def get_dependent_filters():
+    """Return dependent dropdown options based on current selections."""
+    selected_type = request.args.get("type", "Mutual Fund")
+    amc_filter = norm_list(parse_multi_param("amc"))
+    cat_filter = norm_list(parse_multi_param("category"))
+
+    df = schemes_df.copy()
+
+    # Apply type filter
+    if selected_type.lower() != "both":
+        df = df[df["instrumentType"].str.lower() == selected_type.lower()]
+
+    # Apply AMC filter
+    if amc_filter:
+        df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
+
+    # Apply Category filter
+    if cat_filter:
+        df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
+
+    stats = {
+        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
+        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
+        "plans": sorted(df["Plan"].dropna().unique().tolist()),
+        "options": sorted(df["Option"].dropna().unique().tolist()),
+    }
+    return jsonify(stats)
 
 # --------------------------------------------------------------------
 # Run Server
