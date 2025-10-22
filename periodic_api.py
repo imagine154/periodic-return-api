@@ -1,13 +1,13 @@
-# periodic_api.py — optimized version
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from flask_compress import Compress
 import pandas as pd
 from periodic_return import fetch_nav_history, calculate_periodic_returns
-import os
 
 app = Flask(__name__)
-# With this:
+
+# --------------------------------------------------------------------
+# Enable CORS (Frontend URLs + local dev)
+# --------------------------------------------------------------------
 CORS(app, resources={
     r"/api/*": {
         "origins": [
@@ -20,106 +20,106 @@ CORS(app, resources={
         "allow_headers": ["Content-Type", "Authorization"]
     }
 })
-Compress(app)  # enable gzip compression
 
-# ---------------------------------------------
-# Load and preprocess dataset ONCE at startup
-# ---------------------------------------------
-DATA_FILE = "schemeswithcodes.pkl" if os.path.exists("schemeswithcodes.pkl") else "schemeswithcodes.csv"
+# --------------------------------------------------------------------
+# Load master dataset once at startup
+# --------------------------------------------------------------------
+schemes_df = pd.read_csv("schemeswithcodes.csv")
 
-print(f"📥 Loading {DATA_FILE} ...")
-schemes_df = pd.read_pickle(DATA_FILE) if DATA_FILE.endswith(".pkl") else pd.read_csv(DATA_FILE)
-print(f"✅ Loaded {len(schemes_df)} schemes.")
-
-# Normalize text columns
-for col in ["AMC", "schemeCategory", "schemeSubCategory", "Plan", "Option", "schemeName"]:
-    schemes_df[col] = schemes_df[col].astype(str).str.strip()
-
-# Add derived column for investment type
+# Add instrument type (Mutual Fund or ETF)
 schemes_df["instrumentType"] = schemes_df["schemeSubCategory"].apply(
     lambda x: "ETF" if "ETF" in str(x).upper() else "Mutual Fund"
 )
 
+# Normalize for filtering
+def normalize_series(series):
+    return series.astype(str).str.strip().str.lower()
 
-# ---------------------------------------------
-# /api/stats - Metadata endpoint for dropdowns
-# ---------------------------------------------
-@app.route("/api/stats", methods=["GET"])
-def get_metadata():
-    df = schemes_df
-    return jsonify({
-        "total": len(df),
-        "mutual_funds": int((df["instrumentType"] == "Mutual Fund").sum()),
-        "etfs": int((df["instrumentType"] == "ETF").sum()),
-        "amcs": sorted(df["AMC"].dropna().unique().tolist()),
-        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
-        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
-        "plans": sorted(df["Plan"].dropna().unique().tolist()),
-        "options": sorted(df["Option"].dropna().unique().tolist()),
-    })
+schemes_df["AMC_norm"] = normalize_series(schemes_df["AMC"])
+schemes_df["Category_norm"] = normalize_series(schemes_df["schemeCategory"])
+schemes_df["SubCategory_norm"] = normalize_series(schemes_df["schemeSubCategory"])
+schemes_df["Plan_norm"] = normalize_series(schemes_df["Plan"])
+schemes_df["Option_norm"] = normalize_series(schemes_df["Option"])
+
+# --------------------------------------------------------------------
+# Utility helpers
+# --------------------------------------------------------------------
+def parse_multi_param(param_name):
+    """Parse query parameters that may be comma-separated or repeated."""
+    values = request.args.getlist(param_name)
+    parsed = []
+    for v in values:
+        if "," in v:
+            parsed.extend([x.strip() for x in v.split(",") if x.strip()])
+        elif v.strip():
+            parsed.append(v.strip())
+    return parsed
 
 
-# ---------------------------------------------
-# /api/schemes - Filtered or searched scheme list
-# ---------------------------------------------
+def norm_list(vals):
+    return [v.strip().lower() for v in vals if isinstance(v, str) and v.strip()]
+
+
+# --------------------------------------------------------------------
+# API: Schemes List
+# --------------------------------------------------------------------
 @app.route("/api/schemes", methods=["GET"])
 def get_scheme_list():
     q = request.args.get("q", "").lower().strip()
     selected_type = request.args.get("type", "Mutual Fund")
 
-    def parse_multi_param(param_name):
-        values = request.args.getlist(param_name)
-        parsed = []
-        for v in values:
-            if "," in v:
-                parsed.extend([x.strip() for x in v.split(",") if x.strip()])
-            elif v.strip():
-                parsed.append(v.strip())
-        return parsed
+    # Parse filters
+    amc_filter = norm_list(parse_multi_param("amc"))
+    cat_filter = norm_list(parse_multi_param("category"))
+    subcat_filter = norm_list(parse_multi_param("subcategory"))
+    plan_filter = norm_list(parse_multi_param("plan"))
+    option_filter = norm_list(parse_multi_param("option"))
 
-    amc_filter = parse_multi_param("amc")
-    cat_filter = parse_multi_param("category")
-    subcat_filter = parse_multi_param("subcategory")
-    plan_filter = parse_multi_param("plan")
-    option_filter = parse_multi_param("option")
+    # Clean out empty filters
+    amc_filter = [v for v in amc_filter if v]
+    cat_filter = [v for v in cat_filter if v]
+    subcat_filter = [v for v in subcat_filter if v]
+    plan_filter = [v for v in plan_filter if v]
+    option_filter = [v for v in option_filter if v]
 
-    limit = int(request.args.get("limit", 500))  # safety limit
+    df = schemes_df.copy()
 
-    df = schemes_df
-
-    # Filter by investment type
+    # --- Type filter (Mutual Fund / ETF / Both)
     if selected_type.lower() != "both":
-        df = df[df["instrumentType"].str.lower() == selected_type.lower()]
+        df = df[df["instrumentType"].str.lower().str.strip() == selected_type.lower().strip()]
 
-    # Apply dropdown filters
+    # --- Apply dropdown filters (case-insensitive partial match)
     if amc_filter:
-        df = df[df["AMC"].isin(amc_filter)]
+        df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
     if cat_filter:
-        df = df[df["schemeCategory"].isin(cat_filter)]
+        df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
     if subcat_filter:
-        df = df[df["schemeSubCategory"].isin(subcat_filter)]
+        df = df[df["SubCategory_norm"].apply(lambda x: any(v in x for v in subcat_filter))]
     if plan_filter:
-        df = df[df["Plan"].isin(plan_filter)]
+        df = df[df["Plan_norm"].apply(lambda x: any(v in x for v in plan_filter))]
     if option_filter:
-        df = df[df["Option"].isin(option_filter)]
+        df = df[df["Option_norm"].apply(lambda x: any(v in x for v in option_filter))]
 
-    # If no search or filters, skip large payload
-    if not q and not amc_filter and not cat_filter and not subcat_filter:
-        return jsonify([])
-
-    # Apply name search
+    # --- Search (broad matching across columns)
     if q:
-        df = df[df["schemeName"].str.lower().str.contains(q)]
+        q_norm = q.strip().lower()
+        df = df[
+            df["schemeName"].str.lower().str.contains(q_norm, na=False)
+            | df["AMC"].str.lower().str.contains(q_norm, na=False)
+            | df["schemeCategory"].str.lower().str.contains(q_norm, na=False)
+            | df["schemeSubCategory"].str.lower().str.contains(q_norm, na=False)
+            ]
 
-    df = df.sort_values(["AMC", "schemeCategory", "schemeSubCategory", "schemeName"])
-    result = df.head(limit).to_dict(orient="records")
+    result_count = len(df)
+    print(f"✅ Search='{q}', Type='{selected_type}', Rows={result_count}, AMC={amc_filter}")
 
-    return jsonify(result)
+    # Limit to 300 for performance
+    return jsonify(df.head(300).to_dict(orient="records"))
 
 
-# ---------------------------------------------
-# /api/periodic_returns - Return calculator
-# ---------------------------------------------
+# --------------------------------------------------------------------
+# API: Periodic Returns
+# --------------------------------------------------------------------
 @app.route("/api/periodic_returns", methods=["GET"])
 def get_periodic_returns():
     amfi_code = request.args.get("code")
@@ -128,7 +128,7 @@ def get_periodic_returns():
 
     nav_df, scheme_name = fetch_nav_history(amfi_code)
     if nav_df is None or nav_df.empty:
-        return jsonify({"error": f"No NAV data found for {amfi_code}"}), 404
+        return jsonify({"error": "Invalid or no NAV data found"}), 404
 
     results = calculate_periodic_returns(nav_df)
     return jsonify({
@@ -138,17 +138,27 @@ def get_periodic_returns():
     })
 
 
-# ---------------------------------------------
-# Optional utility route for Render debugging
-# ---------------------------------------------
-@app.route("/api/health")
-def health():
-    return jsonify({"status": "ok", "total_schemes": len(schemes_df)})
+# --------------------------------------------------------------------
+# API: Stats (unique dropdown options)
+# --------------------------------------------------------------------
+@app.route("/api/stats", methods=["GET"])
+def get_stats():
+    stats = {
+        "total": len(schemes_df),
+        "mutual_funds": int((schemes_df["instrumentType"] == "Mutual Fund").sum()),
+        "etfs": int((schemes_df["instrumentType"] == "ETF").sum()),
+        "amcs": sorted(schemes_df["AMC"].dropna().unique().tolist()),
+        "categories": sorted(schemes_df["schemeCategory"].dropna().unique().tolist()),
+        "subcategories": sorted(schemes_df["schemeSubCategory"].dropna().unique().tolist()),
+        "plans": sorted(schemes_df["Plan"].dropna().unique().tolist()),
+        "options": sorted(schemes_df["Option"].dropna().unique().tolist()),
+    }
+    print(f"📊 Stats served: {stats['total']} total, {stats['mutual_funds']} MF, {stats['etfs']} ETF")
+    return jsonify(stats)
 
 
-# ---------------------------------------------
-# Entry point
-# ---------------------------------------------
+# --------------------------------------------------------------------
+# Run Server
+# --------------------------------------------------------------------
 if __name__ == "__main__":
-    print("🚀 Flask app starting on port 5000 ...")
     app.run(debug=True, host="0.0.0.0", port=5000)
