@@ -156,6 +156,14 @@ def get_stats():
     print(f"📊 Stats served: {stats['total']} total, {stats['mutual_funds']} MF, {stats['etfs']} ETF")
     return jsonify(stats)
 
+@app.route("/api/scheme_names", methods=["GET"])
+def get_scheme_names():
+    selected_type = request.args.get("type", "Mutual Fund")
+    df = schemes_df.copy()
+    if selected_type != "Both":
+        df = df[df["instrumentType"] == selected_type]
+    result = df[["schemeCode", "schemeName"]].to_dict(orient="records")
+    return jsonify(result)
 
 # --------------------------------------------------------------------
 # Run Server
