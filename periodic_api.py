@@ -114,7 +114,7 @@ def get_scheme_list():
     print(f"✅ Search='{q}', Type='{selected_type}', Rows={result_count}, AMC={amc_filter}")
 
     # Limit to 300 for performance
-    return jsonify(df.head(300).to_dict(orient="records"))
+    return jsonify(df.to_dict(orient="records"))
 
 
 # --------------------------------------------------------------------
