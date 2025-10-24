@@ -161,6 +161,7 @@ def calculate_periodic_returns(df):
     Calculate periodic returns:
     - Absolute for <= 1Y (1M, 3M, 6M, 1Y)
     - Annualized CAGR for > 1Y (3Y, 5Y, 7Y, 10Y)
+    If data is insufficient for a period, returns None (NA).
     """
     try:
         if df is None or df.empty:
@@ -169,9 +170,10 @@ def calculate_periodic_returns(df):
         results = {}
         end_date = df.index[-1]
         end_nav = float(df["nav"].iloc[-1])
+        first_date = df.index[0]
 
         def safe_absolute(start_date_index):
-            """Absolute returns for short-term durations."""
+            """Absolute return calculation."""
             try:
                 start_nav = float(df.loc[start_date_index, "nav"])
                 if start_nav <= 0:
@@ -181,7 +183,7 @@ def calculate_periodic_returns(df):
                 return None
 
         def safe_cagr(start_date_index):
-            """CAGR returns for long-term durations."""
+            """CAGR calculation."""
             try:
                 start_nav = float(df.loc[start_date_index, "nav"])
                 if start_nav <= 0 or end_nav <= 0:
@@ -195,6 +197,13 @@ def calculate_periodic_returns(df):
 
         for label, days in PERIODS.items():
             start_date_candidate = end_date - timedelta(days=days)
+
+            # ✅ Check if enough historical data exists
+            if start_date_candidate < first_date:
+                results[label] = None  # Not enough history
+                continue
+
+            # Find the first available NAV after that date
             df_range = df[df.index >= start_date_candidate]
             if df_range.empty:
                 results[label] = None
@@ -209,6 +218,7 @@ def calculate_periodic_returns(df):
     except Exception as e:
         print(f"⚠️ Error calculating periodic returns: {e}")
         return {}
+
 
 
 # -------------------------
