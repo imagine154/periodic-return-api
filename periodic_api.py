@@ -143,18 +143,50 @@ def get_periodic_returns():
 # --------------------------------------------------------------------
 @app.route("/api/stats", methods=["GET"])
 def get_stats():
+    """
+    Returns available filters (AMCs, categories, subcategories, plans, options)
+    and counts for Mutual Funds and ETFs.
+    Supports optional query params:
+      - type: "Mutual Fund" or "ETF"
+      - plan: e.g., "Direct"
+      - option: e.g., "Growth"
+    """
+    df = schemes_df.copy()
+
+    # --- Optional filtering for faster subset ---
+    type_param = request.args.get("type")
+    plan_param = request.args.get("plan")
+    option_param = request.args.get("option")
+
+    if type_param:
+        df = df[df["instrumentType"].str.lower() == type_param.lower()]
+
+    if plan_param:
+        df = df[df["Plan"].str.lower() == plan_param.lower()]
+
+    if option_param:
+        df = df[df["Option"].str.lower() == option_param.lower()]
+
+    # --- Stats computation ---
     stats = {
-        "total": len(schemes_df),
-        "mutual_funds": int((schemes_df["instrumentType"] == "Mutual Fund").sum()),
-        "etfs": int((schemes_df["instrumentType"] == "ETF").sum()),
-        "amcs": sorted(schemes_df["AMC"].dropna().unique().tolist()),
-        "categories": sorted(schemes_df["schemeCategory"].dropna().unique().tolist()),
-        "subcategories": sorted(schemes_df["schemeSubCategory"].dropna().unique().tolist()),
-        "plans": sorted(schemes_df["Plan"].dropna().unique().tolist()),
-        "options": sorted(schemes_df["Option"].dropna().unique().tolist()),
+        "total": len(df),
+        "mutual_funds": int((df["instrumentType"] == "Mutual Fund").sum()),
+        "etfs": int((df["instrumentType"] == "ETF").sum()),
+        "amcs": sorted(df["AMC"].dropna().unique().tolist()),
+        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
+        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
+        "plans": sorted(df["Plan"].dropna().unique().tolist()),
+        "options": sorted(df["Option"].dropna().unique().tolist()),
     }
-    print(f"📊 Stats served: {stats['total']} total, {stats['mutual_funds']} MF, {stats['etfs']} ETF")
+
+    print(
+        f"📊 Stats served: {stats['total']} total "
+        f"({stats['mutual_funds']} MF, {stats['etfs']} ETF) "
+        f"[Filters: type={type_param}, plan={plan_param}, option={option_param}]"
+    )
+
     return jsonify(stats)
+
 
 @app.route("/api/scheme_names", methods=["GET"])
 def get_scheme_names():
