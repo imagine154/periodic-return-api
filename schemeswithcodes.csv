@@ -294,7 +294,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 101672,Tata,Equity Scheme,Value,Tata Value Fund-Regular-Growth,Regular,Growth
 101685,HSBC,Debt Scheme,Medium to Long Duration,HSBC Medium to Long Duration Fund-Regular-Growth,Regular,Growth
 101686,HSBC,Debt Scheme,Medium to Long Duration,HSBC Medium to Long Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
-101705,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential BSE Sensex ETF,ETF,ETF
+101705,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential BSE Sensex ETF,Direct,ETF
 101706,ICICI Prudential,Equity Scheme,Multi Cap,ICICI Prudential Multicap Fund-Regular-IDCW,Regular,IDCW
 101714,Tata,Debt Scheme,Liquid,Tata Liquid Fund-Regular-Daily IDCW,Regular,IDCW
 101737,Aditya Birla Sun Life,Equity Scheme,Dividend Yield,Aditya Birla Sun Life Dividend Yield Fund-Regular-IDCW,Regular,IDCW
@@ -652,7 +652,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 105418,Taurus,Equity Scheme,Sectoral/ Thematic,Taurus Infrastructure Fund-Regular-IDCW Payout,Regular,IDCW
 105459,Invesco,Equity Scheme,Contra,Invesco India Contra Fund-Regular-IDCW,Regular,IDCW
 105460,Invesco,Equity Scheme,Contra,Invesco India Contra Fund-Regular-Growth,Regular,Growth
-105463,UTI,Gold & Silver Scheme,Gold ETF,UTI GOLD ETF,ETF,ETF
+105463,UTI,Gold & Silver Scheme,Gold ETF,UTI GOLD ETF,Direct,ETF
 105503,Invesco,Equity Scheme,Mid Cap,Invesco India Midcap Fund-Regular-Growth,Regular,Growth
 105504,Invesco,Equity Scheme,Mid Cap,Invesco India Midcap Fund-Regular-IDCW,Regular,IDCW
 105543,HDFC,Debt Scheme,Low Duration,HDFC Low Duration Fund-Regular-Monthly IDCW,Regular,IDCW
@@ -712,7 +712,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 106183,UTI,Debt Scheme,Fixed Maturity,UTI Interval Fund-I-Regular-Growth,Regular,Growth
 106185,UTI,Debt Scheme,Fixed Maturity,UTI Interval Fund-I-Institutional-Regular-Growth,Regular,Growth
 106186,UTI,Debt Scheme,Fixed Maturity,UTI Interval Fund-I-Regular-IDCW,Regular,IDCW
-106193,Kotak Mahindra,Gold & Silver Scheme,Gold ETF,KOTAK GOLD ETF,ETF,ETF
+106193,Kotak Mahindra,Gold & Silver Scheme,Gold ETF,KOTAK GOLD ETF,Direct,ETF
 106212,SBI,Debt Scheme,Low Duration,SBI MAGNUM LOW DURATION FUND-Regular-Growth,Regular,Growth
 106213,SBI,Debt Scheme,Low Duration,SBI Magnum Low Duration Fund-Regular-Daily IDCW,Regular,IDCW
 106214,SBI,Debt Scheme,Low Duration,SBI Magnum Low Duration Fund-Regular-Weekly IDCW,Regular,IDCW
@@ -765,7 +765,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 106871,LIC,Equity Scheme,Large Cap,LIC MF Large Cap Fund-Regular-Growth,Regular,Growth
 106872,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life International Equity Fund-Regular-IDCW,Regular,IDCW
 106873,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life International Equity Fund-Regular-Growth,Regular,Growth
-106929,Kotak Mahindra,Debt Scheme,Banking and PSU ETF,Kotak Nifty PSU Bank ETF,ETF,ETF
+106929,Kotak Mahindra,Debt Scheme,Banking and PSU ETF,Kotak Nifty PSU Bank ETF,Direct,ETF
 106978,Franklin Templeton,Equity Scheme,Sectoral/ Thematic,Franklin Asian Equity Fund-Regular-IDCW,Regular,IDCW
 106979,Franklin Templeton,Equity Scheme,Sectoral/ Thematic,Franklin Asian Equity Fund-Regular-Growth,Regular,Growth
 106980,UTI,Debt Scheme,Short Duration,UTI Short Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
@@ -810,7 +810,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 108403,Taurus,Equity Scheme,Large Cap,Taurus Large Cap Fund-Regular-IDCW Payout,Regular,IDCW
 108465,ICICI Prudential,Equity Scheme,Large Cap,ICICI Prudential Large Cap Fund -Regular-IDCW,Regular,IDCW
 108466,ICICI Prudential,Equity Scheme,Large Cap,ICICI Prudential Large Cap Fund -Regular-Growth,Regular,Growth
-108479,Quantum,Equity Scheme,Index ETF,Quantum Nifty 50 ETF,ETF,ETF
+108479,Quantum,Equity Scheme,Index ETF,Quantum Nifty 50 ETF,Direct,ETF
 108511,Kotak Mahindra,Debt Scheme,Dynamic Bond,Kotak Dynamic Bond Fund-Regular-Growth,Regular,Growth
 108544,Bandhan,Hybrid Scheme,FoF Arbitrage,Bandhan Income Plus Arbitrage Active FOF-Regular-Quarterly IDCW,Regular,IDCW
 108545,Bandhan,Hybrid Scheme,FoF Arbitrage,Bandhan Income Plus Arbitrage Active FOF-Regular-Growth,Regular,Growth
@@ -862,7 +862,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 108909,Bandhan,Equity Scheme,Value,Bandhan Value Fund-Regular-Growth,Regular,Growth
 108992,Bandhan,Hybrid Scheme,Equity Savings,BANDHAN Equity Savings Fund-Regular-Monthly IDCW,Regular,IDCW
 108995,Bandhan,Hybrid Scheme,Equity Savings,BANDHAN Equity Savings Fund-Regular-Growth,Regular,Growth
-109010,Kotak Mahindra,Equity Scheme,Index ETF,Kotak BSE Sensex ETF,ETF,ETF
+109010,Kotak Mahindra,Equity Scheme,Index ETF,Kotak BSE Sensex ETF,Direct,ETF
 109058,Sundaram,Equity Scheme,Sectoral/ Thematic,Sundaram Fin Srvs Opportunities Fund-Regular-IDCW,Regular,IDCW
 109059,Sundaram,Equity Scheme,Sectoral/ Thematic,Sundaram Financial Services Opportunities Fund-Regular-Growth,Regular,Growth
 109108,Aditya Birla Sun Life,Debt Scheme,Low Duration,Aditya Birla Sun Life Savings Fund-Retail-Daily IDCW,Retail,IDCW
@@ -975,7 +975,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 111938,Edelweiss,Equity Scheme,Large Cap,Edelweiss Large Cap Fund - Plan B-Regular-IDCW,Regular,IDCW
 111939,Edelweiss,Equity Scheme,Large Cap,Edelweiss Large Cap Fund - Plan C-Regular-IDCW,Regular,IDCW
 111940,Edelweiss,Equity Scheme,Large Cap,Edelweiss Large Cap Fund-Regular-Growth,Regular,Growth
-111954,SBI,Gold & Silver Scheme,Gold ETF,SBI Gold ETF,ETF,ETF
+111954,SBI,Gold & Silver Scheme,Gold ETF,SBI Gold ETF,Direct,ETF
 111957,ICICI Prudential,Equity Scheme,Focused,ICICI Prudential Focused Equity Fund-Regular-Growth,Regular,Growth
 111958,ICICI Prudential,Equity Scheme,Focused,ICICI Prudential Focused Equity Fund-Regular-IDCW,Regular,IDCW
 111962,Canara Robeco,Debt Scheme,Dynamic Bond,CANARA ROBECO DYNAMIC BOND FUND-Regular-Growth,Regular,Growth
@@ -1042,7 +1042,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 112341,Nippon Life India,Debt Scheme,Money Market,NIPPON INDIA MONEY MARKET FUND-Regular-Quarterly IDCW,Regular,IDCW
 112342,ICICI Prudential,Debt Scheme,Banking and PSU,ICICI Prudential Banking and PSU Debt Fund-Regular-Growth,Regular,Growth
 112347,DSP,Equity Scheme,FoF Overseas,DSP World Mining Overseas Equity Omni FoF-Regular-IDCW,Regular,IDCW
-112351,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 50 ETF,ETF,ETF
+112351,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 50 ETF,Direct,ETF
 112352,Bandhan,Hybrid Scheme,Conservative Hybrid,BANDHAN Conservative Hybrid Fund-Regular-IDCW,Regular,IDCW
 112353,Bandhan,Hybrid Scheme,Conservative Hybrid,BANDHAN Conservative Hybrid Fund-Regular-Growth,Regular,Growth
 112354,Axis,Debt Scheme,Short Duration,Axis Short Duration Fund-Regular-Growth,Regular,Growth
@@ -1051,7 +1051,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 112359,Bank of India,Equity Scheme,Sectoral/ Thematic,BANK OF INDIA Manufacturing & Infrastructure Fund-Regular-Growth,Regular,Growth
 112360,Bank of India,Equity Scheme,Sectoral/ Thematic,BANK OF INDIA Manufacturing & Infrastructure Fund-Regular-Quarterly IDCW,Regular,IDCW
 112361,Bank of India,Equity Scheme,Sectoral/ Thematic,BANK OF INDIA Manufacturing & Infrastructure Fund-Regular-IDCW,Regular,IDCW
-112368,Invesco,Gold & Silver Scheme,Gold ETF,Invesco India Gold ETF,ETF,ETF
+112368,Invesco,Gold & Silver Scheme,Gold ETF,Invesco India Gold ETF,Direct,ETF
 112369,Axis,Debt Scheme,Short Duration,Axis Short Duration Fund-Regular-Weekly IDCW,Regular,IDCW
 112378,Canara Robeco,Hybrid Scheme,Conservative Hybrid,CANARA ROBECO CONSERVATIVE HYBRID FUND-Regular-Quarterly IDCW,Regular,IDCW
 112635,UTI,Debt Scheme,Money Market,UTI Money Market Fund-Regular-Weekly IDCW,Regular,IDCW
@@ -1097,13 +1097,13 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 113037,Baroda BNP Paribas,Debt Scheme,Short Duration,Baroda BNP Paribas Short Duration Fund-Regular-Monthly IDCW,Regular,IDCW
 113047,HDFC,Debt Scheme,Short Duration,HDFC Short Term Debt Fund-Regular-Growth,Regular,Growth
 113048,HDFC,Debt Scheme,Short Duration,HDFC Short Term Debt Fund-Regular-Fortnightly IDCW,Regular,IDCW
-113049,HDFC,Gold & Silver Scheme,Gold ETF,HDFC Gold ETF,ETF,ETF
+113049,HDFC,Gold & Silver Scheme,Gold ETF,HDFC Gold ETF,Direct,ETF
 113064,Axis,Hybrid Scheme,Multi Asset Allocation,Axis Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
 113065,Axis,Hybrid Scheme,Multi Asset Allocation,Axis Multi Asset Allocation Fund-Regular-Monthly IDCW,Regular,IDCW
-113069,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 50 ETF,ETF,ETF
+113069,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 50 ETF,Direct,ETF
 113070,HDFC,Debt Scheme,Corporate Bond,HDFC Corporate Bond Fund-Regular-Growth,Regular,Growth
 113071,HDFC,Debt Scheme,Corporate Bond,HDFC Corporate Bond Fund-Regular-Quarterly IDCW,Regular,IDCW
-113076,ICICI Prudential,Gold & Silver Scheme,Gold ETF,ICICI Prudential Gold ETF,ETF,ETF
+113076,ICICI Prudential,Gold & Silver Scheme,Gold ETF,ICICI Prudential Gold ETF,Direct,ETF
 113077,UTI,Debt Scheme,Dynamic Bond,UTI Dynamic Bond Fund-Regular-Growth,Regular,Growth
 113078,UTI,Debt Scheme,Dynamic Bond,UTI Dynamic Bond Fund-Regular-Quarterly IDCW,Regular,IDCW
 113097,ICICI Prudential,Hybrid Scheme,Conservative Hybrid,ICICI Regular Savings Fund-Regular-Quarterly IDCW,Regular,IDCW
@@ -1135,7 +1135,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 113346,Nippon Life India,Hybrid Scheme,Arbitrage,NIPPON INDIA ARBITRAGE FUND-Regular-IDCW,Regular,IDCW
 113361,Bandhan,Hybrid Scheme,Conservative Hybrid,BANDHAN Conservative Hybrid Fund-Regular-Quarterly IDCW,Regular,IDCW
 113403,ICICI Prudential,Debt Scheme,Dynamic Bond,ICICI Prudential All Seasons Bond Fund-Regular-Quarterly IDCW,Regular,IDCW
-113434,Axis,Gold & Silver Scheme,Gold ETF,Axis Gold ETF,ETF,ETF
+113434,Axis,Gold & Silver Scheme,Gold ETF,Axis Gold ETF,Direct,ETF
 114239,ICICI Prudential,Debt Scheme,Credit Risk,ICICI Prudential Credit Risk Fund-Regular-Growth,Regular,Growth
 114240,ICICI Prudential,Debt Scheme,Credit Risk,ICICI Prudential Credit Risk Fund-Regular-Quarterly IDCW,Regular,IDCW
 114297,SBI,Debt Scheme,Overnight,SBI Overnight Fund-Regular-Daily IDCW,Regular,IDCW
@@ -1144,7 +1144,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 114360,Invesco,Debt Scheme,Ultra Short Duration,Invesco India Ultra Short Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
 114361,Invesco,Debt Scheme,Ultra Short Duration,Invesco India Ultra Short Duration Fund-Regular-Annual IDCW,Regular,IDCW
 114362,Invesco,Debt Scheme,Ultra Short Duration,Invesco India Ultra Short Duration Fund-Regular-Monthly IDCW,Regular,IDCW
-114456,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Midcap 100 ETF,ETF,ETF
+114456,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Midcap 100 ETF,Direct,ETF
 114457,Kotak Mahindra,Equity Scheme,Large Cap,Kotak Large Cap Fund-Regular-IDCW Payout,Regular,IDCW
 114458,Kotak Mahindra,Equity Scheme,Large Cap,Kotak Large Cap Fund-Regular-Growth,Regular,Growth
 114476,Bandhan,Equity Scheme,Sectoral/ Thematic,BANDHAN Infrastructure Fund-Regular-Growth,Regular,Growth
@@ -1159,7 +1159,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 114859,Kotak Mahindra,Hybrid Scheme,Conservative Hybrid,Kotak Debt Hybrid Fund-Regular-Growth,Regular,Growth
 114930,Mirae,Equity Scheme,Sectoral/ Thematic,Mirae Asset Great Consumer Fund-Regular-IDCW,Regular,IDCW
 114931,Mirae,Equity Scheme,Sectoral/ Thematic,Mirae Asset Great Consumer Fund-Regular-Growth,Regular,Growth
-114984,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nasdaq 100 ETF (MOFN100) ETF,ETF,ETF
+114984,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nasdaq 100 ETF (MOFN100) ETF,Direct,ETF
 115068,Axis,Debt Scheme,Dynamic Bond,Axis Dynamic Bond Fund-Regular-Growth,Regular,Growth
 115069,Axis,Debt Scheme,Dynamic Bond,Axis Dynamic Bond Fund-Regular-Quarterly IDCW,Regular,IDCW
 115077,Canara Robeco,Debt Scheme,Short Duration,CANARA ROBECO SHORT DURATION FUND-Regular-Growth,Regular,Growth
@@ -1170,11 +1170,11 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 115094,ICICI Prudential,Debt Scheme,Ultra Short Duration,ICICI Prudential Ultra Short Term Fund-Regular-Monthly IDCW,Regular,IDCW
 115116,HSBC,Equity Scheme,FoF Overseas,HSBC Brazil Fund-Regular-Growth,Regular,Growth
 115117,HSBC,Equity Scheme,FoF Overseas,HSBC Brazil Fund-Regular-IDCW,Regular,IDCW
-115127,Aditya Birla Sun Life,Gold & Silver Scheme,Gold ETF,Aditya Birla Sun Life Gold ETF,ETF,ETF
+115127,Aditya Birla Sun Life,Gold & Silver Scheme,Gold ETF,Aditya Birla Sun Life Gold ETF,Direct,ETF
 115131,Axis,Debt Scheme,Dynamic Bond,Axis Dynamic Bond Fund-Regular-Half - Yearly IDCW,Regular,IDCW
 115132,Quantum,Gold & Silver Scheme,Gold,Quantum Gold Savings Fund-Direct-Growth,Direct,Growth
 115270,Union,Equity Scheme,Flexi Cap,Union Flexi Cap Fund-Regular-Growth,Regular,Growth
-115284,Invesco,Equity Scheme,Index ETF,Invesco India Nifty 50 ETF,ETF,ETF
+115284,Invesco,Equity Scheme,Index ETF,Invesco India Nifty 50 ETF,Direct,ETF
 115290,Union,Equity Scheme,Flexi Cap,Union Flexi Cap Fund-Regular-IDCW,Regular,IDCW
 115294,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI Prudential Technology Fund-Regular-IDCW,Regular,IDCW
 115398,Union,Debt Scheme,Liquid,Union Liquid Fund-Regular-Growth,Regular,Growth
@@ -1189,7 +1189,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 115505,ICICI Prudential,Debt Scheme,Liquid,ICICI Prudential Liquid Fund-Regular-IDCW,Regular,IDCW
 115510,ICICI Prudential,Debt Scheme,Floater,ICICI Prudential Floating Interest Fund-Regular-IDCW,Regular,IDCW
 115511,ICICI Prudential,Debt Scheme,Low Duration,ICICI Prudential Savings Fund-Regular-IDCW,Regular,IDCW
-115512,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty 50 ETF,ETF,ETF
+115512,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty 50 ETF,Direct,ETF
 115515,Invesco,Debt Scheme,Money Market,Invesco India Money Market Fund-Retail-Daily IDCW,Retail,IDCW
 115676,SBI,Gold & Silver Scheme,Gold,SBI GOLD FUND-Regular-Growth,Regular,Growth
 115677,SBI,Gold & Silver Scheme,Gold,SBI Gold Fund-Regular-IDCW,Regular,IDCW
@@ -2398,13 +2398,13 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 120846,Quant,Equity Scheme,ELSS,quant ELSS Tax Saver Fund-Direct-IDCW,Direct,IDCW
 120847,Quant,Equity Scheme,ELSS,quant ELSS Tax Saver Fund-Direct-Growth,Direct,Growth
 120870,ICICI Prudential,Equity Scheme,Small Cap,ICICI Prudential Smallcap Fund-Direct-IDCW,Direct,IDCW
-121109,SBI,Equity Scheme,Index ETF,SBI BSE SENSEX ETF,ETF,ETF
-121146,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 100 ETF,ETF,ETF
+121109,SBI,Equity Scheme,Index ETF,SBI BSE SENSEX ETF,Direct,ETF
+121146,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 100 ETF,Direct,ETF
 121279,Bandhan,Debt Scheme,Banking and PSU,Bandhan Banking and PSU Fund-Direct-Growth,Direct,Growth
 121280,Bandhan,Debt Scheme,Banking and PSU,Bandhan Banking and PSU Fund-Regular-Growth,Regular,Growth
 121281,Bandhan,Debt Scheme,Banking and PSU,Bandhan Banking and PSU Fund-Direct-IDCW,Direct,IDCW
 121282,Bandhan,Debt Scheme,Banking and PSU,Bandhan Banking and PSU Fund-Regular-IDCW,Regular,IDCW
-121366,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 50 ETF,ETF,ETF
+121366,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 50 ETF,Direct,ETF
 121891,UTI,Debt Scheme,Ultra Short Duration,UTI Ultra Short Duration Fund-Regular-IDCW,Regular,IDCW
 121892,UTI,Debt Scheme,Ultra Short Duration,UTI Ultra Short Duration Fund-Direct-IDCW,Direct,IDCW
 121931,Bandhan,Debt Scheme,Banking and PSU,Bandhan Banking and PSU Fund-Regular-Fortnightly IDCW,Regular,IDCW
@@ -2454,7 +2454,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 122904,ICICI Prudential,Debt Scheme,Low Duration,ICICI Prudential Savings Fund-Direct-Fortnightly IDCW,Direct,IDCW
 122982,ICICI Prudential,Debt Scheme,Low Duration,ICICI Prudential Savings Fund-Direct-Quarterly IDCW,Direct,IDCW
 122995,ICICI Prudential,Debt Scheme,Low Duration,ICICI Prudential Savings Fund-Regular-Quarterly IDCW,Regular,IDCW
-123004,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 100 ETF,ETF,ETF
+123004,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 100 ETF,Direct,ETF
 123287,DSP,Debt Scheme,Low Duration,DSP Savings Fund-Regular-Daily IDCW,Regular,IDCW
 123288,DSP,Debt Scheme,Low Duration,DSP Savings Fund-Direct-Daily IDCW,Direct,IDCW
 123646,UTI,Debt Scheme,Fixed Maturity,UTI Interval Fund-I-Direct-Growth,Direct,Growth
@@ -2586,12 +2586,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 128053,HDFC,Debt Scheme,Credit Risk,HDFC Credit Risk Debt Fund-Regular-Growth,Regular,Growth
 128078,Kotak Mahindra,Debt Scheme,Medium Duration,Kotak Medium Term Fund - Standard-Regular-IDCW,Regular,IDCW
 128079,Kotak Mahindra,Debt Scheme,Medium Duration,Kotak Medium Term Fund-Direct-IDCW,Direct,IDCW
-128331,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty India Consumption ETF,ETF,ETF
+128331,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty India Consumption ETF,Direct,ETF
 128626,HDFC,Debt Scheme,Banking and PSU,HDFC Banking and PSU Debt Fund-Direct-IDCW,Direct,IDCW
 128627,HDFC,Debt Scheme,Banking and PSU,HDFC Banking and PSU Debt Fund-Regular-IDCW,Regular,IDCW
 128628,HDFC,Debt Scheme,Banking and PSU,HDFC Banking and PSU Debt Fund-Regular-Growth,Regular,Growth
 128629,HDFC,Debt Scheme,Banking and PSU,HDFC Banking and PSU Debt Fund-Direct-Growth,Direct,Growth
-128639,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty ETF,ETF,ETF
+128639,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty ETF,Direct,ETF
 128820,Nippon Life India,Hybrid Scheme,Arbitrage,NIPPON INDIA ARBITRAGE FUND-Regular-Monthly IDCW,Regular,IDCW
 128821,Nippon Life India,Hybrid Scheme,Arbitrage,NIPPON INDIA ARBITRAGE FUND-Direct-Monthly IDCW,Direct,IDCW
 129006,Franklin Templeton,Debt Scheme,Banking and PSU,Franklin India Banking & PSU Debt Fund-Regular-Growth,Regular,Growth
@@ -2703,7 +2703,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 131302,DSP,Debt Scheme,Gilt with 10 year constant duration,DSP 10Y G-Sec Fund-Direct-Quarterly IDCW,Direct,IDCW
 131303,DSP,Debt Scheme,Gilt with 10 year constant duration,DSP 10Y G-Sec Fund-Direct-Monthly IDCW,Direct,IDCW
 131304,DSP,Debt Scheme,Gilt with 10 year constant duration,DSP 10Y G-Sec Fund-Direct-IDCW,Direct,IDCW
-131331,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF BSE Sensex ETF,ETF,ETF
+131331,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF BSE Sensex ETF,Direct,ETF
 131354,Bandhan,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,BANDHAN Balanced Advantage Fund-Regular-IDCW,Regular,IDCW
 131355,Bandhan,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,BANDHAN Balanced Advantage Fund-Direct-Growth,Direct,Growth
 131356,Bandhan,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,BANDHAN Balanced Advantage Fund-Direct-IDCW,Direct,IDCW
@@ -2805,7 +2805,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 133053,ICICI Prudential,Hybrid Scheme,Equity Savings,ICICI Prudential Equity Savings Fund-Regular-Quarterly IDCW,Regular,IDCW
 133054,ICICI Prudential,Hybrid Scheme,Equity Savings,ICICI Prudential Equity Savings Fund-Direct-Growth,Direct,Growth
 133059,UTI,Debt Scheme,Ultra Short Duration,UTI Ultra Short Duration Fund-Direct-Quarterly IDCW,Direct,IDCW
-133122,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Bank ETF,ETF,ETF
+133122,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Bank ETF,Direct,ETF
 133127,UTI,Debt Scheme,Low Duration,UTI Low Duration Fund-Direct-IDCW,Direct,IDCW
 133130,UTI,Debt Scheme,Low Duration,UTI Low Duration Fund-Regular-IDCW,Regular,IDCW
 133147,HDFC,Debt Scheme,Credit Risk,HDFC Credit Risk Debt Fund-Direct-IDCW,Direct,IDCW
@@ -2813,7 +2813,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 133180,UTI,Debt Scheme,Dynamic Bond,UTI Dynamic Bond Fund-Direct-IDCW,Direct,IDCW
 133265,Nippon Life India,Debt Scheme,Gilt,Nippon India Gilt Fund-Direct-Bonus,Direct,Bonus
 133280,UTI,Debt Scheme,Medium to Long Duration,UTI Medium to Long Duration Fund-Direct-IDCW,Direct,IDCW
-133307,LIC,Debt Scheme,Bond ETF,LIC MF Nifty 8-13 yr G-Sec ETF,ETF,ETF
+133307,LIC,Debt Scheme,Bond ETF,LIC MF Nifty 8-13 yr G-Sec ETF,Direct,ETF
 133344,UTI,Debt Scheme,Credit Risk,UTI Credit Risk Fund-Regular-Annual IDCW,Regular,IDCW
 133365,HDFC,Debt Scheme,Medium to Long Duration,HDFC Income Fund - Normal-Direct-IDCW,Direct,IDCW
 133366,HDFC,Debt Scheme,Medium to Long Duration,HDFC Income Fund - Normal-Regular-IDCW,Regular,IDCW
@@ -2916,9 +2916,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 133973,UTI,Debt Scheme,Liquid,UTI Liquid Fund-Regular-Annual IDCW,Regular,IDCW
 133974,Tata,Debt Scheme,Short Duration,Tata Short Term Bond Fund-Direct-Periodic IDCW,Direct,IDCW
 133975,Tata,Debt Scheme,Short Duration,Tata Short Term Bond Fund-Regular-Periodic IDCW,Regular,IDCW
-134008,SBI,Equity Scheme,Index ETF,SBI Nifty Bank ETF,ETF,ETF
-134013,SBI,Equity Scheme,Index ETF,SBI Nifty Next 50 ETF,ETF,ETF
-134014,SBI,Equity Scheme,Index ETF,SBI BSE 100 ETF,ETF,ETF
+134008,SBI,Equity Scheme,Index ETF,SBI Nifty Bank ETF,Direct,ETF
+134013,SBI,Equity Scheme,Index ETF,SBI Nifty Next 50 ETF,Direct,ETF
+134014,SBI,Equity Scheme,Index ETF,SBI BSE 100 ETF,Direct,ETF
 134015,LIC,Equity Scheme,Sectoral/ Thematic,LIC MF Banking and Fin Srvs Fund-Regular-IDCW,Regular,IDCW
 134016,LIC,Equity Scheme,Sectoral/ Thematic,LIC MF Banking and Financial Services Fund-Regular-Growth,Regular,Growth
 134017,LIC,Equity Scheme,Sectoral/ Thematic,LIC MF Banking and Financial Services Fund-Direct-Growth,Direct,Growth
@@ -2972,7 +2972,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 134643,SBI,Hybrid Scheme,Equity Savings,SBI Equity Savings Fund-Direct-Growth,Direct,Growth
 134644,SBI,Hybrid Scheme,Equity Savings,SBI Equity Savings Fund-Regular-Growth,Regular,Growth
 134763,UTI,Debt Scheme,Money Market,UTI Money Market Fund-Regular-Half - Yearly IDCW,Regular,IDCW
-134782,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 50 Value 20 ETF,ETF,ETF
+134782,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 50 Value 20 ETF,Direct,ETF
 134788,UTI,Debt Scheme,Dynamic Bond,UTI Dynamic Bond Fund-Direct-Half - Yearly IDCW,Direct,IDCW
 134799,UTI,Debt Scheme,Ultra Short Duration,UTI Ultra Short Duration Fund-Regular-Half - Yearly IDCW,Regular,IDCW
 134813,Mirae,Hybrid Scheme,Aggressive Hybrid,Mirae Asset Aggressive Hybrid Fund-Direct-Growth,Direct,Growth
@@ -3021,7 +3021,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 134973,UTI,Debt Scheme,Money Market,UTI Money Market Fund-Direct-Annual IDCW,Direct,IDCW
 134998,UTI,Debt Scheme,Medium to Long Duration,UTI Medium to Long Duration Fund-Direct-Half - Yearly IDCW,Direct,IDCW
 135051,UTI,Debt Scheme,Credit Risk,UTI Credit Risk Fund-Regular-IDCW,Regular,IDCW
-135106,SBI,Equity Scheme,Index ETF,SBI Nifty 50 ETF,ETF,ETF
+135106,SBI,Equity Scheme,Index ETF,SBI Nifty 50 ETF,Direct,ETF
 135120,Axis,Hybrid Scheme,Equity Savings,Axis Equity Savings Fund-Direct-Growth,Direct,Growth
 135121,Axis,Hybrid Scheme,Equity Savings,Axis Equity Savings Fund-Direct-Monthly IDCW,Direct,IDCW
 135122,Axis,Hybrid Scheme,Equity Savings,Axis Equity Savings Fund-Regular-Growth,Regular,Growth
@@ -3038,8 +3038,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 135174,JM Financial,Hybrid Scheme,Arbitrage,JM Arbitrage Fund-Direct-Quarterly IDCW,Direct,IDCW
 135191,UTI,Debt Scheme,Low Duration,UTI Low Duration Fund-Direct-Fortnightly IDCW,Direct,IDCW
 135290,UTI,Debt Scheme,Credit Risk,UTI Credit Risk Fund-Direct-Annual IDCW,Direct,IDCW
-135320,UTI,Equity Scheme,Index ETF,UTI Nifty 50 ETF,ETF,ETF
-135321,UTI,Equity Scheme,Index ETF,UTI BSE Sensex ETF,ETF,ETF
+135320,UTI,Equity Scheme,Index ETF,UTI Nifty 50 ETF,Direct,ETF
+135321,UTI,Equity Scheme,Index ETF,UTI BSE Sensex ETF,Direct,ETF
 135336,UTI,Debt Scheme,Dynamic Bond,UTI Dynamic Bond Fund-Regular-IDCW,Regular,IDCW
 135341,Groww,Equity Scheme,Value,Groww Value Fund-Direct-Growth,Direct,Growth
 135342,Groww,Equity Scheme,Value,Groww Value Fund-Direct-IDCW,Direct,IDCW
@@ -3060,12 +3060,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 135600,PGIM India,Equity Scheme,ELSS,PGIM India ELSS Tax Saver Fund-Direct-IDCW,Direct,IDCW
 135601,PGIM India,Equity Scheme,ELSS,PGIM India ELSS Tax Saver Fund-Direct-Growth,Direct,Growth
 135606,UTI,Debt Scheme,Money Market,UTI Money Market Fund-Direct-Fortnightly IDCW,Direct,IDCW
-135607,LIC,Equity Scheme,Index ETF,LIC MF Nifty 50 ETF,ETF,ETF
+135607,LIC,Equity Scheme,Index ETF,LIC MF Nifty 50 ETF,Direct,ETF
 135652,Navi,Equity Scheme,ELSS,Navi ELSS Tax Saver Fund-Regular-IDCW Payout,Regular,IDCW
 135653,Navi,Equity Scheme,ELSS,Navi ELSS Tax Saver Fund-Direct-IDCW Payout,Direct,IDCW
 135654,Navi,Equity Scheme,ELSS,Navi ELSS Tax Saver Fund-Direct-Growth,Direct,Growth
 135655,Navi,Equity Scheme,ELSS,Navi ELSS Tax Saver Fund-Regular-Growth,Regular,Growth
-135672,LIC,Equity Scheme,Index ETF,LIC MF BSE Sensex ETF,ETF,ETF
+135672,LIC,Equity Scheme,Index ETF,LIC MF BSE Sensex ETF,Direct,ETF
 135677,Navi,Equity Scheme,Large & Mid Cap,Navi Large & Midcap Fund-Direct-Growth,Direct,Growth
 135678,Navi,Equity Scheme,Large & Mid Cap,Navi Large & Midcap Fund-Regular-Growth,Regular,Growth
 135679,Navi,Equity Scheme,Large & Mid Cap,Navi Large & Midcap Fund-Direct-IDCW Payout,Direct,IDCW
@@ -3075,7 +3075,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 135683,Sundaram,Equity Scheme,ELSS,Sundaram Long Term Tax Advantage Fund Series II-Regular-IDCW Payout,Regular,IDCW
 135684,Sundaram,Equity Scheme,ELSS,Sundaram Long Term Tax Advantage Fund Series II-Regular-Growth,Regular,Growth
 135721,UTI,Debt Scheme,Liquid,UTI Liquid Fund-Regular-Quarterly IDCW,Regular,IDCW
-135744,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 50 Value 20 ETF,ETF,ETF
+135744,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 50 Value 20 ETF,Direct,ETF
 135759,Axis,Solution Oriented Scheme,Children's,Axis Children's Fund - Lock in-Regular-Growth,Regular,Growth
 135760,Axis,Solution Oriented Scheme,Children's,Axis Children's Fund - Lock in-Regular-IDCW,Regular,IDCW
 135761,Axis,Solution Oriented Scheme,Children's,Axis Children's Fund - No Lock in-Regular-IDCW,Regular,IDCW
@@ -3118,8 +3118,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 135816,Tata,Equity Scheme,Sectoral/ Thematic,TATA Resources & Energy Fund-Direct-IDCW,Direct,IDCW
 135817,Tata,Equity Scheme,Sectoral/ Thematic,TATA Resources & Energy Fund-Direct-IDCW Payout,Direct,IDCW
 135818,Tata,Equity Scheme,Sectoral/ Thematic,TATA Resources & Energy Fund-Regular-IDCW,Regular,IDCW
-135853,HDFC,Equity Scheme,Index ETF,HDFC NIFTY 50 ETF,ETF,ETF
-135854,HDFC,Debt Scheme,Liquid ETF,HDFC BSE Sensex ETF,ETF,ETF
+135853,HDFC,Equity Scheme,Index ETF,HDFC NIFTY 50 ETF,Direct,ETF
+135854,HDFC,Debt Scheme,Liquid ETF,HDFC BSE Sensex ETF,Direct,ETF
 135914,Bandhan,Debt Scheme,Corporate Bond,BANDHAN Corporate Bond Fund-Regular-Growth,Regular,Growth
 135915,Bandhan,Debt Scheme,Corporate Bond,BANDHAN Corporate Bond Fund-Regular-Periodic IDCW,Regular,IDCW
 135916,Bandhan,Debt Scheme,Corporate Bond,BANDHAN Corporate Bond Fund-Direct-Growth,Direct,Growth
@@ -3149,7 +3149,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 136464,HDFC,Solution Oriented Scheme,Retirement,HDFC Retirement Savings Fund - Hybrid-Equity Plan-Direct-Growth,Direct,Growth
 136465,HDFC,Solution Oriented Scheme,Retirement,HDFC Retirement Savings Fund - Hybrid-Debt Plan-Direct-Growth,Direct,Growth
 136466,HDFC,Solution Oriented Scheme,Retirement,HDFC Retirement Savings Fund - Hybrid-Debt Plan-Regular-Growth,Regular,Growth
-136473,LIC,Equity Scheme,Index ETF,LIC MF Nifty 100 ETF,ETF,ETF
+136473,LIC,Equity Scheme,Index ETF,LIC MF Nifty 100 ETF,Direct,ETF
 136563,DSP,Hybrid Scheme,Equity Savings,DSP Equity Savings Fund-Regular-Growth,Regular,Growth
 136564,DSP,Hybrid Scheme,Equity Savings,DSP Equity Savings Fund-Regular-IDCW,Regular,IDCW
 136565,DSP,Hybrid Scheme,Equity Savings,DSP Equity Savings Fund-Regular-Monthly IDCW,Regular,IDCW
@@ -3228,10 +3228,10 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 139389,Invesco,Debt Scheme,Liquid,Invesco India Liquid Fund-<3 Years-Regular-Unclaimed  Dividend,Regular,Unclaimed  Dividend
 139390,Invesco,Debt Scheme,Liquid,Invesco India Liquid Fund-3+ Years-Regular-Unclaimed  Dividend,Regular,Unclaimed  Dividend
 139407,UTI,Debt Scheme,Banking and PSU,UTI Banking & PSU Fund-Regular-Half - Yearly IDCW,Regular,IDCW
-139430,SBI,Debt Scheme,Bond ETF,SBI Nifty 10 yr Benchmark G-Sec ETF,ETF,ETF
-139455,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty50 Value 20 ETF,ETF,ETF
-139496,Nippon Life India,Debt Scheme,Gilt ETF,Nippon India ETF Nifty 8-13 yr G-Sec Long Term Gilt ETF,ETF,ETF
-139519,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential BSE Midcap Select ETF,ETF,ETF
+139430,SBI,Debt Scheme,Bond ETF,SBI Nifty 10 yr Benchmark G-Sec ETF,Direct,ETF
+139455,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty50 Value 20 ETF,Direct,ETF
+139496,Nippon Life India,Debt Scheme,Gilt ETF,Nippon India ETF Nifty 8-13 yr G-Sec Long Term Gilt ETF,Direct,ETF
+139519,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential BSE Midcap Select ETF,Direct,ETF
 139520,Axis,Hybrid Scheme,Equity Savings,Axis Equity Savings Fund-Direct-IDCW,Direct,IDCW
 139521,Axis,Hybrid Scheme,Equity Savings,Axis Equity Savings Fund-Regular-IDCW,Regular,IDCW
 139527,Bank of India,Hybrid Scheme,Aggressive Hybrid,BANK OF INDIA MID & SMALL CAP EQUITY & DEBT FUND-Direct-Growth,Direct,Growth
@@ -3245,7 +3245,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 139538,Mahindra Manulife,Debt Scheme,Liquid,Mahindra Manulife Liquid Fund-Direct-Growth,Direct,Growth
 139541,Mahindra Manulife,Debt Scheme,Liquid,Mahindra Manulife Liquid Fund-Regular-Weekly IDCW,Regular,IDCW
 139568,UTI,Debt Scheme,Ultra Short Duration,UTI Ultra Short Duration Fund-Direct-Annual IDCW,Direct,IDCW
-139581,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life BSE Sensex ETF,ETF,ETF
+139581,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life BSE Sensex ETF,Direct,ETF
 139582,Bandhan,Debt Scheme,Liquid,BANDHAN LIQUID Fund-<3 Years-Regular-Unclaimed IDCW,Regular,IDCW
 139583,Bandhan,Debt Scheme,Liquid,BANDHAN LIQUID Fund-3+ Years-Regular-Unclaimed IDCW,Regular,IDCW
 139584,Bandhan,Debt Scheme,Liquid,BANDHAN LIQUID Fund-<3 Years-Regular-Unclaimed Redemption,Regular,Unclaimed Redemption
@@ -3265,8 +3265,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 139820,PGIM India,Hybrid Scheme,Aggressive Hybrid,PGIM India Aggressive Hybrid Equity Fund-Direct-Monthly IDCW,Direct,IDCW
 139821,PGIM India,Hybrid Scheme,Aggressive Hybrid,PGIM India Aggressive Hybrid Equity Fund-Regular-Monthly IDCW,Regular,IDCW
 139838,UTI,Debt Scheme,Liquid,UTI Liquid Fund-Regular-Fortnightly IDCW,Regular,IDCW
-139839,Bandhan,Equity Scheme,Index ETF,BANDHAN Nifty 50 ETF,ETF,ETF
-139840,Bandhan,Equity Scheme,Index ETF,BANDHAN BSE Sensex ETF,ETF,ETF
+139839,Bandhan,Equity Scheme,Index ETF,BANDHAN Nifty 50 ETF,Direct,ETF
+139840,Bandhan,Equity Scheme,Index ETF,BANDHAN BSE Sensex ETF,Direct,ETF
 139863,Motilal Oswal,Hybrid Scheme,FoF Dynamic Asset Allocation,Motilal Oswal Balanced Advantage Fund (MOFDYNAMIC)-Regular-Annual IDCW,Regular,IDCW
 139865,Motilal Oswal,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Motilal Oswal Balanced Advantage Fund-Direct-Quarterly IDCW,Direct,IDCW
 139866,Motilal Oswal,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Motilal Oswal Balanced Advantage Fund-Direct-Annual IDCW,Direct,IDCW
@@ -3283,16 +3283,16 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 139992,Sundaram,Equity Scheme,ELSS,Sundaram Long Term Micro Cap Tax Advantage Fund Series IV-Regular-Growth,Regular,Growth
 140023,UTI,Debt Scheme,Money Market,UTI Money Market Fund-Direct-Half - Yearly IDCW,Direct,IDCW
 140024,UTI,Debt Scheme,Liquid,UTI Liquid Fund-Direct-Quarterly IDCW,Direct,IDCW
-140084,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 50 BeES ETF,ETF,ETF
-140085,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Next 50 Junior BeES ETF,ETF,ETF
-140086,Nippon Life India,Debt Scheme,Liquid ETF,Nippon India ETF Nifty 1D Rate Liquid BeES ETF,ETF,ETF
-140087,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Bank BeES ETF,ETF,ETF
-140088,Nippon Life India,Gold & Silver Scheme,Gold ETF,Nippon India ETF Gold BeES ETF,ETF,ETF
-140089,Nippon Life India,Debt Scheme,Banking and PSU ETF,Nippon India ETF Nifty PSU Bank BeES ETF,ETF,ETF
-140094,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 50 Shariah BeES ETF,ETF,ETF
-140095,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Hang Seng BeES ETF,ETF,ETF
-140102,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Infrastructure BeES ETF,ETF,ETF
-140107,Nippon Life India,Equity Scheme,Index ETF,CPSE ETF,ETF,ETF
+140084,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 50 BeES ETF,Direct,ETF
+140085,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Next 50 Junior BeES ETF,Direct,ETF
+140086,Nippon Life India,Debt Scheme,Liquid ETF,Nippon India ETF Nifty 1D Rate Liquid BeES ETF,Direct,ETF
+140087,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Bank BeES ETF,Direct,ETF
+140088,Nippon Life India,Gold & Silver Scheme,Gold ETF,Nippon India ETF Gold BeES ETF,Direct,ETF
+140089,Nippon Life India,Debt Scheme,Banking and PSU ETF,Nippon India ETF Nifty PSU Bank BeES ETF,Direct,ETF
+140094,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty 50 Shariah BeES ETF,Direct,ETF
+140095,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Hang Seng BeES ETF,Direct,ETF
+140102,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Infrastructure BeES ETF,Direct,ETF
+140107,Nippon Life India,Equity Scheme,Index ETF,CPSE ETF,Direct,ETF
 140116,UTI,Debt Scheme,Banking and PSU,UTI Banking & PSU Fund-Regular-Annual IDCW,Regular,IDCW
 140135,UTI,Debt Scheme,Banking and PSU,UTI Banking & PSU Fund-Direct-Annual IDCW,Direct,IDCW
 140172,Edelweiss,Equity Scheme,Large & Mid Cap,Edelweiss Large & Mid Cap Fund-Regular-Growth,Regular,Growth
@@ -3452,7 +3452,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 141411,Navi,Equity Scheme,Large & Mid Cap,Navi Large & Midcap Fund-Regular-Annual IDCW,Regular,IDCW
 141414,Navi,Equity Scheme,Large & Mid Cap,Navi Large & Midcap Fund-Direct-Annual IDCW,Direct,IDCW
 141415,Navi,Equity Scheme,Large & Mid Cap,Navi Large & Midcap Fund-Direct-Half - Yearly IDCW,Direct,IDCW
-141545,Axis,Equity Scheme,Index ETF,Axis Nifty 50 ETF,ETF,ETF
+141545,Axis,Equity Scheme,Index ETF,Axis Nifty 50 ETF,Direct,ETF
 141564,Sundaram,Equity Scheme,ELSS,Sundaram Long Term Micro Cap Tax Advantage Fund Series VI-Direct-Growth,Direct,Growth
 141565,Sundaram,Equity Scheme,ELSS,Sundaram Long Term Micro Cap Tax Advantage Fund Series VI-Regular-Growth,Regular,Growth
 141566,Sundaram,Equity Scheme,ELSS,Sundaram Long Term Micro Cap Tax Adv Fund Series VI-Regular-IDCW Payout,Regular,IDCW
@@ -3467,14 +3467,14 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 141593,Axis,Debt Scheme,Corporate Bond,Axis Corporate Bond Fund-Regular-Growth,Regular,Growth
 141594,Axis,Debt Scheme,Corporate Bond,Axis Corporate Bond Fund-Regular-Monthly IDCW,Regular,IDCW
 141595,Axis,Debt Scheme,Corporate Bond,Axis Corporate Bond Fund-Regular-IDCW,Regular,IDCW
-141596,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 100 Low Volatility 30 ETF,ETF,ETF
+141596,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 100 Low Volatility 30 ETF,Direct,ETF
 141605,Edelweiss,Hybrid Scheme,Arbitrage,Edelweiss Arbitrage Fund-Regular-Monthly IDCW,Regular,IDCW
 141606,Edelweiss,Hybrid Scheme,Arbitrage,Edelweiss Arbitrage Fund-Direct-Monthly IDCW,Direct,IDCW
 141642,Axis,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Axis Balanced Advantage Fund-Direct-Growth,Direct,Growth
 141643,Axis,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Axis Balanced Advantage Fund-Direct-IDCW,Direct,IDCW
 141644,Axis,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Axis Balanced Advantage Fund-Regular-Growth,Regular,Growth
 141645,Axis,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Axis Balanced Advantage Fund-Regular-IDCW,Regular,IDCW
-141665,UTI,Equity Scheme,Index ETF,UTI Nifty Next 50 ETF,ETF,ETF
+141665,UTI,Equity Scheme,Index ETF,UTI Nifty Next 50 ETF,Direct,ETF
 141766,Edelweiss,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Edelweiss Balanced Advantage Fund-Regular-Monthly IDCW,Regular,IDCW
 141767,Edelweiss,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Edelweiss Balanced Advantage Fund-Direct-Monthly IDCW,Direct,IDCW
 141768,UTI,Debt Scheme,Liquid,UTI Liquid Fund-Direct-IDCW,Direct,IDCW
@@ -3504,7 +3504,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 141950,Bank of India,Equity Scheme,ELSS,BANK OF INDIA Mid Cap Tax Fund Series 1-Direct-Growth,Direct,Growth
 141951,Bank of India,Equity Scheme,ELSS,BANK OF INDIA Mid Cap Tax Fund Series 1-Regular-IDCW,Regular,IDCW
 141952,Bank of India,Equity Scheme,ELSS,BANK OF INDIA Mid Cap Tax Fund Series 1-Regular-Growth,Regular,Growth
-141957,ICICI Prudential,Equity Scheme,Index ETF,BHARAT 22 ETF,ETF,ETF
+141957,ICICI Prudential,Equity Scheme,Index ETF,BHARAT 22 ETF,Direct,ETF
 141958,UTI,Debt Scheme,Low Duration,UTI Low Duration Fund-Direct-Annual IDCW,Direct,IDCW
 142035,Union,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Union Balanced Advantage Fund-Regular-Growth,Regular,Growth
 142036,Union,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Union Balanced Advantage Fund-Regular-IDCW,Regular,IDCW
@@ -3537,7 +3537,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 142384,Edelweiss,Equity Scheme,Sectoral/ Thematic,Edelweiss Recently Listed IPO Fund-Regular-IDCW,Regular,IDCW
 142386,Edelweiss,Equity Scheme,Sectoral/ Thematic,Edelweiss Recently Listed IPO Fund-Direct-IDCW,Direct,IDCW
 142388,Edelweiss,Equity Scheme,Sectoral/ Thematic,Edelweiss Recently Listed IPO Fund-Direct-Growth,Direct,Growth
-142589,DSP,Debt Scheme,Liquid ETF,DSP NIFTY 1D Rate Liquid ETF,ETF,ETF
+142589,DSP,Debt Scheme,Liquid ETF,DSP NIFTY 1D Rate Liquid ETF,Direct,ETF
 142640,Mirae,Debt Scheme,Short Duration,Mirae Asset Short Duration Fund-Direct-IDCW,Direct,IDCW
 142641,Mirae,Debt Scheme,Short Duration,Mirae Asset Short Duration Fund-Direct-Growth,Direct,Growth
 142642,Mirae,Debt Scheme,Short Duration,Mirae Asset Short Duration Fund-Regular-Growth,Regular,Growth
@@ -3567,7 +3567,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 143240,Union,Debt Scheme,Corporate Bond,Union Corporate Bond Fund-Regular-IDCW,Regular,IDCW
 143241,Union,Debt Scheme,Corporate Bond,Union Corporate Bond Fund-Direct-Growth,Direct,Growth
 143242,Union,Debt Scheme,Corporate Bond,Union Corporate Bond Fund-Direct-IDCW,Direct,IDCW
-143247,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential BSE 500 ETF,ETF,ETF
+143247,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential BSE 500 ETF,Direct,ETF
 143258,Bandhan,Hybrid Scheme,Equity Savings,BANDHAN Equity Savings Fund-Direct-Quarterly IDCW,Direct,IDCW
 143259,Bandhan,Hybrid Scheme,Equity Savings,BANDHAN Equity Savings Fund-Regular-Quarterly IDCW,Regular,IDCW
 143260,PPFAS,Debt Scheme,Liquid,Parag Parikh Liquid Fund-Regular-Growth,Regular,Growth
@@ -3727,7 +3727,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 144546,Tata,Equity Scheme,Flexi Cap,Tata Flexi Cap Fund-Direct-Growth,Direct,Growth
 144547,Tata,Equity Scheme,Flexi Cap,TATA Flexi Cap Fund-Direct-IDCW Payout,Direct,IDCW
 144548,Tata,Equity Scheme,Flexi Cap,Tata Flexi Cap Fund-Regular-Growth,Regular,Growth
-144587,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Next 50 ETF,ETF,ETF
+144587,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Next 50 ETF,Direct,ETF
 144644,DSP,Debt Scheme,Corporate Bond,DSP Corporate Bond Fund-Regular-Growth,Regular,Growth
 144645,DSP,Debt Scheme,Corporate Bond,DSP Corporate Bond Fund-Regular-Monthly IDCW,Regular,IDCW
 144646,DSP,Debt Scheme,Corporate Bond,DSP Corporate Bond Fund-Direct-Growth,Direct,Growth
@@ -3756,8 +3756,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 144903,Shriram,Equity Scheme,Flexi Cap,Shriram Flexi Cap Fund-Regular-IDCW,Regular,IDCW
 144905,Shriram,Equity Scheme,Flexi Cap,Shriram Flexi Cap Fund-Direct-Growth,Direct,Growth
 144906,Shriram,Equity Scheme,Flexi Cap,Shriram Flexi Cap Fund-Direct-IDCW,Direct,IDCW
-144916,SBI,Equity Scheme,Index ETF,SBI BSE Sensex Next 50 ETF,ETF,ETF
-144947,ICICI Prudential,Debt Scheme,Liquid ETF,ICICI Prudential BSE Liquid Rate ETF-IDCW ETF,ETF,ETF
+144916,SBI,Equity Scheme,Index ETF,SBI BSE Sensex Next 50 ETF,Direct,ETF
+144947,ICICI Prudential,Debt Scheme,Liquid ETF,ICICI Prudential BSE Liquid Rate ETF-IDCW ETF,Direct,ETF
 145034,HDFC,Debt Scheme,Ultra Short Duration,HDFC Ultra Short Term Fund-Direct-Growth,Direct,Growth
 145035,HDFC,Debt Scheme,Ultra Short Duration,HDFC Ultra Short Term Fund-Direct-Weekly IDCW,Direct,IDCW
 145036,HDFC,Debt Scheme,Ultra Short Duration,HDFC Ultra Short Term Fund-Direct-Monthly IDCW,Direct,IDCW
@@ -3856,8 +3856,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 145606,Groww,Hybrid Scheme,Aggressive Hybrid,Groww Aggressive Hybrid Fund-Direct-Monthly IDCW,Direct,IDCW
 145607,Groww,Hybrid Scheme,Aggressive Hybrid,Groww Aggressive Hybrid Fund-Regular-Quarterly IDCW,Regular,IDCW
 145608,Groww,Hybrid Scheme,Aggressive Hybrid,Groww Aggressive Hybrid Fund-Regular-Half - Yearly IDCW,Regular,IDCW
-145633,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 50 ETF,ETF,ETF
-145648,SBI,Equity Scheme,Index ETF,SBI Nifty 200 Quality 30 ETF,ETF,ETF
+145633,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 50 ETF,Direct,ETF
+145648,SBI,Equity Scheme,Index ETF,SBI Nifty 200 Quality 30 ETF,Direct,ETF
 145675,Bank of India,Equity Scheme,Small Cap,BANK OF INDIA Small Cap Fund-Direct-IDCW,Direct,IDCW
 145676,Bank of India,Equity Scheme,Small Cap,BANK OF INDIA Small Cap Fund-Regular-IDCW,Regular,IDCW
 145677,Bank of India,Equity Scheme,Small Cap,BANK OF INDIA Small Cap Fund-Regular-Growth,Regular,Growth
@@ -3872,7 +3872,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 145726,Tata,Hybrid Scheme,Arbitrage,TATA Arbitrage Fund-Regular-Monthly IDCW,Regular,IDCW
 145727,Tata,Hybrid Scheme,Arbitrage,TATA Arbitrage Fund-Direct-IDCW Payout Monthly,Direct,IDCW
 145728,Tata,Hybrid Scheme,Arbitrage,TATA Arbitrage Fund-Regular-IDCW Payout Monthly,Regular,IDCW
-145801,Tata,Equity Scheme,Index ETF,Tata Nifty 50 ETF,ETF,ETF
+145801,Tata,Equity Scheme,Index ETF,Tata Nifty 50 ETF,Direct,ETF
 145810,Nippon Life India,Debt Scheme,Overnight,Nippon India Overnight Fund-Direct-Growth,Direct,Growth
 145811,Nippon Life India,Debt Scheme,Overnight,Nippon India Overnight Fund-Regular-Growth,Regular,Growth
 145812,Nippon Life India,Debt Scheme,Overnight,NIPPON INDIA OVERNIGHT FUND-Direct-Daily IDCW,Direct,IDCW
@@ -3888,7 +3888,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 145830,Nippon Life India,Debt Scheme,Overnight,NIPPON INDIA OVERNIGHT FUND-Regular-Daily IDCW,Regular,IDCW
 145833,Nippon Life India,Debt Scheme,Overnight,NIPPON INDIA OVERNIGHT FUND-Regular-Quarterly IDCW,Regular,IDCW
 145834,Motilal Oswal,Debt Scheme,Liquid,Motilal Oswal Liquid Fund-Direct-Growth,Direct,Growth
-145881,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sunlife Nifty Next 50 ETF,ETF,ETF
+145881,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sunlife Nifty Next 50 ETF,Direct,ETF
 145890,LIC,Hybrid Scheme,Arbitrage,LIC MF Arbitrage Fund-Regular-Growth,Regular,Growth
 145891,LIC,Hybrid Scheme,Arbitrage,LIC MF Arbitrage Fund-Direct-Weekly IDCW,Direct,IDCW
 145892,LIC,Hybrid Scheme,Arbitrage,LIC MF Arbitrage Fund-Regular-Monthly IDCW,Regular,IDCW
@@ -3973,7 +3973,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 146228,Motilal Oswal,Debt Scheme,Liquid,Motilal Oswal Liquid Fund-Direct-IDCW,Direct,IDCW
 146229,Motilal Oswal,Debt Scheme,Liquid,Motilal Oswal Liquid Fund-Direct-Weekly IDCW,Direct,IDCW
 146230,Motilal Oswal,Debt Scheme,Liquid,Motilal Oswal Liquid Fund-Regular-Fortnightly IDCW,Regular,IDCW
-146271,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Midcap 150 ETF,ETF,ETF
+146271,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty Midcap 150 ETF,Direct,ETF
 146294,Union,Hybrid Scheme,Arbitrage,Union Arbitrage Fund-Regular-Growth,Regular,Growth
 146295,Union,Hybrid Scheme,Arbitrage,Union Arbitrage Fund-Regular-IDCW,Regular,IDCW
 146296,Union,Hybrid Scheme,Arbitrage,Union Arbitrage Fund-Direct-IDCW,Direct,IDCW
@@ -3990,7 +3990,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 146381,DSP,Equity Scheme,Index-Nifty,DSP Nifty Next 50 Index Fund-Direct-Growth,Direct,Growth
 146382,DSP,Equity Scheme,Index-Nifty,DSP Nifty Next 50 Index Fund-Direct-IDCW,Direct,IDCW
 146383,DSP,Equity Scheme,Index-Nifty,DSP Nifty Next 50 Index Fund-Regular-IDCW,Regular,IDCW
-146388,UTI,Equity Scheme,Index ETF,UTI - BSE Sensex Next 50 ETF,ETF,ETF
+146388,UTI,Equity Scheme,Index ETF,UTI - BSE Sensex Next 50 ETF,Direct,ETF
 146405,Aditya Birla Sun Life,Solution Oriented Scheme,Children's,ADITYA BIRLA SUN LIFE BAL BHAVISHYA YOJNA-Regular-IDCW,Regular,IDCW
 146407,Aditya Birla Sun Life,Solution Oriented Scheme,Children's,ADITYA BIRLA SUN LIFE BAL BHAVISHYA YOJNA-Direct-Growth,Direct,Growth
 146408,Aditya Birla Sun Life,Solution Oriented Scheme,Children's,ADITYA BIRLA SUN LIFE BAL BHAVISHYA YOJNA-Direct-IDCW,Direct,IDCW
@@ -4198,7 +4198,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147480,Mirae,Equity Scheme,Mid Cap,Mirae Asset Midcap Fund-Regular-IDCW,Regular,IDCW
 147481,PPFAS,Equity Scheme,ELSS,Parag Parikh ELSS Tax Saver Fund-Direct-Growth,Direct,Growth
 147482,PPFAS,Equity Scheme,ELSS,Parag Parikh ELSS Tax Saver Fund-Regular-Growth,Regular,Growth
-147483,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Bank ETF,ETF,ETF
+147483,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Bank ETF,Direct,ETF
 147490,Union,Equity Scheme,Focused,Union Focused Fund-Regular-Growth,Regular,Growth
 147491,Union,Equity Scheme,Focused,Union Focused Fund-Direct-IDCW,Direct,IDCW
 147492,Union,Equity Scheme,Focused,Union Focused Fund-Direct-Growth,Direct,Growth
@@ -4214,7 +4214,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147516,LIC,Debt Scheme,Overnight,LIC MF Overnight Fund-Direct-Daily IDCW,Direct,IDCW
 147518,LIC,Debt Scheme,Overnight,LIC MF Overnight Fund-Regular-Weekly IDCW,Regular,IDCW
 147519,LIC,Debt Scheme,Overnight,LIC MF Overnight Fund-Regular-Growth,Regular,Growth
-147530,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Private Bank ETF,ETF,ETF
+147530,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Private Bank ETF,Direct,ETF
 147531,Canara Robeco,Debt Scheme,Overnight,CANARA ROBECO OVERNIGHT FUND-Direct-Growth,Direct,Growth
 147532,Canara Robeco,Debt Scheme,Overnight,CANARA ROBECO OVERNIGHT FUND-Direct-Daily IDCW,Direct,IDCW
 147533,Canara Robeco,Debt Scheme,Overnight,CANARA ROBECO OVERNIGHT FUND-Regular-Daily IDCW,Regular,IDCW
@@ -4247,14 +4247,14 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147576,Axis,Debt Scheme,Money Market,Axis Money Market Fund-Direct-Annual IDCW,Direct,IDCW
 147577,Axis,Debt Scheme,Money Market,Axis Money Market Fund-Regular-Daily IDCW,Regular,IDCW
 147578,Axis,Debt Scheme,Money Market,Axis Money Market Fund-Regular-Monthly IDCW,Regular,IDCW
-147579,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF BSE Sensex Next 50 ETF,ETF,ETF
+147579,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF BSE Sensex Next 50 ETF,Direct,ETF
 147600,PGIM India,Debt Scheme,Overnight,PGIM India Overnight Fund-Regular-Growth,Regular,Growth
 147605,PGIM India,Debt Scheme,Overnight,PGIM India Overnight Fund-Direct-Daily IDCW,Direct,IDCW
 147606,PGIM India,Debt Scheme,Overnight,PGIM India Overnight Fund-Direct-Growth,Direct,Growth
 147607,PGIM India,Debt Scheme,Overnight,PGIM India Overnight Fund-Regular-Weekly IDCW,Regular,IDCW
 147608,PGIM India,Debt Scheme,Overnight,PGIM India Overnight Fund-Direct-Weekly IDCW,Direct,IDCW
 147609,PGIM India,Debt Scheme,Overnight,PGIM India Overnight Fund-Regular-Daily IDCW,Regular,IDCW
-147614,Tata,Equity Scheme,Index ETF,Tata Nifty Private Bank ETF,ETF,ETF
+147614,Tata,Equity Scheme,Index ETF,Tata Nifty Private Bank ETF,Direct,ETF
 147615,ITI,Hybrid Scheme,Arbitrage,ITI Arbitrage Fund-Direct-IDCW,Direct,IDCW
 147616,ITI,Hybrid Scheme,Arbitrage,ITI Arbitrage Fund-Regular-IDCW,Regular,IDCW
 147617,ITI,Hybrid Scheme,Arbitrage,ITI Arbitrage Fund-Direct-Growth,Direct,Growth
@@ -4301,7 +4301,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147732,Mahindra Manulife,Debt Scheme,Ultra Short Duration,Mahindra Manulife Ultra Short Duration Fund-Direct-Weekly IDCW,Direct,IDCW
 147733,Mahindra Manulife,Debt Scheme,Ultra Short Duration,Mahindra Manulife Ultra Short Duration Fund-Direct-Daily IDCW,Direct,IDCW
 147734,Mahindra Manulife,Debt Scheme,Ultra Short Duration,Mahindra Manulife Ultra Short Duration Fund-Regular-Growth,Regular,Growth
-147735,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty Bank ETF,ETF,ETF
+147735,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty Bank ETF,Direct,ETF
 147736,Mirae,Debt Scheme,Overnight,Mirae Asset Overnight Fund-Direct-Growth,Direct,Growth
 147737,Mirae,Debt Scheme,Overnight,Mirae Asset Overnight Fund-Direct-Daily IDCW,Direct,IDCW
 147738,Mirae,Debt Scheme,Overnight,Mirae Asset Overnight Fund-Direct-Monthly IDCW,Direct,IDCW
@@ -4362,7 +4362,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147845,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life PSU Equity Fund-Direct-IDCW Payout,Direct,IDCW
 147846,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life PSU Equity Fund-Regular-Growth,Regular,Growth
 147847,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life PSU Equity Fund-Regular-IDCW Payout,Regular,IDCW
-147849,Edelweiss,Debt Scheme,Bond ETF,Bharat Bond ETF - April 2030 ETF,ETF,ETF
+147849,Edelweiss,Debt Scheme,Bond ETF,Bharat Bond ETF - April 2030 ETF,Direct,ETF
 147854,Edelweiss,Debt Scheme,FoF Target Maturity,Bharat Bond FOF - April 2030-Regular-Growth,Regular,Growth
 147855,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond FOF - April 2030-Direct-IDCW,Direct,IDCW
 147856,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond FOF - April 2030-Regular-IDCW,Regular,IDCW
@@ -4386,7 +4386,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147897,Axis,Hybrid Scheme,FoF Arbitrage,Axis Income Plus Arbitrage Active FOF-Regular-Half - Yearly IDCW,Regular,IDCW
 147898,Axis,Hybrid Scheme,FoF Arbitrage,Axis Income Plus Arbitrage Active FOF-Regular-Annual IDCW,Regular,IDCW
 147905,Axis,Hybrid Scheme,FoF Arbitrage,Axis Income Plus Arbitrage Active FOF-Regular-Quarterly IDCW,Regular,IDCW
-147906,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Next 50 ETF,ETF,ETF
+147906,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Next 50 ETF,Direct,ETF
 147907,HSBC,Debt Scheme,Ultra Short Duration,HSBC Ultra Short Duration Fund-Regular-Growth,Regular,Growth
 147908,HSBC,Debt Scheme,Ultra Short Duration,HSBC Ultra Short Duration Fund-Direct-Growth,Direct,Growth
 147909,HSBC,Debt Scheme,Ultra Short Duration,HSBC Ultra Short Duration Fund-Regular-Daily IDCW,Regular,IDCW
@@ -4399,7 +4399,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 147918,ITI,Equity Scheme,Small Cap,ITI Small Cap Fund-Regular-IDCW,Regular,IDCW
 147919,ITI,Equity Scheme,Small Cap,ITI Small Cap Fund-Direct-Growth,Direct,Growth
 147920,ITI,Equity Scheme,Small Cap,ITI Small Cap Fund-Regular-Growth,Regular,Growth
-147921,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Midcap 150 ETF,ETF,ETF
+147921,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Midcap 150 ETF,Direct,ETF
 147928,Axis,Equity Scheme,Sectoral/ Thematic,Axis ESG Integration Strategy Fund-Direct-Growth,Direct,Growth
 147929,Axis,Equity Scheme,Sectoral/ Thematic,Axis ESG Integration Strategy Fund-Regular-Growth,Regular,Growth
 147930,Axis,Equity Scheme,Sectoral/ Thematic,Axis ESG Integration Strategy Fund-Regular-IDCW,Regular,IDCW
@@ -4438,7 +4438,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148162,PGIM India,Debt Scheme,Money Market,PGIM India Money Market Fund-Direct-Daily IDCW,Direct,IDCW
 148163,PGIM India,Debt Scheme,Money Market,PGIM India Money Market Fund-Direct-Monthly IDCW,Direct,IDCW
 148164,PGIM India,Debt Scheme,Money Market,PGIM India Money Market Fund-Direct-Weekly IDCW,Direct,IDCW
-148173,UTI,Equity Scheme,Index ETF,UTI Nifty Bank ETF,ETF,ETF
+148173,UTI,Equity Scheme,Index ETF,UTI Nifty Bank ETF,Direct,ETF
 148351,ITI,Equity Scheme,Large Cap,ITI Large Cap Fund-Regular-Growth,Regular,Growth
 148352,ITI,Equity Scheme,Large Cap,ITI Large Cap Fund-Direct-IDCW,Direct,IDCW
 148353,ITI,Equity Scheme,Large Cap,ITI Large Cap Fund-Direct-Growth,Direct,Growth
@@ -4457,7 +4457,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148405,Bank of India,Equity Scheme,Flexi Cap,BANK OF INDIA Flexi Cap Fund-Regular-Growth,Regular,Growth
 148406,Bank of India,Equity Scheme,Flexi Cap,BANK OF INDIA Flexi Cap Fund-Direct-IDCW,Direct,IDCW
 148407,Bank of India,Equity Scheme,Flexi Cap,BANK OF INDIA Flexi Cap Fund-Regular-IDCW,Regular,IDCW
-148408,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty IT ETF,ETF,ETF
+148408,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty IT ETF,Direct,ETF
 148409,HSBC,Equity Scheme,Focused,HSBC Focused Fund-Regular-Growth,Regular,Growth
 148410,HSBC,Equity Scheme,Focused,HSBC Focused Fund-Regular-IDCW,Regular,IDCW
 148411,HSBC,Equity Scheme,Focused,HSBC Focused Fund-Direct-Growth,Direct,Growth
@@ -4468,18 +4468,18 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148417,Mirae,Debt Scheme,Banking and PSU,Mirae Asset Banking and PSU Fund-Direct-IDCW,Direct,IDCW
 148418,Mirae,Debt Scheme,Banking and PSU,Mirae Asset Banking and PSU Fund-Regular-IDCW,Regular,IDCW
 148419,Mirae,Debt Scheme,Banking and PSU,Mirae Asset Banking and PSU Fund-Direct-Growth,Direct,Growth
-148445,Edelweiss,Debt Scheme,Bond ETF,BHARAT Bond ETF- April 2031 ETF,ETF,ETF
+148445,Edelweiss,Debt Scheme,Bond ETF,BHARAT Bond ETF- April 2031 ETF,Direct,ETF
 148450,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond FOF- April 2031-Direct-Growth,Direct,Growth
 148451,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond FOF - April 2031-Regular-IDCW,Regular,IDCW
 148452,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond FOF- April 2031-Regular-Growth,Regular,Growth
 148453,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond FOF - April 2031-Direct-IDCW,Direct,IDCW
-148456,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Alpha Low- Volatility 30 ETF,ETF,ETF
+148456,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Alpha Low- Volatility 30 ETF,Direct,ETF
 148457,Nippon Life India,Hybrid Scheme,Multi Asset Allocation,Nippon India Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 148458,Nippon Life India,Hybrid Scheme,Multi Asset Allocation,NIPPON INDIA MULTI ASSET ALLOCATION FUND-Direct-IDCW,Direct,IDCW
 148459,Nippon Life India,Hybrid Scheme,Multi Asset Allocation,Nippon India Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
 148460,Nippon Life India,Hybrid Scheme,Multi Asset Allocation,NIPPON INDIA MULTI ASSET ALLOCATION FUND-Regular-IDCW,Regular,IDCW
-148461,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Bank ETF,ETF,ETF
-148466,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty IT ETF,ETF,ETF
+148461,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Bank ETF,Direct,ETF
+148466,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty IT ETF,Direct,ETF
 148467,Mahindra Manulife,Hybrid Scheme,Arbitrage,Mahindra Manulife Arbitrage Fund-Regular-Growth,Regular,Growth
 148468,Mahindra Manulife,Hybrid Scheme,Arbitrage,Mahindra Manulife Arbitrage Fund-Direct-Growth,Direct,Growth
 148469,Mahindra Manulife,Hybrid Scheme,Arbitrage,Mahindra Manulife Arbitrage Fund-Regular-IDCW,Regular,IDCW
@@ -4532,8 +4532,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148538,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Special Opportunities Fund-Regular-IDCW,Regular,IDCW
 148539,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Special Opportunities Fund-Direct-Growth,Direct,Growth
 148540,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Special Opportunities Fund-Direct-IDCW,Direct,IDCW
-148541,SBI,Equity Scheme,Index ETF,SBI Nifty Private Bank ETF,ETF,ETF
-148542,SBI,Equity Scheme,Index ETF,SBI Nifty IT ETF,ETF,ETF
+148541,SBI,Equity Scheme,Index ETF,SBI Nifty Private Bank ETF,Direct,ETF
+148542,SBI,Equity Scheme,Index ETF,SBI Nifty IT ETF,Direct,ETF
 148543,SBI,Debt Scheme,Floater,SBI Floating Rate Debt Fund-Regular-Growth,Regular,Growth
 148544,SBI,Debt Scheme,Floater,SBI Floating Rate DEBT Fund-Regular-Monthly IDCW,Regular,IDCW
 148546,SBI,Debt Scheme,Floater,SBI Floating Rate DEBT Fund-Regular-Quarterly IDCW,Regular,IDCW
@@ -4544,7 +4544,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148556,Edelweiss,Index Funds,Equity Sectoral/Thematic,Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund-Direct-IDCW,Direct,IDCW
 148557,Edelweiss,Index Funds,Equity Sectoral/Thematic,Edelweiss MSCI India Domestic & World Healthcare 45 index Fund-Regular-Growth,Regular,Growth
 148558,Edelweiss,Index Funds,Equity Sectoral/Thematic,Edelweiss MSCI India Domestic & World Healthcare 45 Index Fund-Regular-IDCW,Regular,IDCW
-148559,Axis,Equity Scheme,Index ETF,Axis NIFTY Bank ETF,ETF,ETF
+148559,Axis,Equity Scheme,Index ETF,Axis NIFTY Bank ETF,Direct,ETF
 148560,Quant,Equity Scheme,Sectoral/ Thematic,quant ESG Integration Strategy Fund-Regular-Growth,Regular,Growth
 148561,Quant,Equity Scheme,Sectoral/ Thematic,quant ESG Integration Strategy Fund-Regular-IDCW,Regular,IDCW
 148563,Quant,Equity Scheme,Sectoral/ Thematic,quant ESG Integration Strategy Fund-Direct-IDCW,Direct,IDCW
@@ -4553,7 +4553,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148567,Mahindra Manulife,Equity Scheme,Focused,Mahindra Manulife Focused Fund-Direct-Growth,Direct,Growth
 148569,Mahindra Manulife,Equity Scheme,Focused,Mahindra Manulife Focused Fund-Direct-IDCW,Direct,IDCW
 148571,Mahindra Manulife,Equity Scheme,Focused,Mahindra Manulife Focused Fund-Regular-Growth,Regular,Growth
-148572,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 100 ESG Sector Leaders ETF,ETF,ETF
+148572,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 100 ESG Sector Leaders ETF,Direct,ETF
 148573,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty 100 ESG Sector Leaders FoF-Regular-IDCW,Regular,IDCW
 148574,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty 100 ESG Sector Leaders FoF-Direct-Growth,Direct,Growth
 148575,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty 100 ESG Sector Leaders FoF-Direct-IDCW,Direct,IDCW
@@ -4586,7 +4586,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148617,UTI,Equity Scheme,Small Cap,UTI Small Cap Fund-Regular-Growth,Regular,Growth
 148618,UTI,Equity Scheme,Small Cap,UTI Small Cap Fund-Direct-Growth,Direct,Growth
 148619,UTI,Equity Scheme,Small Cap,UTI Small Cap Fund-Direct-IDCW Payout,Direct,IDCW
-148620,Motilal Oswal,Debt Scheme,Bond ETF,Motilal Oswal Nifty 5 year Benchmark G-sec ETF,ETF,ETF
+148620,Motilal Oswal,Debt Scheme,Bond ETF,Motilal Oswal Nifty 5 year Benchmark G-sec ETF,Direct,ETF
 148621,Mirae,Equity Scheme,Sectoral/ Thematic,Mirae Asset Banking and Financial Services Fund-Regular-Growth,Regular,Growth
 148622,Mirae,Equity Scheme,Sectoral/ Thematic,Mirae Asset Banking and Fin Srvs Fund-Regular-IDCW,Regular,IDCW
 148623,Mirae,Equity Scheme,Sectoral/ Thematic,Mirae Asset Banking and Financial Services Fund-Direct-Growth,Direct,Growth
@@ -4715,7 +4715,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148760,SBI,Equity Scheme,FoF Overseas,SBI US Specific Equity Active FoF-Direct-Growth,Direct,Growth
 148761,SBI,Equity Scheme,FoF Overseas,SBI US Specific Equity Active FoF-Direct-IDCW,Direct,IDCW
 148762,SBI,Equity Scheme,FoF Overseas,SBI US Specific Equity Active FoF-Regular-Growth,Regular,Growth
-148763,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty IT ETF,ETF,ETF
+148763,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty IT ETF,Direct,ETF
 148768,DSP,Debt Scheme,Floater,DSP Floater Fund-Regular-Growth,Regular,Growth
 148769,DSP,Debt Scheme,Floater,DSP Floater Fund-Direct-IDCW,Direct,IDCW
 148770,DSP,Debt Scheme,Floater,DSP Floater Fund-Regular-IDCW,Regular,IDCW
@@ -4732,9 +4732,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148795,Edelweiss,Index Funds,Debt Index,Edelweiss NIFTY PSU Bond+ SDL Apr 2026 50:50 Index Fund-Direct-Growth,Direct,Growth
 148796,Edelweiss,Index Funds,Debt Index,Edelweiss NIFTY PSU Bond+ SDL Apr 2026 50:50 Index Fund-Direct-IDCW,Direct,IDCW
 148797,Edelweiss,Index Funds,Debt Index,Edelweiss NIFTY PSU Bond+ SDL Apr 2026 50:50 Index Fund-Regular-Growth,Regular,Growth
-148798,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty SDL Apr 2026 Top 20 Equal Weight ETF,ETF,ETF
-148799,Axis,Equity Scheme,Index ETF,Axis IT ETF,ETF,ETF
-148800,Nippon Life India,Debt Scheme,Bond ETF,Nippon India ETF Nifty 5 yr Benchmark G-Sec ETF,ETF,ETF
+148798,Nippon Life India,Equity Scheme,Index ETF,Nippon India ETF Nifty SDL Apr 2026 Top 20 Equal Weight ETF,Direct,ETF
+148799,Axis,Equity Scheme,Index ETF,Axis IT ETF,Direct,ETF
+148800,Nippon Life India,Debt Scheme,Bond ETF,Nippon India ETF Nifty 5 yr Benchmark G-Sec ETF,Direct,ETF
 148805,Aditya Birla Sun Life,Equity Scheme,Index-Nifty,Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Regular-Growth,Regular,Growth
 148806,Aditya Birla Sun Life,Equity Scheme,Index-Nifty,ABSL Nifty Midcap 150 Index Fund-Regular-IDCW Payout,Regular,IDCW
 148807,Aditya Birla Sun Life,Equity Scheme,Index-Nifty,Aditya Birla Sun Life Nifty Midcap 150 Index Fund-Direct-Growth,Direct,Growth
@@ -4785,11 +4785,11 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148923,Quant,Equity Scheme,Sectoral/ Thematic,quant Quantamental Fund-Regular-Growth,Regular,Growth
 148924,Quant,Equity Scheme,Sectoral/ Thematic,quant Quantamental Fund-Direct-IDCW,Direct,IDCW
 148925,Quant,Equity Scheme,Sectoral/ Thematic,quant Quantamental Fund-Direct-Growth,Direct,Growth
-148926,Axis,Debt Scheme,Bond ETF,Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF,ETF,ETF
-148927,Mirae,Equity Scheme,Index ETF,Mirae Asset NYSE FANG + ETF,ETF,ETF
+148926,Axis,Debt Scheme,Bond ETF,Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF,Direct,ETF
+148927,Mirae,Equity Scheme,Index ETF,Mirae Asset NYSE FANG + ETF,Direct,ETF
 148928,Mirae,Equity Scheme,FoF Overseas,Mirae Asset NYSE FANG + ETF FoF-Direct-Growth,Direct,Growth
 148929,Mirae,Equity Scheme,FoF Overseas,Mirae Asset NYSE FANG + ETF FoF-Regular-Growth,Regular,Growth
-148934,Axis,Equity Scheme,Index ETF,Axis NIFTY Healthcare ETF,ETF,ETF
+148934,Axis,Equity Scheme,Index ETF,Axis NIFTY Healthcare ETF,Direct,ETF
 148943,SBI,Equity Scheme,Index-Nifty,SBI Nifty Next 50 Index Fund-Regular-Growth,Regular,Growth
 148944,SBI,Equity Scheme,Index-Nifty,SBI Nifty Next 50 Index Fund-Regular-IDCW,Regular,IDCW
 148945,SBI,Equity Scheme,Index-Nifty,SBI Nifty Next 50 Index Fund-Direct-Growth,Direct,Growth
@@ -4804,7 +4804,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 148954,Axis,Equity Scheme,FoF Overseas,Axis Global Innovation FoF-Direct-Growth,Direct,Growth
 148955,Axis,Equity Scheme,FoF Overseas,Axis Global Innovation FoF-Direct-IDCW,Direct,IDCW
 148956,Axis,Equity Scheme,FoF Overseas,Axis Global Innovation FoF-Regular-IDCW,Regular,IDCW
-148957,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Healthcare ETF,ETF,ETF
+148957,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Healthcare ETF,Direct,ETF
 148958,PPFAS,Hybrid Scheme,Conservative Hybrid,Parag Parikh Conservative Hybrid Fund-Direct-Growth,Direct,Growth
 148959,PPFAS,Hybrid Scheme,Conservative Hybrid,Parag Parikh Conservative Hybrid Fund-Regular-Growth,Regular,Growth
 148960,PPFAS,Hybrid Scheme,Conservative Hybrid,Parag Parikh Conservative Hybrid Fund-Regular-Monthly IDCW,Regular,IDCW
@@ -4853,7 +4853,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149005,Tata,Debt Scheme,Floater,Tata Floating Rate Fund-Regular-IDCW Payout Quarterly,Regular,IDCW
 149006,Tata,Debt Scheme,Floater,Tata Floating Rate Fund-Regular-IDCW Payout Periodic,Regular,IDCW
 149007,Tata,Debt Scheme,Floater,Tata Floating Rate Fund-Direct-Growth,Direct,Growth
-149008,Nippon Life India,Equity Scheme,Index ETF,Nippon India Nifty Pharma ETF,ETF,ETF
+149008,Nippon Life India,Equity Scheme,Index ETF,Nippon India Nifty Pharma ETF,Direct,ETF
 149009,Invesco,Debt Scheme,Medium Duration,Invesco India Medium Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
 149010,Invesco,Debt Scheme,Medium Duration,Invesco India Medium Duration Fund-Regular-IDCW,Regular,IDCW
 149011,Invesco,Debt Scheme,Medium Duration,Invesco India Medium Duration Fund-Direct-Growth,Direct,Growth
@@ -4886,7 +4886,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149038,Tata,Debt Scheme,Floater,Tata Floating Rate Fund-Regular-Quarterly IDCW,Regular,IDCW
 149039,Navi,Equity Scheme,Index-Nifty,Navi Nifty 50 Index Fund-Direct-Growth,Direct,Growth
 149040,Navi,Equity Scheme,Index-Nifty,Navi Nifty 50 Index Fund-Regular-Growth,Regular,Growth
-149041,SBI,Equity Scheme,Index ETF,SBI Nifty Consumption ETF,ETF,ETF
+149041,SBI,Equity Scheme,Index ETF,SBI Nifty Consumption ETF,Direct,ETF
 149042,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 46 (1850 Days)-Regular-IDCW,Regular,IDCW
 149043,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 46 (1850 Days)-Direct-Growth,Direct,Growth
 149044,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 46 (1850 Days)-Direct-IDCW,Direct,IDCW
@@ -4915,7 +4915,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149069,Tata,Equity Scheme,Sectoral/ Thematic,Tata Business Cycle Fund-Regular-IDCW,Regular,IDCW
 149070,Tata,Equity Scheme,Sectoral/ Thematic,Tata Business Cycle Fund-Regular-IDCW Payout,Regular,IDCW
 149071,Tata,Equity Scheme,Sectoral/ Thematic,Tata Business Cycle Fund-Direct-Growth,Direct,Growth
-149072,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty FMCG ETF,ETF,ETF
+149072,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty FMCG ETF,Direct,ETF
 149073,Trust,Debt Scheme,Short Duration,TRUSTMF Short Duration Fund-Regular-Growth,Regular,Growth
 149074,Trust,Debt Scheme,Short Duration,TRUSTMF Short Duration Fund-Regular-Weekly IDCW,Regular,IDCW
 149075,Trust,Debt Scheme,Short Duration,TRUSTMF Short Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
@@ -4944,7 +4944,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149102,Mahindra Manulife,Equity Scheme,Flexi Cap,Mahindra Manulife Flexi Cap Fund-Regular-IDCW,Regular,IDCW
 149103,Mahindra Manulife,Equity Scheme,Flexi Cap,Mahindra Manulife Flexi Cap Fund-Direct-IDCW,Direct,IDCW
 149104,Mahindra Manulife,Equity Scheme,Flexi Cap,Mahindra Manulife Flexi Cap Fund-Direct-Growth,Direct,Growth
-149105,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Financial Services ETF,ETF,ETF
+149105,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Financial Services ETF,Direct,ETF
 149106,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY50 Equal weight Index Fund-Regular-Growth,Regular,Growth
 149107,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY50 Equal weight Index Fund-Direct-Growth,Direct,Growth
 149112,Mirae,Debt Scheme,Money Market,Mirae Asset Money Market Fund-Direct-Growth,Direct,Growth
@@ -4974,7 +4974,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149145,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 49 (1823 Days)-Regular-Growth,Regular,Growth
 149146,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 49 (1823 Days)-Regular-IDCW,Regular,IDCW
 149147,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 49 (1823 Days)-Direct-Growth,Direct,Growth
-149156,Axis,Equity Scheme,Index ETF,Axis NIFTY India Consumption ETF,ETF,ETF
+149156,Axis,Equity Scheme,Index ETF,Axis NIFTY India Consumption ETF,Direct,ETF
 149157,ICICI Prudential,Index Funds,FoF Equity Index,ICICI Prudential Nifty Alpha Low - Volatility 30 ETF FOF-Regular-Growth,Regular,Growth
 149158,ICICI Prudential,Index Funds,FoF Equity Index,ICICI Prudential Nifty Alpha Low - Volatility 30 ETF FOF-Direct-Growth,Direct,Growth
 149159,ICICI Prudential,Index Funds,FoF Equity Index,ICICI Nifty Alpha Low - Volatility 30 ETF FOF-Regular-IDCW,Regular,IDCW
@@ -4983,7 +4983,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149166,Axis,Equity Scheme,Value,Axis Value Fund-Direct-Growth,Direct,Growth
 149167,Axis,Equity Scheme,Value,Axis Value Fund-Regular-Growth,Regular,Growth
 149168,Axis,Equity Scheme,Value,Axis Value Fund-Direct-IDCW,Direct,IDCW
-149169,Mirae,Equity Scheme,Index ETF,Mirae Asset S&P 500 Top 50 ETF,ETF,ETF
+149169,Mirae,Equity Scheme,Index ETF,Mirae Asset S&P 500 Top 50 ETF,Direct,ETF
 149170,Mirae,Equity Scheme,FoF Overseas,Mirae Asset S&P 500 Top 50 ETF FoF-Direct-Growth,Direct,Growth
 149171,Mirae,Equity Scheme,FoF Overseas,Mirae Asset S&P 500 Top 50 ETF FoF-Regular-Growth,Regular,Growth
 149172,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 50 (1843 Days)-Regular-Growth,Regular,Growth
@@ -5046,7 +5046,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149259,LIC,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,LIC MF Balanced Advantage Fund-Regular-Growth,Regular,Growth
 149260,LIC,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,LIC MF Balanced Advantage Fund-Direct-IDCW,Direct,IDCW
 149261,LIC,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,LIC MF Balanced Advantage Fund-Direct-Growth,Direct,Growth
-149262,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty Healthcare ETF,ETF,ETF
+149262,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty Healthcare ETF,Direct,ETF
 149263,NJ,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,NJ Balanced Advantage Fund-Regular-IDCW Payout,Regular,IDCW
 149264,NJ,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,NJ Balanced Advantage Fund-Direct-Growth,Direct,Growth
 149265,NJ,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,NJ Balanced Advantage Fund-Direct-IDCW Payout,Direct,IDCW
@@ -5063,15 +5063,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149282,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty Smallcap 250 Index Fund-Regular-IDCW,Regular,IDCW
 149283,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty Smallcap 250 Index Fund-Direct-Growth,Direct,Growth
 149284,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty Smallcap 250 Index Fund-Direct-IDCW,Direct,IDCW
-149285,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty India Consumption ETF,ETF,ETF
-149286,DSP,Equity Scheme,Index ETF,DSP Nifty 50 Equal Weight ETF,ETF,ETF
+149285,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty India Consumption ETF,Direct,ETF
+149286,DSP,Equity Scheme,Index ETF,DSP Nifty 50 Equal Weight ETF,Direct,ETF
 149287,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY Next 50 Index Fund-Regular-Growth,Regular,Growth
 149288,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY Next 50 Index Fund-Direct-Growth,Direct,Growth
 149289,Aditya Birla Sun Life,Debt Scheme,FoF Overseas,Aditya Birla Sun Life US Equity Passive FOF-Direct-IDCW,Direct,IDCW
 149290,Aditya Birla Sun Life,Equity Scheme,FoF Overseas,Aditya Birla Sun Life US Equity Passive FOF-Regular-Growth,Regular,Growth
 149291,Aditya Birla Sun Life,Debt Scheme,FoF Overseas,Aditya Birla Sun Life US Equity Passive FOF-Direct-Growth,Direct,Growth
 149292,Aditya Birla Sun Life,Equity Scheme,FoF Overseas,Aditya Birla Sun Life US Equity Passive FOF-Regular-IDCW,Regular,IDCW
-149293,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty IT ETF,ETF,ETF
+149293,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty IT ETF,Direct,ETF
 149294,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Business Cycle Fund-Regular-IDCW Payout,Regular,IDCW
 149295,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Business Cycle Fund-Direct-Growth,Direct,Growth
 149296,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Business Cycle Fund-Regular-Growth,Regular,Growth
@@ -5137,7 +5137,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149372,Axis,Equity Scheme,Index-Nifty,Axis Nifty 50 Index Fund-Regular-IDCW,Regular,IDCW
 149373,Axis,Equity Scheme,Index-Nifty,Axis Nifty 50 Index Fund-Direct-Growth,Direct,Growth
 149374,Axis,Equity Scheme,Index-Nifty,Axis Nifty 50 Index Fund-Direct-IDCW,Direct,IDCW
-149379,Mirae,Equity Scheme,Index ETF,Mirae Asset Hang Seng TECH ETF,ETF,ETF
+149379,Mirae,Equity Scheme,Index ETF,Mirae Asset Hang Seng TECH ETF,Direct,ETF
 149380,Mirae,Equity Scheme,FoF Overseas,Mirae Asset Hang Seng TECH ETF FoF-Regular-Growth,Regular,Growth
 149381,Mirae,Equity Scheme,FoF Overseas,Mirae AssetHang Seng TECH ETF FoF-Direct-Growth,Direct,Growth
 149382,Axis,Equity Scheme,Multi Cap,Axis Multicap Fund-Regular-Growth,Regular,Growth
@@ -5148,16 +5148,16 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149389,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty Midcap 150 Index Fund-Direct-Growth,Direct,Growth
 149390,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty Midcap 150 Index Fund-Regular-Growth,Regular,Growth
 149391,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty Midcap 150 Index Fund-Direct-IDCW,Direct,IDCW
-149392,DSP,Equity Scheme,Index ETF,DSP Nifty 50 ETF,ETF,ETF
+149392,DSP,Equity Scheme,Index ETF,DSP Nifty 50 ETF,Direct,ETF
 149394,Groww,Debt Scheme,Overnight,Groww Overnight Fund - Unclaimed-Regular-IDCW,Regular,IDCW
 149396,Groww,Debt Scheme,Overnight,Groww Overnight Fund-<3 Years-Regular-Unclaimed IDCW,Regular,IDCW
-149397,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Alpha 50 ETF,ETF,ETF
-149398,Edelweiss,Debt Scheme,Bond ETF,BHARAT Bond ETF - April 2032 ETF,ETF,ETF
+149397,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Alpha 50 ETF,Direct,ETF
+149398,Edelweiss,Debt Scheme,Bond ETF,BHARAT Bond ETF - April 2032 ETF,Direct,ETF
 149399,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2032-Regular-Growth,Regular,Growth
 149400,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2032-Regular-IDCW,Regular,IDCW
 149401,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2032-Direct-Growth,Direct,Growth
 149402,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2032-Direct-IDCW,Direct,IDCW
-149403,DSP,Equity Scheme,Index ETF,DSP Nifty Midcap 150 Quality 50 ETF,ETF,ETF
+149403,DSP,Equity Scheme,Index ETF,DSP Nifty Midcap 150 Quality 50 ETF,Direct,ETF
 149404,Mahindra Manulife,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Mahindra Manulife Balanced Advantage Fund-Regular-Growth,Regular,Growth
 149405,Mahindra Manulife,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Mahindra Manulife Balanced Advantage Fund-Regular-IDCW,Regular,IDCW
 149406,Mahindra Manulife,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Mahindra Manulife Balanced Advantage Fund-Direct-Growth,Direct,Growth
@@ -5174,7 +5174,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149431,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 57 (1835 Days)-Direct-Growth,Direct,Growth
 149432,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 57 (1835 Days)-Regular-Growth,Regular,Growth
 149433,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 57 (1835 Days)-Regular-IDCW,Regular,IDCW
-149438,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nasdaq Q50 ETF,ETF,ETF
+149438,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nasdaq Q50 ETF,Direct,ETF
 149439,ICICI Prudential,Hybrid Scheme,FoF Multi Asset,ICICI Prudential Passive Multi-Asset FoF-Regular-Growth,Regular,Growth
 149440,ICICI Prudential,Hybrid Scheme,FoF Multi Asset,ICICI Prudential Passive Multi-Asset FoF-Regular-IDCW,Regular,IDCW
 149441,ICICI Prudential,Hybrid Scheme,FoF Multi Asset,ICICI Prudential Passive Multi-Asset FoF-Direct-Growth,Direct,Growth
@@ -5199,9 +5199,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149460,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 58 (1842 Days)-Direct-Growth,Direct,Growth
 149461,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 58 (1842 Days)-Direct-IDCW,Direct,IDCW
 149462,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 58 (1842 Days)-Regular-IDCW,Regular,IDCW
-149463,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Auto ETF,ETF,ETF
-149464,ICICI Prudential,Gold & Silver Scheme,Silver ETF,ICICI PRUDENTIAL SILVER ETF,ETF,ETF
-149465,Nippon Life India,Equity Scheme,Index ETF,Nippon India Nifty Auto ETF,ETF,ETF
+149463,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Auto ETF,Direct,ETF
+149464,ICICI Prudential,Gold & Silver Scheme,Silver ETF,ICICI PRUDENTIAL SILVER ETF,Direct,ETF
+149465,Nippon Life India,Equity Scheme,Index ETF,Nippon India Nifty Auto ETF,Direct,ETF
 149466,Axis,Equity Scheme,Index-Nifty,Axis Nifty Next 50 Index Fund-Direct-Growth,Direct,Growth
 149467,Axis,Equity Scheme,Index-Nifty,Axis Nifty Next 50 Index Fund-Regular-Growth,Regular,Growth
 149468,Axis,Equity Scheme,Index-Nifty,Axis Nifty Next 50 Index Fund-Regular-IDCW,Regular,IDCW
@@ -5268,8 +5268,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149716,Sundaram,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Sundaram Balanced Advantage Fund-Regular-Monthly IDCW,Regular,IDCW
 149717,Sundaram,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Sundaram Balanced Advantage Fund-Direct-Growth,Direct,Growth
 149718,Sundaram,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Sundaram Balanced Advantage Fund-Direct-Monthly IDCW,Direct,IDCW
-149757,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Midcap 50 ETF,ETF,ETF
-149758,Nippon Life India,Gold & Silver Scheme,Silver ETF,Nippon India Silver ETF,ETF,ETF
+149757,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Midcap 50 ETF,Direct,ETF
+149758,Nippon Life India,Gold & Silver Scheme,Silver ETF,Nippon India Silver ETF,Direct,ETF
 149759,Nippon Life India,Gold & Silver Scheme,Silver,Nippon India Silver ETF FOF-Regular-Growth,Regular,Growth
 149760,Nippon Life India,Gold & Silver Scheme,Silver,Nippon India Silver ETF FOF-Direct-Growth,Direct,Growth
 149761,Nippon Life India,Gold & Silver Scheme,Silver,Nippon India Silver ETF FOF-Regular-IDCW,Regular,IDCW
@@ -5282,12 +5282,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149776,ICICI Prudential,Gold & Silver Scheme,Silver,ICICI PRUDENTIAL SILVER ETF FoF-Direct-IDCW,Direct,IDCW
 149777,ICICI Prudential,Gold & Silver Scheme,Silver,ICICI PRUDENTIAL SILVER ETF FoF-Regular-Growth,Regular,Growth
 149778,ICICI Prudential,Gold & Silver Scheme,Silver,ICICI PRUDENTIAL SILVER ETF FoF-Regular-IDCW,Regular,IDCW
-149779,Aditya Birla Sun Life,Gold & Silver Scheme,Silver ETF,Aditya Birla Sun Life Silver ETF,ETF,ETF
+149779,Aditya Birla Sun Life,Gold & Silver Scheme,Silver ETF,Aditya Birla Sun Life Silver ETF,Direct,ETF
 149780,Aditya Birla Sun Life,Gold & Silver Scheme,Silver,Aditya Birla Sun Life Silver ETF FOF-Direct-Growth,Direct,Growth
 149781,Aditya Birla Sun Life,Gold & Silver Scheme,Silver,Aditya Birla Sun Life Silver ETF FOF-Direct-IDCW,Direct,IDCW
 149783,Aditya Birla Sun Life,Gold & Silver Scheme,Silver,Aditya Birla Sun Life Silver ETF FOF-Regular-Growth,Regular,Growth
 149784,Aditya Birla Sun Life,Gold & Silver Scheme,Silver,Aditya Birla Sun Life Silver ETF FOF-Regular-IDCW,Regular,IDCW
-149786,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty India Manufacturing ETF,ETF,ETF
+149786,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty India Manufacturing ETF,Direct,ETF
 149787,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty India Manufacturing ETF FOF-Direct-IDCW,Direct,IDCW
 149788,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty India Manufacturing ETF FOF-Regular-Growth,Regular,Growth
 149789,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty India Manufacturing ETF FOF-Regular-IDCW,Regular,IDCW
@@ -5302,7 +5302,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149798,Trust,Debt Scheme,Overnight,TRUST MF OVERNIGHT FUND-Regular-Daily IDCW,Regular,IDCW
 149799,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal Nifty 200 Momentum 30 Index Fund-Regular-Growth,Regular,Growth
 149800,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal Nifty 200 Momentum 30 Index Fund-Direct-Growth,Direct,Growth
-149801,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 200 Momentum 30 ETF,ETF,ETF
+149801,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 200 Momentum 30 ETF,Direct,ETF
 149802,UTI,Index Funds,Equity Index,UTI BSE Sensex Index Fund-Regular-Growth,Regular,Growth
 149803,UTI,Index Funds,Equity Index,UTI BSE Sensex Index Fund-Direct-Growth,Direct,Growth
 149804,Navi,Index Funds,Equity Index,Navi Nifty Bank Index Fund-Direct-Growth,Direct,Growth
@@ -5379,17 +5379,17 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149915,Nippon Life India,Debt Scheme,Fixed Maturity,Nippon India Fixed Maturity Plan-XLIII-Series 5-Regular-Growth,Regular,Growth
 149916,Nippon Life India,Debt Scheme,Fixed Maturity,Nippon India Fixed Maturity Plan-XLIII-Series 5-Regular-IDCW Payout,Regular,IDCW
 149917,Nippon Life India,Debt Scheme,Fixed Maturity,Nippon India Fixed Maturity Plan-XLIII-Series 5-Direct-Growth,Direct,Growth
-149918,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Midcap 150 ETF,ETF,ETF
+149918,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Midcap 150 ETF,Direct,ETF
 149919,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Low Volatility Index Fund-Direct-Growth,Direct,Growth
 149920,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Low Volatility Index Fund-Regular-Growth,Regular,Growth
-149921,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Low Volatility ETF,ETF,ETF
+149921,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Low Volatility ETF,Direct,ETF
 149922,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1861D March 2022-Regular-Growth,Regular,Growth
 149923,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1861D March 2022-Direct-Quarterly IDCW,Direct,IDCW
 149924,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1861D March 2022-Direct-Growth,Direct,Growth
 149925,HDFC,Debt Scheme,Fixed Maturity,HDFC Fixed Maturity 1861D March 2022-Regular-IDCW,Regular,IDCW
 149926,HDFC,Debt Scheme,Fixed Maturity,HDFC Fixed Maturity 1861D March 2022-Direct-IDCW,Direct,IDCW
 149927,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1861D March 2022-Regular-Quarterly IDCW,Regular,IDCW
-149928,ICICI Prudential,Debt Scheme,Bond ETF,ICICI Prudential Nifty 5 yr Benchmark G-SEC ETF,ETF,ETF
+149928,ICICI Prudential,Debt Scheme,Bond ETF,ICICI Prudential Nifty 5 yr Benchmark G-SEC ETF,Direct,ETF
 149935,Axis,Equity Scheme,Index-Nifty,Axis Nifty Midcap 50 Index Fund-Direct-IDCW,Direct,IDCW
 149936,Axis,Equity Scheme,Index-Nifty,Axis Nifty Midcap 50 Index Fund-Direct-Growth,Direct,Growth
 149937,Axis,Equity Scheme,Index-Nifty,Axis Nifty Midcap 50 Index Fund-Regular-IDCW,Regular,IDCW
@@ -5398,7 +5398,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149947,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund-Regular-IDCW Payout,Regular,IDCW
 149949,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund-Regular-Growth,Regular,Growth
 149950,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL PSU Plus SDL 50:50 Oct 2025 Index Fund-Direct-Growth,Direct,Growth
-149959,Tata,Equity Scheme,Index ETF,Tata Nifty India Digital ETF,ETF,ETF
+149959,Tata,Equity Scheme,Index ETF,Tata Nifty India Digital ETF,Direct,ETF
 149960,Invesco,Equity Scheme,FoF Overseas,Invesco India - Invesco EQQQ Nasdaq-100 ETF FoF-Regular-Growth,Regular,Growth
 149961,Invesco,Equity Scheme,FoF Overseas,Invesco India - Invesco EQQQ Nasdaq-100 ETF FoF-Direct-Growth,Direct,Growth
 149962,HSBC,Index Funds,Debt Index,HSBC CRISIL IBX 50:50 Gilt Plus SDL Apr 2028 Index Fund-Direct-IDCW Payout,Direct,IDCW
@@ -5421,7 +5421,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 149997,ICICI Prudential,Index Funds,Debt Index,ICICI Prudential Nifty SDL Sep 2027 Index Fund-Direct-Annual IDCW,Direct,IDCW
 149998,ICICI Prudential,Index Funds,Debt Index,ICICI Prudential Nifty SDL Sep 2027 Index Fund-Regular-Growth,Regular,Growth
 149999,ICICI Prudential,Index Funds,Debt Index,ICICI Prudential Nifty SDL Sep 2027 Index Fund-Direct-Growth,Direct,Growth
-150000,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 100 Low Volatility 30 ETF,ETF,ETF
+150000,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 100 Low Volatility 30 ETF,Direct,ETF
 150001,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1876D March 2022-Regular-Growth,Regular,Growth
 150002,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1876D March 2022-Direct-Growth,Direct,Growth
 150003,HDFC,Debt Scheme,Fixed Maturity,HDFC Fixed Maturity 1876D March 2022-Direct-IDCW,Direct,IDCW
@@ -5593,12 +5593,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150442,Quant,Equity Scheme,Large Cap,quant Large Cap Fund-Regular-IDCW,Regular,IDCW
 150443,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Financials ex Bank 30 Index Fund-Direct-Growth,Direct,Growth
 150444,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Financials ex Bank 30 Index Fund-Regular-Growth,Regular,Growth
-150445,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Healthcare ETF,ETF,ETF
+150445,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Healthcare ETF,Direct,ETF
 150451,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty 200 Momentum 30 Index Fund-Regular-IDCW,Regular,IDCW
 150452,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty 200 Momentum 30 Index Fund-Direct-Growth,Direct,Growth
 150453,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty 200 Momentum 30 Index Fund-Direct-IDCW,Direct,IDCW
 150454,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty 200 Momentum 30 Index Fund-Regular-Growth,Regular,Growth
-150455,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 200 Momentum 30 ETF,ETF,ETF
+150455,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 200 Momentum 30 ETF,Direct,ETF
 150456,Union,Debt Scheme,Gilt,Union Gilt Fund-Direct-Half - Yearly IDCW,Direct,IDCW
 150457,Union,Debt Scheme,Gilt,Union Gilt Fund-Regular-Half - Yearly IDCW,Regular,IDCW
 150458,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 67 (1467 Days)-Direct-IDCW Payout,Direct,IDCW
@@ -5613,8 +5613,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150471,Mirae,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Mirae Asset Balanced Advantage Fund-Direct-IDCW,Direct,IDCW
 150473,Mirae,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Mirae Asset Balanced Advantage Fund-Regular-Growth,Regular,Growth
 150474,Mirae,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Mirae Asset Balanced Advantage Fund-Regular-IDCW,Regular,IDCW
-150476,HDFC,Equity Scheme,Index ETF,HDFC NIFTY 100 ETF,ETF,ETF
-150477,HDFC,Equity Scheme,Index ETF,HDFC NIFTY NEXT 50 ETF,ETF,ETF
+150476,HDFC,Equity Scheme,Index ETF,HDFC NIFTY 100 ETF,Direct,ETF
+150477,HDFC,Equity Scheme,Index ETF,HDFC NIFTY NEXT 50 ETF,Direct,ETF
 150478,Franklin Templeton,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Franklin India Balanced Advantage Fund-Regular-IDCW,Regular,IDCW
 150479,Franklin Templeton,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Franklin India Balanced Advantage Fund-Direct-IDCW,Direct,IDCW
 150480,Franklin Templeton,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Franklin India Balanced Advantage Fund-Regular-Growth,Regular,Growth
@@ -5627,9 +5627,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150488,Nippon Life India,Index Funds,Equity Index,Nippon India Nifty Alpha Low Volatility 30 Index Fund-Direct-IDCW,Direct,IDCW
 150490,Nippon Life India,Index Funds,Equity Index,Nippon India Nifty Alpha Low Volatility 30 Index Fund-Regular-Growth,Regular,Growth
 150491,Nippon Life India,Index Funds,Equity Index,Nippon India Nifty Alpha Low Volatility 30 Index Fund-Regular-IDCW,Regular,IDCW
-150492,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty India Consumption ETF,ETF,ETF
-150497,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty 200 Quality 30 ETF,ETF,ETF
-150498,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty 200 Momentum 30 ETF,ETF,ETF
+150492,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty India Consumption ETF,Direct,ETF
+150497,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty 200 Quality 30 ETF,Direct,ETF
+150498,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty 200 Momentum 30 ETF,Direct,ETF
 150499,HSBC,Debt Scheme,Overnight,HSBC Overnight Fund-<3 Years-Regular-Unclaimed IDCW,Regular,IDCW
 150500,HSBC,Debt Scheme,Overnight,HSBC Overnight Fund-3+ Years-Regular-Unclaimed Redemption,Regular,Unclaimed Redemption
 150501,HSBC,Debt Scheme,Overnight,HSBC Overnight Fund-3+ Years-Regular-Unclaimed IDCW,Regular,IDCW
@@ -5644,15 +5644,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150514,Trust,Debt Scheme,Money Market,TRUSTMF MONEY MARKET FUND-Direct-Monthly IDCW,Direct,IDCW
 150515,Navi,Index Funds,Equity Sectoral/Thematic,Navi Nifty India Manufacturing Index Fund-Direct-Growth,Direct,Growth
 150516,Navi,Index Funds,Equity Sectoral/Thematic,Navi Nifty India Manufacturing Index Fund-Regular-Growth,Regular,Growth
-150517,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Enhanced Value ETF,ETF,ETF
+150517,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Enhanced Value ETF,Direct,ETF
 150518,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Enhanced Value Index Fund-Direct-Growth,Direct,Growth
 150519,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Enhanced Value Index Fund-Regular-Growth,Regular,Growth
-150520,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Quality ETF,ETF,ETF
+150520,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE Quality ETF,Direct,ETF
 150521,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Quality Index Fund-Direct-Growth,Direct,Growth
 150522,Motilal Oswal,Index Funds,Equity Index,Motilal Oswal BSE Quality Index Fund-Regular-Growth,Regular,Growth
-150523,DSP,Gold & Silver Scheme,Silver ETF,DSP Silver ETF,ETF,ETF
-150526,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Infrastructure ETF,ETF,ETF
-150531,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty MNC ETF,ETF,ETF
+150523,DSP,Gold & Silver Scheme,Silver ETF,DSP Silver ETF,Direct,ETF
+150526,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Infrastructure ETF,Direct,ETF
+150531,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty MNC ETF,Direct,ETF
 150532,Tata,Equity Scheme,Sectoral/ Thematic,Tata Housing Opportunities Fund-Direct-Growth,Direct,Growth
 150533,Tata,Equity Scheme,Sectoral/ Thematic,Tata Housing Opportunities Fund-Direct-IDCW,Direct,IDCW
 150534,Tata,Equity Scheme,Sectoral/ Thematic,Tata Housing Opportunities Fund-Direct-IDCW Payout,Direct,IDCW
@@ -5677,7 +5677,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150553,Union,Solution Oriented Scheme,Retirement,Union Retirement Fund-Regular-IDCW,Regular,IDCW
 150554,Union,Solution Oriented Scheme,Retirement,Union Retirement Fund-Direct-Growth,Direct,Growth
 150555,Union,Solution Oriented Scheme,Retirement,Union Retirement Fund-Direct-IDCW,Direct,IDCW
-150556,HDFC,Gold & Silver Scheme,Silver ETF,HDFC Silver ETF,ETF,ETF
+150556,HDFC,Gold & Silver Scheme,Silver ETF,HDFC Silver ETF,Direct,ETF
 150558,Shriram,Debt Scheme,Overnight,Shriram Overnight Fund-Regular-Daily IDCW,Regular,IDCW
 150560,Shriram,Debt Scheme,Overnight,Shriram Overnight Fund-Regular-Monthly IDCW,Regular,IDCW
 150561,Shriram,Debt Scheme,Overnight,Shriram Overnight Fund-Direct-Daily IDCW,Direct,IDCW
@@ -5714,13 +5714,13 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150603,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 64 (1169 Days)-Direct-IDCW Payout,Direct,IDCW
 150604,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 64 (1169 Days)-Regular-Growth,Regular,Growth
 150605,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 64 (1169 Days)-Regular-IDCW Payout,Regular,IDCW
-150610,Axis,Gold & Silver Scheme,Silver ETF,Axis Silver ETF,ETF,ETF
+150610,Axis,Gold & Silver Scheme,Silver ETF,Axis Silver ETF,Direct,ETF
 150615,Axis,Gold & Silver Scheme,Silver,Axis Silver Fund of Fund-Direct-Growth,Direct,Growth
 150616,Axis,Gold & Silver Scheme,Silver,Axis Silver Fund of Fund-Direct-IDCW,Direct,IDCW
 150617,Axis,Gold & Silver Scheme,Silver,Axis Silver Fund of Fund-Regular-Growth,Regular,Growth
 150618,Axis,Gold & Silver Scheme,Silver,Axis Silver Fund of Fund-Regular-IDCW,Regular,IDCW
-150619,HDFC,Equity Scheme,Index ETF,HDFC NIFTY 50 VALUE 20 ETF,ETF,ETF
-150620,HDFC,Equity Scheme,Index ETF,HDFC NIFTY100 QUALITY 30 ETF,ETF,ETF
+150619,HDFC,Equity Scheme,Index ETF,HDFC NIFTY 50 VALUE 20 ETF,Direct,ETF
+150620,HDFC,Equity Scheme,Index ETF,HDFC NIFTY100 QUALITY 30 ETF,Direct,ETF
 150621,HDFC,Equity Scheme,Index ETF,HDFC NIFTY-Regular-Growth,Regular,Growth
 150622,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Business Cycle Fund-Regular-IDCW,Regular,IDCW
 150624,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Business Cycle Fund-Direct-Growth,Direct,Growth
@@ -5756,8 +5756,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150654,HDFC,Debt Scheme,Fixed Maturity,HDFC Fixed Maturity 1359D September-Direct-Quarterly IDCW,Direct,IDCW
 150655,HDFC,Debt Scheme,Fixed Maturity,HDFC FMP 1359D September-Direct-Growth,Direct,Growth
 150656,HDFC,Debt Scheme,Fixed Maturity,HDFC Fixed Maturity 1359D September-Regular-Quarterly IDCW,Regular,IDCW
-150657,HDFC,Equity Scheme,Index ETF,HDFC NIFTY200 MOMENTUM 30 ETF,ETF,ETF
-150658,HDFC,Equity Scheme,Index ETF,HDFC NIFTY100 Low Volatility 30 ETF,ETF,ETF
+150657,HDFC,Equity Scheme,Index ETF,HDFC NIFTY200 MOMENTUM 30 ETF,Direct,ETF
+150658,HDFC,Equity Scheme,Index ETF,HDFC NIFTY100 Low Volatility 30 ETF,Direct,ETF
 150659,LIC,Equity Scheme,Multi Cap,LIC MF Multi Cap Fund-Direct-Growth,Direct,Growth
 150660,LIC,Equity Scheme,Multi Cap,LIC MF Multi Cap Fund-Direct-IDCW,Direct,IDCW
 150661,LIC,Equity Scheme,Multi Cap,LIC MF Multi Cap Fund-Regular-Growth,Regular,Growth
@@ -5866,8 +5866,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150798,WhiteOak Capital,Equity Scheme,Large Cap,WhiteOak Capital Large Cap Fund-Direct-IDCW,Direct,IDCW
 150799,WhiteOak Capital,Equity Scheme,Large Cap,WhiteOak Capital Large Cap Fund-Regular-Growth,Regular,Growth
 150800,WhiteOak Capital,Equity Scheme,Large Cap,WhiteOak Capital Large Cap Fund-Regular-IDCW,Regular,IDCW
-150801,HDFC,Equity Scheme,Index ETF,HDFC NIFTY IT ETF,ETF,ETF
-150802,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Private Bank ETF,ETF,ETF
+150801,HDFC,Equity Scheme,Index ETF,HDFC NIFTY IT ETF,Direct,ETF
+150802,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Private Bank ETF,Direct,ETF
 150803,HDFC,Equity Scheme,Sectoral/ Thematic,HDFC Business Cycle Fund-Regular-Growth,Regular,Growth
 150804,HDFC,Equity Scheme,Sectoral/ Thematic,HDFC Business Cycle Fund-Direct-IDCW,Direct,IDCW
 150805,HDFC,Equity Scheme,Sectoral/ Thematic,HDFC Business Cycle Fund-Direct-Growth,Direct,Growth
@@ -5931,7 +5931,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150872,Bandhan,Index Funds,Debt Index,BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND-Direct-IDCW,Direct,IDCW
 150873,Bandhan,Index Funds,Debt Index,BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND-Regular-Growth,Regular,Growth
 150874,Bandhan,Index Funds,Debt Index,BANDHAN CRISIL IBX 90:10 SDL PLUS GILT APRIL 2032 INDEX FUND-Regular-IDCW,Regular,IDCW
-150879,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Financial Services Ex-BaNk ETF,ETF,ETF
+150879,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Financial Services Ex-BaNk ETF,Direct,ETF
 150884,DSP,Debt Scheme,Fixed Maturity,DSP FMP Series - 268 - 1281 Days-Regular-Growth,Regular,Growth
 150885,DSP,Debt Scheme,Fixed Maturity,DSP FMP Series - 268 - 1281 Days-Direct-Growth,Direct,Growth
 150886,DSP,Debt Scheme,Fixed Maturity,DSP Fixed Maturity Series - 268 - 1281 Days-Direct-IDCW,Direct,IDCW
@@ -5979,7 +5979,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150937,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil IBX 60:40 SDL+AAA PSU APR 2026 Index Fund-Regular-IDCW Payout,Regular,IDCW
 150938,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil IBX 60:40 SDL + AAA PSU APR 2026 Index Fund-Direct-Growth,Direct,Growth
 150939,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil IBX 60:40 SDL+ AAA PSU APR2026 Index Fund-Direct-IDCW Payout,Direct,IDCW
-150948,Kotak Mahindra,Gold & Silver Scheme,Silver ETF,Kotak Silver ETF,ETF,ETF
+150948,Kotak Mahindra,Gold & Silver Scheme,Silver ETF,Kotak Silver ETF,Direct,ETF
 150949,ICICI Prudential,Debt Scheme,Fixed Maturity,ICICI FMP-Series 88-1226 Days Plan F-Regular-Growth,Regular,Growth
 150950,ICICI Prudential,Debt Scheme,Fixed Maturity,ICICI FMP-Series 88-1226 Days Plan F-Direct-Growth,Direct,Growth
 150951,ICICI Prudential,Debt Scheme,Fixed Maturity,ICICI Fixed Maturity-Series 88-1226 Days Plan F-Regular-Quarterly IDCW,Regular,IDCW
@@ -6000,7 +6000,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 150984,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 73 (1226 Days)-Direct-Growth,Direct,Growth
 150985,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity- Series 73 (1226 Days)-Direct-IDCW Payout,Direct,IDCW
 150986,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 73 (1226 Days)-Regular-Growth,Regular,Growth
-150987,Edelweiss,Debt Scheme,Bond ETF,BHARAT Bond ETF - April 2033 ETF,ETF,ETF
+150987,Edelweiss,Debt Scheme,Bond ETF,BHARAT Bond ETF - April 2033 ETF,Direct,ETF
 150988,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2033-Regular-IDCW,Regular,IDCW
 150989,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2033-Direct-Growth,Direct,Growth
 150990,Edelweiss,Debt Scheme,FoF Target Maturity,BHARAT Bond ETF FOF - April 2033-Direct-IDCW,Direct,IDCW
@@ -6147,14 +6147,14 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151191,Quant,Debt Scheme,Overnight,quant Overnight Fund-Regular-IDCW,Regular,IDCW
 151193,Quant,Debt Scheme,Overnight,quant Overnight Fund-Direct-IDCW,Direct,IDCW
 151195,Quant,Debt Scheme,Overnight,quant Overnight Fund-Regular-Growth,Regular,Growth
-151196,ICICI Prudential,Debt Scheme,Bond ETF,ICICI Prudential Nifty 10 yr Benchmark G-sec ETF,ETF,ETF
+151196,ICICI Prudential,Debt Scheme,Bond ETF,ICICI Prudential Nifty 10 yr Benchmark G-sec ETF,Direct,ETF
 151201,Axis,Debt Scheme,Long Duration,Axis Long Duration Fund-Regular-Monthly IDCW,Regular,IDCW
 151202,Axis,Debt Scheme,Long Duration,Axis Long Duration Fund-Direct-Monthly IDCW,Direct,IDCW
 151203,Axis,Debt Scheme,Long Duration,Axis Long Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
 151204,Axis,Debt Scheme,Long Duration,Axis Long Duration Fund-Direct-Quarterly IDCW,Direct,IDCW
 151205,Axis,Debt Scheme,Long Duration,Axis Long Duration Fund-Direct-Annual IDCW,Direct,IDCW
 151206,Axis,Debt Scheme,Long Duration,Axis Long Duration Fund-Regular-Annual IDCW,Regular,IDCW
-151207,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Commodities ETF,ETF,ETF
+151207,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Commodities ETF,Direct,ETF
 151208,ICICI Prudential,Index Funds,Debt Index,ICICI Prudential Nifty SDL Sep 2026 Index Fund-Regular-Growth,Regular,Growth
 151209,ICICI Prudential,Index Funds,Debt Index,ICICI Nifty SDL Sep 2026 Index Fund-Regular-Annual IDCW,Regular,IDCW
 151210,ICICI Prudential,Index Funds,Debt Index,ICICI Prudential Nifty SDL Sep 2026 Index Fund-Direct-Annual IDCW,Direct,IDCW
@@ -6189,7 +6189,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151253,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP)-Series 74 (1243 Days)-Direct-IDCW Payout,Direct,IDCW
 151254,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP)-Series 74 (1243 Days)-Regular-Growth,Regular,Growth
 151255,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP)-Series 74 (1243 Days)-Regular-IDCW Payout,Regular,IDCW
-151262,DSP,Equity Scheme,Index ETF,DSP Nifty Bank ETF,ETF,ETF
+151262,DSP,Equity Scheme,Index ETF,DSP Nifty Bank ETF,Direct,ETF
 151267,WhiteOak Capital,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,WhiteOak Capital Balanced Advantage Fund-Direct-Growth,Direct,Growth
 151268,WhiteOak Capital,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,WhiteOak Capital Balanced Advantage Fund-Regular-Growth,Regular,Growth
 151273,Tata,Index Funds,Debt Index,Tata Nifty G-Sec Dec 2029 Index Fund-Direct-Growth,Direct,Growth
@@ -6251,7 +6251,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151349,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 76 (1221 Days)-Regular-Growth,Regular,Growth
 151350,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 76 (1221 Days)-Direct-IDCW Payout,Direct,IDCW
 151351,SBI,Debt Scheme,Fixed Maturity,SBI Fixed Maturity Plan (FMP) - Series 76 (1221 Days)-Direct-Growth,Direct,Growth
-151358,Kotak Mahindra,Debt Scheme,Liquid ETF,Kotak Nifty 1D Rate Liquid ETF,ETF,ETF
+151358,Kotak Mahindra,Debt Scheme,Liquid ETF,Kotak Nifty 1D Rate Liquid ETF,Direct,ETF
 151363,UTI,Index Funds,Debt Index,UTI NIFTY SDL Plus AAA PSU Bond Apr 2026 75:25 Index Fund-Regular-Growth,Regular,Growth
 151364,UTI,Index Funds,Debt Index,UTI NIFTY SDL Plus AAA PSU Bond Apr 2026 75:25 Index Fund-Direct-Growth,Direct,Growth
 151365,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL IBX 50:50 Gilt Plus SDL Short Duration Index fund-Direct-Growth,Direct,Growth
@@ -6263,9 +6263,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151371,DSP,Equity Scheme,Index-Nifty,DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund-Direct-IDCW,Direct,IDCW
 151372,DSP,Equity Scheme,Index-Nifty,DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund-Regular-IDCW,Regular,IDCW
 151373,DSP,Equity Scheme,Index-Nifty,DSP Nifty SDL Plus G-Sec Sep 2027 50:50 Index Fund-Direct-Growth,Direct,Growth
-151374,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Midcap 150 ETF,ETF,ETF
-151375,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Smallcap 250 ETF,ETF,ETF
-151376,HDFC,Equity Scheme,Index ETF,HDFC BSE 500 ETF,ETF,ETF
+151374,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Midcap 150 ETF,Direct,ETF
+151375,HDFC,Equity Scheme,Index ETF,HDFC NIFTY Smallcap 250 ETF,Direct,ETF
+151376,HDFC,Equity Scheme,Index ETF,HDFC BSE 500 ETF,Direct,ETF
 151377,ITI,Equity Scheme,Flexi Cap,ITI Flexi Cap Fund-Regular-Growth,Regular,Growth
 151378,ITI,Equity Scheme,Flexi Cap,ITI Flexi Cap Fund-Regular-IDCW,Regular,IDCW
 151379,ITI,Equity Scheme,Flexi Cap,ITI Flexi Cap Fund-Direct-Growth,Direct,Growth
@@ -6293,7 +6293,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151413,Mirae,Equity Scheme,Flexi Cap,Mirae Asset Flexi Cap Fund-Direct-IDCW,Direct,IDCW
 151414,Mirae,Equity Scheme,Flexi Cap,Mirae Asset Flexi Cap Fund-Regular-Growth,Regular,Growth
 151415,Mirae,Equity Scheme,Flexi Cap,Mirae Asset Flexi Cap Fund-Regular-IDCW,Regular,IDCW
-151416,Mirae,Gold & Silver Scheme,Gold ETF,Mirae Asset Gold ETF,ETF,ETF
+151416,Mirae,Gold & Silver Scheme,Gold ETF,Mirae Asset Gold ETF,Direct,ETF
 151417,Kotak Mahindra,Index Funds,Debt Index,Kotak Nifty SDL Jul 2033 Index Fund-Regular-Growth,Regular,Growth
 151418,Kotak Mahindra,Index Funds,Debt Index,Kotak Nifty SDL Jul 2033 Index Fund-Direct-IDCW,Direct,IDCW
 151419,Kotak Mahindra,Index Funds,Debt Index,Kotak Nifty SDL Jul 2033 Index Fund-Regular-IDCW,Regular,IDCW
@@ -6373,7 +6373,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151530,UTI,Debt Scheme,Long Duration,UTI Long Duration Fund-Direct-Half - Yearly IDCW,Direct,IDCW
 151531,UTI,Debt Scheme,Long Duration,UTI Long Duration Fund-Regular-Annual IDCW,Regular,IDCW
 151532,UTI,Debt Scheme,Long Duration,UTI Long Duration Fund-Regular-IDCW,Regular,IDCW
-151533,Aditya Birla Sun Life,Debt Scheme,Liquid ETF,Aditya Birla Sun Life CRISIL Liquid Overnight ETF,ETF,ETF
+151533,Aditya Birla Sun Life,Debt Scheme,Liquid ETF,Aditya Birla Sun Life CRISIL Liquid Overnight ETF,Direct,ETF
 151546,Bandhan,Debt Scheme,FoF Overseas,Bandhan US Treasury Bond 0-1 year specific Debt Passive FOF-Regular-Growth,Regular,Growth
 151547,Bandhan,Debt Scheme,FoF Overseas,Bandhan US Treasury Bond 0-1 year specific Debt Passive FOF-Regular-IDCW,Regular,IDCW
 151548,Bandhan,Debt Scheme,FOF Overseas,Bandhan US Treasury Bond 0-1 year specific Debt Passive FOF-Direct-Growth,Direct,Growth
@@ -6394,7 +6394,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151569,HDFC,Debt Scheme,Fixed Maturity,HDFC Fixed Maturity 1269D March 2023-Direct-Quarterly IDCW,Direct,IDCW
 151570,HDFC,Index Funds,Debt Index,HDFC NIFTY SDL Plus G-Sec Jun 2027 40:60 Index Fund-Direct-Growth,Direct,Growth
 151571,HDFC,Index Funds,Debt Index,HDFC NIFTY SDL Plus G-Sec Jun 2027 40:60 Index Fund-Regular-Growth,Regular,Growth
-151572,ICICI Prudential,Debt Scheme,Banking and PSU ETF,ICICI Prudential Nifty PSU Bank ETF,ETF,ETF
+151572,ICICI Prudential,Debt Scheme,Banking and PSU ETF,ICICI Prudential Nifty PSU Bank ETF,Direct,ETF
 151573,Baroda BNP Paribas,Index Funds,Debt Index,Baroda BNP Paribas NIFTY SDL December 2028 Index Fund-Regular-IDCW,Regular,IDCW
 151574,Baroda BNP Paribas,Index Funds,Debt Index,Baroda BNP Paribas NIFTY SDL December 2028 Index Fund-Direct-Growth,Direct,Growth
 151575,Baroda BNP Paribas,Index Funds,Debt Index,Baroda BNP Paribas NIFTY SDL December 2028 Index Fund-Direct-IDCW,Direct,IDCW
@@ -6407,7 +6407,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151582,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil IBX Gilt Apr 2028 Index Fund-Regular-IDCW,Regular,IDCW
 151583,Aditya Birla Sun Life,Index Funds,Debt Index,Aditya Birla Sun Life Crisil IBX Gilt Apr 2028 Index Fund-Regular-Growth,Regular,Growth
 151584,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil IBX Gilt Apr 2028 Index Fund-Direct-IDCW,Direct,IDCW
-151585,Axis,Equity Scheme,Index ETF,Axis BSE Sensex ETF,ETF,ETF
+151585,Axis,Equity Scheme,Index ETF,Axis BSE Sensex ETF,Direct,ETF
 151586,Axis,Debt Scheme,Fixed Term,Axis FT Plan - Series 113 (1228 Days)-Direct-Growth,Direct,Growth
 151587,Axis,Debt Scheme,Fixed Term,Axis FT Plan - Series 113 (1228 Days)-Direct-Quarterly IDCW,Direct,IDCW
 151588,Axis,Debt Scheme,Fixed Term,Axis FT Plan - Series 113 (1228 Days)-Regular-Growth,Regular,Growth
@@ -6422,7 +6422,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151597,Invesco,Index Funds,Debt Index,Invesco India Nifty G-sec Sep 2032 Index Fund-Direct-Growth,Direct,Growth
 151602,Kotak Mahindra,Gold & Silver Scheme,Silver,Kotak Silver ETF FoF-Regular-Growth,Regular,Growth
 151603,Kotak Mahindra,Gold & Silver Scheme,Silver,Kotak Silver ETF FoF-Direct-Growth,Direct,Growth
-151604,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 100 Low Volatility 30 ETF,ETF,ETF
+151604,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 100 Low Volatility 30 ETF,Direct,ETF
 151609,NJ,Equity Scheme,ELSS,NJ ELSS Tax Saver Fund Scheme-Regular-Growth,Regular,Growth
 151610,NJ,Equity Scheme,ELSS,NJ ELSS Tax Saver Fund Scheme-Regular-IDCW,Regular,IDCW
 151611,NJ,Equity Scheme,ELSS,NJ ELSS Tax Saver Fund Scheme-Direct-Growth,Direct,Growth
@@ -6457,7 +6457,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151692,Mirae,Index Funds,Debt Index,Mirae Asset Nifty SDL June 2028 Index Fund-Direct-IDCW,Direct,IDCW
 151693,Mirae,Index Funds,Debt Index,Mirae Asset Nifty SDL June 2028 Index Fund-Regular-IDCW,Regular,IDCW
 151694,Mirae,Index Funds,Debt Index,Mirae Asset Nifty SDL June 2028 Index Fund-Regular-Growth,Regular,Growth
-151695,Mirae,Debt Scheme,Bond ETF,Mirae Asset Nifty 8-13 yr Gsec ETF,ETF,ETF
+151695,Mirae,Debt Scheme,Bond ETF,Mirae Asset Nifty 8-13 yr Gsec ETF,Direct,ETF
 151700,Aditya Birla Sun Life,Debt Scheme,Fixed Term,Aditya Birla Sun Life FT Plan - Series UJ (1110 days)-Direct-Growth,Direct,Growth
 151701,Aditya Birla Sun Life,Debt Scheme,Fixed Term,ABSL FT Plan - Series UJ (1110 days)-Regular-IDCW Payout,Regular,IDCW
 151702,Aditya Birla Sun Life,Debt Scheme,Fixed Term,ABSL Fixed Term - Series UJ (1110 days)-Direct-IDCW Payout,Direct,IDCW
@@ -6475,10 +6475,10 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151727,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY Smallcap 250 Index Fund-Direct-Growth,Direct,Growth
 151728,HDFC,Index Funds,Equity Index,HDFC S&P BSE 500 Index Fund-Direct-Growth,Direct,Growth
 151729,HDFC,Index Funds,Equity Index,HDFC BSE 500 Index Fund-Regular-Growth,Regular,Growth
-151730,UTI,Gold & Silver Scheme,Silver ETF,UTI Silver ETF,ETF,ETF
+151730,UTI,Gold & Silver Scheme,Silver ETF,UTI Silver ETF,Direct,ETF
 151731,UTI,Gold & Silver Scheme,Silver,UTI Silver ETF FoF-Direct-Growth,Direct,Growth
 151732,UTI,Gold & Silver Scheme,Silver,UTI Silver ETF FoF-Regular-Growth,Regular,Growth
-151737,DSP,Gold & Silver Scheme,Gold ETF,DSP Gold ETF,ETF,ETF
+151737,DSP,Gold & Silver Scheme,Gold ETF,DSP Gold ETF,Direct,ETF
 151738,UTI,Equity Scheme,Index-Nifty,UTI Nifty 500 Value 50 Index Fund-Regular-Growth,Regular,Growth
 151739,UTI,Equity Scheme,Index-Nifty,UTI Nifty 500 Value 50 Index Fund-Direct-Growth,Direct,Growth
 151745,WhiteOak Capital,Hybrid Scheme,Multi Asset Allocation,WhiteOak Capital Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
@@ -6509,7 +6509,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151776,ITI,Equity Scheme,Focused,ITI Focused Fund-Direct-IDCW,Direct,IDCW
 151777,ITI,Equity Scheme,Focused,ITI Focused Fund-Direct-Growth,Direct,Growth
 151778,ITI,Equity Scheme,Focused,ITI Focused Fund-Regular-Growth,Regular,Growth
-151779,Mirae,Gold & Silver Scheme,Silver ETF,Mirae Asset Silver ETF,ETF,ETF
+151779,Mirae,Gold & Silver Scheme,Silver ETF,Mirae Asset Silver ETF,Direct,ETF
 151780,Kotak Mahindra,Index Funds,Equity Index,Kotak Nifty 200 Momentum 30 Index Fund-Regular-IDCW Payout,Regular,IDCW
 151781,Kotak Mahindra,Index Funds,Equity Index,Kotak Nifty 200 Momentum 30 Index Fund-Direct-Growth,Direct,Growth
 151782,Kotak Mahindra,Index Funds,Equity Index,Kotak Nifty 200 Momentum 30 Index Fund-Direct-IDCW Payout,Direct,IDCW
@@ -6544,7 +6544,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151817,Bandhan,Equity Scheme,Sectoral/ Thematic,BANDHAN Fin Srvs FUND-Direct-IDCW,Direct,IDCW
 151818,Bandhan,Equity Scheme,Sectoral/ Thematic,BANDHAN FINANCIAL SERVICES FUND-Regular-Growth,Regular,Growth
 151819,Bandhan,Equity Scheme,Sectoral/ Thematic,BANDHAN Fin Srvs FUND-Regular-IDCW,Regular,IDCW
-151820,DSP,Equity Scheme,Index ETF,DSP Nifty IT ETF,ETF,ETF
+151820,DSP,Equity Scheme,Index ETF,DSP Nifty IT ETF,Direct,ETF
 151821,Canara Robeco,Equity Scheme,Multi Cap,Canara Robeco Multi Cap Fund-Regular-Growth,Regular,Growth
 151822,Canara Robeco,Equity Scheme,Multi Cap,Canara Robeco Multi Cap Fund-Direct-IDCW,Direct,IDCW
 151823,Canara Robeco,Equity Scheme,Multi Cap,Canara Robeco Multi Cap Fund-Regular-IDCW,Regular,IDCW
@@ -6573,7 +6573,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151854,Quant,Equity Scheme,Sectoral/ Thematic,quant Healthcare Fund-Direct-IDCW,Direct,IDCW
 151855,Quant,Equity Scheme,Sectoral/ Thematic,quant Healthcare Fund-Regular-Growth,Regular,Growth
 151856,Quant,Equity Scheme,Sectoral/ Thematic,quant Healthcare Fund-Regular-IDCW,Regular,IDCW
-151857,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Bank ETF,ETF,ETF
+151857,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Bank ETF,Direct,ETF
 151862,HDFC,Debt Scheme,Fixed Maturity,HDFC Charity Fund for Cancer Cure-Direct-50% IDCW,Direct,IDCW
 151863,HDFC,Debt Scheme,Fixed Maturity,HDFC Charity Fund for Cancer Cure-Regular-75% IDCW,Regular,IDCW
 151864,HDFC,Debt Scheme,Fixed Maturity,HDFC Charity Fund for Cancer Cure-Direct-75% IDCW,Direct,IDCW
@@ -6586,9 +6586,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151883,UTI,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,UTI Balanced Advantage Fund-Direct-IDCW Payout,Direct,IDCW
 151884,UTI,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,UTI Balanced Advantage Fund-Regular-IDCW Payout,Regular,IDCW
 151885,UTI,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,UTI Balanced Advantage Fund-Direct-Growth,Direct,Growth
-151886,DSP,Equity Scheme,Index ETF,DSP BSE Sensex ETF,ETF,ETF
-151887,DSP,Equity Scheme,Index ETF,DSP Nifty Private Bank ETF,ETF,ETF
-151888,DSP,Debt Scheme,Banking and PSU ETF,DSP Nifty PSU Bank ETF,ETF,ETF
+151886,DSP,Equity Scheme,Index ETF,DSP BSE Sensex ETF,Direct,ETF
+151887,DSP,Equity Scheme,Index ETF,DSP Nifty Private Bank ETF,Direct,ETF
+151888,DSP,Debt Scheme,Banking and PSU ETF,DSP Nifty PSU Bank ETF,Direct,ETF
 151889,Bajaj Finserv,Debt Scheme,Money Market,Bajaj Finserv Money Market Fund-Direct-Growth,Direct,Growth
 151890,Bajaj Finserv,Debt Scheme,Money Market,Bajaj Finserv Money Market Fund-Direct-IDCW,Direct,IDCW
 151891,Bajaj Finserv,Debt Scheme,Money Market,Bajaj Finserv Money Market Fund-Regular-IDCW,Regular,IDCW
@@ -6607,8 +6607,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151904,Union,Equity Scheme,Sectoral/ Thematic,Union Innovation & Opportunities Fund-Direct-IDCW,Direct,IDCW
 151905,Union,Equity Scheme,Sectoral/ Thematic,Union Innovation & Opportunities Fund-Direct-Growth,Direct,Growth
 151906,Union,Equity Scheme,Sectoral/ Thematic,Union Innovation & Opportunities Fund-Regular-IDCW,Regular,IDCW
-151907,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 200 Quality 30 ETF,ETF,ETF
-151908,Mirae,Debt Scheme,Liquid ETF,Mirae Asset Nifty 1D Rate Liquid ET- IDCW ETF,ETF,ETF
+151907,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty 200 Quality 30 ETF,Direct,ETF
+151908,Mirae,Debt Scheme,Liquid ETF,Mirae Asset Nifty 1D Rate Liquid ET- IDCW ETF,Direct,ETF
 151909,Kotak Mahindra,Index Funds,Equity Index,Kotak Nifty Fin Srvs Ex-Bank Index Fund-Regular-Growth,Regular,Growth
 151910,Kotak Mahindra,Index Funds,Equity Index,Kotak Nifty Fin Srvs Ex-Bank Index Fund-Regular-IDCW,Regular,IDCW
 151911,Kotak Mahindra,Index Funds,Equity Index,Kotak Nifty Fin Srvs Ex-Bank Index Fund-Direct-Growth,Direct,Growth
@@ -6639,7 +6639,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 151956,LIC,Debt Scheme,Short Duration,LIC MF Short Duration Fund-Regular-Weekly IDCW,Regular,IDCW
 151959,LIC,Debt Scheme,Short Duration,LIC MF Short Duration Fund-Direct-Monthly IDCW,Direct,IDCW
 151960,LIC,Debt Scheme,Short Duration,LIC MF Short Duration Fund-Direct-Weekly IDCW,Direct,IDCW
-151961,LIC,Gold & Silver Scheme,Gold ETF,LIC MF Gold ETF,ETF,ETF
+151961,LIC,Gold & Silver Scheme,Gold ETF,LIC MF Gold ETF,Direct,ETF
 151973,LIC,Gold & Silver Scheme,Gold,LIC MF Gold ETF FoF-Regular-Growth,Regular,Growth
 151974,LIC,Gold & Silver Scheme,Gold,LIC MF Gold ETF FoF-Direct-Growth,Direct,Growth
 151986,LIC,Debt Scheme,Medium to Long Duration,LIC MF Medium to Long Duration Fund-Regular-Quarterly IDCW,Regular,IDCW
@@ -6690,7 +6690,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152046,Mahindra Manulife,Equity Scheme,Sectoral/ Thematic,Mahindra Manulife Business Cycle Fund-Regular-Growth,Regular,Growth
 152047,Mahindra Manulife,Equity Scheme,Sectoral/ Thematic,Mahindra Manulife Business Cycle Fund-Regular-IDCW,Regular,IDCW
 152048,Mahindra Manulife,Equity Scheme,Sectoral/ Thematic,Mahindra Manulife Business Cycle Fund-Direct-IDCW,Direct,IDCW
-152050,UTI,Equity Scheme,Index ETF,UTI Nifty Midcap 150 ETF,ETF,ETF
+152050,UTI,Equity Scheme,Index ETF,UTI Nifty Midcap 150 ETF,Direct,ETF
 152051,Shriram,Hybrid Scheme,Multi Asset Allocation,Shriram Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 152052,Shriram,Hybrid Scheme,Multi Asset Allocation,Shriram Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
 152053,DSP,Hybrid Scheme,Multi Asset Allocation,DSP Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
@@ -6736,7 +6736,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152094,Edelweiss,Equity Scheme,Multi Cap,Edelweiss Multi Cap Fund-Direct-Growth,Direct,Growth
 152095,Edelweiss,Equity Scheme,Multi Cap,Edelweiss Multi Cap Fund-Regular-Growth,Regular,Growth
 152096,Edelweiss,Equity Scheme,Multi Cap,Edelweiss Multi Cap Fund-Regular-IDCW,Regular,IDCW
-152097,Mirae,Equity Scheme,Index ETF,Mirae Asset BSE Sensex ETF,ETF,ETF
+152097,Mirae,Equity Scheme,Index ETF,Mirae Asset BSE Sensex ETF,Direct,ETF
 152098,Kotak Mahindra,Index Funds,Debt Index,Kotak Nifty G-Sec July 2033 Index Fund-Direct-Growth,Direct,Growth
 152099,Kotak Mahindra,Index Funds,Debt Index,Kotak Nifty G-Sec July 2033 Index Fund-Direct-IDCW Payout,Direct,IDCW
 152100,Kotak Mahindra,Index Funds,Debt Index,Kotak Nifty G-Sec July 2033 Index Fund-Regular-Growth,Regular,Growth
@@ -6745,7 +6745,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152103,Bandhan,Solution Oriented Scheme,Retirement,Bandhan Retirement Fund-Regular-Growth,Regular,Growth
 152104,Bandhan,Solution Oriented Scheme,Retirement,Bandhan Retirement Fund-Direct-IDCW,Direct,IDCW
 152105,Bandhan,Solution Oriented Scheme,Retirement,Bandhan Retirement Fund-Regular-IDCW,Regular,IDCW
-152106,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 500 ETF,ETF,ETF
+152106,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 500 ETF,Direct,ETF
 152107,Quantum,Equity Scheme,Small Cap,QUANTUM SMALL CAP FUND-Direct-Growth,Direct,Growth
 152108,Quantum,Equity Scheme,Small Cap,QUANTUM SMALL CAP FUND-Regular-Growth,Regular,Growth
 152109,PPFAS,Hybrid Scheme,Arbitrage,Parag Parikh Arbitrage Fund-Direct-Growth,Direct,Growth
@@ -6760,7 +6760,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152131,Baroda BNP Paribas,Equity Scheme,Small Cap,Baroda BNP Paribas Small Cap Fund-Regular-IDCW,Regular,IDCW
 152132,WhiteOak Capital,Hybrid Scheme,Balanced Hybrid,WhiteOak Capital Balanced Hybrid Fund-Direct-Growth,Direct,Growth
 152133,WhiteOak Capital,Hybrid Scheme,Balanced Hybrid,WhiteOak Capital Balanced Hybrid Fund-Regular-Growth,Regular,Growth
-152134,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 200 Alpha 30 ETF,ETF,ETF
+152134,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 200 Alpha 30 ETF,Direct,ETF
 152135,Helios Capital,Equity Scheme,Flexi Cap,Helios Flexi Cap Fund-Direct-Growth,Direct,Growth
 152136,Helios Capital,Equity Scheme,Flexi Cap,Helios Flexi Cap Fund-Regular-Growth,Regular,Growth
 152137,Helios Capital,Equity Scheme,Flexi Cap,Helios Flexi Cap Fund-Regular-IDCW,Regular,IDCW
@@ -6777,7 +6777,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152152,Helios Capital,Debt Scheme,Overnight,Helios Overnight Fund-Direct-Growth,Direct,Growth
 152153,Helios Capital,Debt Scheme,Overnight,Helios Overnight Fund-Regular-Growth,Regular,Growth
 152154,Helios Capital,Debt Scheme,Overnight,Helios Overnight Fund-Regular-Daily IDCW,Regular,IDCW
-152155,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty IT ETF,ETF,ETF
+152155,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty IT ETF,Direct,ETF
 152156,Zerodha,Equity Scheme,Index-Nifty,Zerodha Nifty LargeMidcap 250 Index Fund-Direct-Growth,Direct,Growth
 152157,Zerodha,Equity Scheme,Index-Nifty,Zerodha ELSS Tax Saver Nifty LargeMidcap 250 Index Fund-Direct-Growth,Direct,Growth
 152158,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Transportation and Logistics Fund-Direct-Growth,Direct,Growth
@@ -6790,7 +6790,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152165,Bajaj Finserv,Debt Scheme,Banking and PSU,Bajaj Finserv Banking and PSU Fund-Regular-Growth,Regular,Growth
 152166,Bajaj Finserv,Debt Scheme,Banking and PSU,Bajaj Finserv Banking and PSU Fund-Regular-IDCW,Regular,IDCW
 152167,Bajaj Finserv,Debt Scheme,Banking and PSU,Bajaj Finserv Banking and PSU Fund-Regular-Monthly IDCW,Regular,IDCW
-152168,SBI,Debt Scheme,Liquid ETF,SBI NIFTY 1D Rate Liquid ETF-IDCW ETF,ETF,ETF
+152168,SBI,Debt Scheme,Liquid ETF,SBI NIFTY 1D Rate Liquid ETF-IDCW ETF,Direct,ETF
 152169,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Consumption Fund-Direct-Growth,Direct,Growth
 152170,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Consumption Fund-Regular-Growth,Regular,Growth
 152171,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Consumption Fund-Regular-IDCW,Regular,IDCW
@@ -6811,7 +6811,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152190,Quant,Equity Scheme,Sectoral/ Thematic,quant Momentum Fund-Regular-Growth,Regular,Growth
 152191,Quant,Equity Scheme,Sectoral/ Thematic,quant Momentum Fund-Regular-IDCW,Regular,IDCW
 152192,Quant,Equity Scheme,Sectoral/ Thematic,quant Momentum Fund-Direct-IDCW,Direct,IDCW
-152193,Edelweiss,Gold & Silver Scheme,Gold ETF,Edelweiss Gold ETF,ETF,ETF
+152193,Edelweiss,Gold & Silver Scheme,Gold ETF,Edelweiss Gold ETF,Direct,ETF
 152194,Bajaj Finserv,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Bajaj Finserv Balanced Advantage Fund-Direct-Growth,Direct,Growth
 152195,Bajaj Finserv,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Bajaj Finserv Balanced Advantage Fund-Direct-IDCW,Direct,IDCW
 152196,Bajaj Finserv,Hybrid Scheme,Dynamic Asset Allocation or Balanced Advantage,Bajaj Finserv Balanced Advantage Fund-Regular-Growth,Regular,Growth
@@ -6826,7 +6826,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152207,DSP,Equity Scheme,Sectoral/ Thematic,DSP Banking & Fin Srvs Fund-Direct-IDCW,Direct,IDCW
 152208,DSP,Equity Scheme,Sectoral/ Thematic,DSP Banking & Financial Services Fund-Regular-Growth,Regular,Growth
 152209,DSP,Equity Scheme,Sectoral/ Thematic,DSP Banking & Fin Srvs Fund-Regular-IDCW,Regular,IDCW
-152212,Edelweiss,Gold & Silver Scheme,Silver ETF,Edelweiss Silver ETF,ETF,ETF
+152212,Edelweiss,Gold & Silver Scheme,Silver ETF,Edelweiss Silver ETF,Direct,ETF
 152213,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Healthcare Fund-Regular-IDCW,Regular,IDCW
 152214,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Healthcare Fund-Direct-Growth,Direct,Growth
 152215,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Healthcare Fund-Direct-IDCW,Direct,IDCW
@@ -6837,7 +6837,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152220,Union,Solution Oriented Scheme,Children's,Union Children's Fund-Direct-IDCW,Direct,IDCW
 152225,WhiteOak Capital,Equity Scheme,Large & Mid Cap,Whiteoak Capital Large & Mid Cap Fund-Regular-Growth,Regular,Growth
 152226,WhiteOak Capital,Equity Scheme,Large & Mid Cap,Whiteoak Capital Large & Mid Cap Fund-Direct-Growth,Direct,Growth
-152231,Baroda BNP Paribas,Gold & Silver Scheme,Gold ETF,Baroda BNP Paribas Gold ETF,ETF,ETF
+152231,Baroda BNP Paribas,Gold & Silver Scheme,Gold ETF,Baroda BNP Paribas Gold ETF,Direct,ETF
 152232,Motilal Oswal,Equity Scheme,Small Cap,Motilal Oswal Small Cap Fund-Regular-Growth,Regular,Growth
 152234,Motilal Oswal,Equity Scheme,Small Cap,Motilal Oswal Small Cap Fund-Regular-IDCW,Regular,IDCW
 152235,Motilal Oswal,Equity Scheme,Small Cap,Motilal Oswal Small Cap Fund-Direct-IDCW,Direct,IDCW
@@ -6866,8 +6866,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152273,Groww,Equity Scheme,Sectoral/ Thematic,Groww Banking & Fin Srvs Fund-Direct-IDCW,Direct,IDCW
 152274,Groww,Equity Scheme,Sectoral/ Thematic,Groww Banking & Financial Services Fund-Regular-Growth,Regular,Growth
 152276,Groww,Equity Scheme,Sectoral/ Thematic,Groww Banking & Fin Srvs Fund-Regular-IDCW,Regular,IDCW
-152284,Tata,Gold & Silver Scheme,Gold ETF,Tata Gold ETF,ETF,ETF
-152285,Tata,Gold & Silver Scheme,Silver ETF,Tata Silver ETF,ETF,ETF
+152284,Tata,Gold & Silver Scheme,Gold ETF,Tata Gold ETF,Direct,ETF
+152285,Tata,Gold & Silver Scheme,Silver ETF,Tata Silver ETF,Direct,ETF
 152286,Tata,Gold & Silver Scheme,Gold,Tata Gold ETF FoF-Regular-IDCW Payout,Regular,IDCW
 152287,Tata,Gold & Silver Scheme,Gold,Tata Gold ETF FoF-Direct-Growth,Direct,Growth
 152288,Tata,Gold & Silver Scheme,Gold,Tata Gold ETF FoF-Direct-IDCW Payout,Direct,IDCW
@@ -6884,7 +6884,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152299,Quantum,Debt Scheme,Liquid,Quantum Liquid Fund-3+ Years-Regular-Unclaimed IDCW,Regular,IDCW
 152300,Quantum,Debt Scheme,Liquid,Quantum Liquid Fund-<3 Years-Regular-Unclaimed Redemption,Regular,Unclaimed Redemption
 152301,Quantum,Debt Scheme,Liquid,Quantum Liquid Fund-3+ Years-Regular-Unclaimed Redemption,Regular,Unclaimed Redemption
-152306,DSP,Equity Scheme,Index ETF,DSP Nifty Healthcare ETF,ETF,ETF
+152306,DSP,Equity Scheme,Index ETF,DSP Nifty Healthcare ETF,Direct,ETF
 152307,DSP,Equity Scheme,Multi Cap,DSP Multicap Fund-Regular-Growth,Regular,Growth
 152308,DSP,Equity Scheme,Multi Cap,DSP Multicap Fund-Regular-IDCW,Regular,IDCW
 152309,DSP,Equity Scheme,Multi Cap,DSP Multicap Fund-Direct-IDCW,Direct,IDCW
@@ -6901,7 +6901,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152324,Bandhan,Hybrid Scheme,Multi Asset Allocation,Bandhan Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 152325,Bandhan,Hybrid Scheme,Multi Asset Allocation,Bandhan Multi Asset Allocation Fund-Regular-IDCW,Regular,IDCW
 152326,Bandhan,Hybrid Scheme,Multi Asset Allocation,Bandhan Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
-152327,Zerodha,Debt Scheme,Liquid ETF,Zerodha Nifty 1D Rate Liquid ETF,ETF,ETF
+152327,Zerodha,Debt Scheme,Liquid ETF,Zerodha Nifty 1D Rate Liquid ETF,Direct,ETF
 152328,Baroda BNP Paribas,Equity Scheme,Index-Nifty,Baroda BNP Paribas Nifty 50 Index Fund-Regular-IDCW,Regular,IDCW
 152329,Baroda BNP Paribas,Equity Scheme,Index-Nifty,Baroda BNP Paribas Nifty 50 Index Fund-Direct-Growth,Direct,Growth
 152330,Baroda BNP Paribas,Equity Scheme,Index-Nifty,Baroda BNP Paribas Nifty 50 Index Fund-Direct-IDCW,Direct,IDCW
@@ -6916,14 +6916,14 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152347,Mirae,Hybrid Scheme,Multi Asset Allocation,Mirae Asset Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
 152348,WhiteOak Capital,Equity Scheme,Sectoral/ Thematic,WhiteOak Capital Pharma and Heathcare Fund-Regular-Growth,Regular,Growth
 152349,WhiteOak Capital,Equity Scheme,Sectoral/ Thematic,WhiteOak Capital Pharma and Heathcare Fund-Direct-Growth,Direct,Growth
-152350,HDFC,Debt Scheme,Banking and PSU ETF,HDFC NIFTY PSU BANK ETF,ETF,ETF
+152350,HDFC,Debt Scheme,Banking and PSU ETF,HDFC NIFTY PSU BANK ETF,Direct,ETF
 152351,Motilal Oswal,Equity Scheme,Large Cap,Motilal Oswal Large Cap-Direct-IDCW,Direct,IDCW
 152352,Motilal Oswal,Equity Scheme,Large Cap,Motilal Oswal Large Cap-Regular-Growth,Regular,Growth
 152353,Motilal Oswal,Equity Scheme,Large Cap,Motilal Oswal Large Cap-Regular-IDCW,Regular,IDCW
 152354,Motilal Oswal,Equity Scheme,Large Cap,Motilal Oswal Large Cap-Direct-Growth,Direct,Growth
-152355,UTI,Equity Scheme,Index ETF,UTI Nifty IT ETF,ETF,ETF
-152356,Bajaj Finserv,Equity Scheme,Index ETF,Bajaj Finserv Nifty 50 ETF,ETF,ETF
-152357,Bajaj Finserv,Equity Scheme,Index ETF,Bajaj Finserv Nifty Bank ETF,ETF,ETF
+152355,UTI,Equity Scheme,Index ETF,UTI Nifty IT ETF,Direct,ETF
+152356,Bajaj Finserv,Equity Scheme,Index ETF,Bajaj Finserv Nifty 50 ETF,Direct,ETF
+152357,Bajaj Finserv,Equity Scheme,Index ETF,Bajaj Finserv Nifty Bank ETF,Direct,ETF
 152358,Old Bridge,Equity Scheme,Focused,Old Bridge Focused Fund-Direct-Growth,Direct,Growth
 152359,Old Bridge,Equity Scheme,Focused,Old Bridge Focused Fund-Direct-IDCW,Direct,IDCW
 152361,Old Bridge,Equity Scheme,Focused,Old Bridge Focused Fund-Regular-Growth,Regular,Growth
@@ -6932,8 +6932,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152365,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty50 Value 20 Index Fund-Direct-Growth,Direct,Growth
 152366,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty50 Value 20 Index Fund-Regular-Growth,Regular,Growth
 152367,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty50 Value 20 Index Fund-Direct-IDCW,Direct,IDCW
-152368,UTI,Debt Scheme,Bond ETF,UTI Nifty 5 yr Benchmark G-Sec ETF,ETF,ETF
-152369,UTI,Debt Scheme,Bond ETF,UTI Nifty 10 yr Benchmark G-Sec ETF,ETF,ETF
+152368,UTI,Debt Scheme,Bond ETF,UTI Nifty 5 yr Benchmark G-Sec ETF,Direct,ETF
+152369,UTI,Debt Scheme,Bond ETF,UTI Nifty 10 yr Benchmark G-Sec ETF,Direct,ETF
 152370,SBI,Equity Scheme,Index-Nifty,SBI Nifty50 Equal Weight Index Fund-Direct-Growth,Direct,Growth
 152371,SBI,Equity Scheme,Index-Nifty,SBI Nifty50 Equal Weight Index Fund-Direct-IDCW,Direct,IDCW
 152372,SBI,Equity Scheme,Index-Nifty,SBI Nifty50 Equal Weight Index Fund-Regular-Growth,Regular,Growth
@@ -6958,7 +6958,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152396,Bank of India,Hybrid Scheme,Multi Asset Allocation,Bank of India Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 152398,Bank of India,Hybrid Scheme,Multi Asset Allocation,Bank of India Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
 152399,Bank of India,Hybrid Scheme,Multi Asset Allocation,Bank of India Multi Asset Allocation Fund-Direct-IDCW,Direct,IDCW
-152404,LIC,Equity Scheme,Index ETF,LIC MF Nifty Midcap 100 ETF,ETF,ETF
+152404,LIC,Equity Scheme,Index ETF,LIC MF Nifty Midcap 100 ETF,Direct,ETF
 152405,Bajaj Finserv,Equity Scheme,Large & Mid Cap,Bajaj Finserv Large and Mid Cap Fund-Direct-IDCW,Direct,IDCW
 152406,Bajaj Finserv,Equity Scheme,Large & Mid Cap,Bajaj Finserv Large and Mid Cap Fund-Regular-Growth,Regular,Growth
 152407,Bajaj Finserv,Equity Scheme,Large & Mid Cap,Bajaj Finserv Large and Mid Cap Fund-Regular-IDCW,Regular,IDCW
@@ -6997,7 +6997,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152448,Canara Robeco,Equity Scheme,Sectoral/ Thematic,Canara Robeco Manufacturing Fund-Regular-ICDW,Regular,IDCW
 152449,Canara Robeco,Equity Scheme,Sectoral/ Thematic,Canara Robeco Manufacturing Fund-Direct-ICDW,Direct,IDCW
 152450,Canara Robeco,Equity Scheme,Sectoral/ Thematic,Canara Robeco Manufacturing Fund-Direct-Growth,Direct,Growth
-152455,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF,ETF,ETF
+152455,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF,Direct,ETF
 152456,Mirae,Index Funds,FoF Equity Index,Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF FoF-Direct-IDCW,Direct,IDCW
 152457,Mirae,Index Funds,FoF Equity Index,Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF FoF-Regular-Growth,Regular,Growth
 152458,Mirae,Index Funds,FoF Equity Index,Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF FoF-Regular-IDCW,Regular,IDCW
@@ -7016,7 +7016,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152473,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Innovation Fund-Regular-IDCW,Regular,IDCW
 152474,Quantum,Hybrid Scheme,Multi Asset Allocation,Quantum Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 152475,Quantum,Hybrid Scheme,Multi Asset Allocation,Quantum Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
-152476,Zerodha,Gold & Silver Scheme,Gold ETF,Zerodha Gold ETF,ETF,ETF
+152476,Zerodha,Gold & Silver Scheme,Gold ETF,Zerodha Gold ETF,Direct,ETF
 152481,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty LargeMidcap 250 Index Fund-Regular-Growth,Regular,Growth
 152482,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty LargeMidcap 250 Index Fund-Direct-Growth,Direct,Growth
 152483,ICICI Prudential,Equity Scheme,Index-Nifty,ICICI Prudential Nifty LargeMidcap 250 Index Fund-Direct-IDCW,Direct,IDCW
@@ -7049,9 +7049,9 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152538,PGIM India,Solution Oriented Scheme,Retirement,PGIM India Retirement Fund-Regular-Growth,Regular,Growth
 152539,PGIM India,Solution Oriented Scheme,Retirement,PGIM India Retirement Fund-Direct-IDCW Payout,Direct,IDCW
 152540,PGIM India,Solution Oriented Scheme,Retirement,PGIM India Retirement Fund-Regular-IDCW Payout,Regular,IDCW
-152541,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Realty ETF,ETF,ETF
-152546,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Smallcap 250 ETF,ETF,ETF
-152555,DSP,Debt Scheme,Liquid ETF,DSP BSE Liquid Rate ETF,ETF,ETF
+152541,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Realty ETF,Direct,ETF
+152546,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Smallcap 250 ETF,Direct,ETF
+152555,DSP,Debt Scheme,Liquid ETF,DSP BSE Liquid Rate ETF,Direct,ETF
 152556,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty Auto Index Fund-Regular-IDCW,Regular,IDCW
 152557,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty Auto Index Fund-Direct-Growth,Direct,Growth
 152558,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty Auto Index Fund-Direct-IDCW,Direct,IDCW
@@ -7111,7 +7111,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152617,Edelweiss,Index Funds,Equity Index,Edelweiss Nifty Alpha Low Volatility 30 Index Fund-Regular-Growth,Regular,Growth
 152618,Edelweiss,Index Funds,Equity Index,Edelweiss Nifty Alpha Low Volatility 30 Index Fund-Regular-IDCW Payout,Regular,IDCW
 152619,Edelweiss,Index Funds,Equity Index,Edelweiss Nifty Alpha Low Volatility 30 Index Fund-Direct-IDCW Payout,Direct,IDCW
-152620,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty PSE ETF,ETF,ETF
+152620,Aditya Birla Sun Life,Equity Scheme,Index ETF,Aditya Birla Sun Life Nifty PSE ETF,Direct,ETF
 152625,Baroda BNP Paribas,Solution Oriented Scheme,Retirement,Baroda BNP Paribas Retirement Fund-Regular-Growth,Regular,Growth
 152626,Baroda BNP Paribas,Solution Oriented Scheme,Retirement,Baroda BNP Paribas Retirement Fund-Direct-IDCW,Direct,IDCW
 152627,Baroda BNP Paribas,Solution Oriented Scheme,Retirement,Baroda BNP Paribas Retirement Fund-Regular-IDCW,Regular,IDCW
@@ -7121,11 +7121,11 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152631,Axis,Index Funds,Equity Index,Axis Nifty Bank Index Fund-Direct-IDCW,Direct,IDCW
 152632,Axis,Index Funds,Equity Index,Axis Nifty Bank Index Fund-Regular-Growth,Regular,Growth
 152633,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty Non-Cyclical Consumer Index Fund-Regular-Growth,Regular,Growth
-152634,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty MidSmallcap400 Momentum Quality 100 ETF,ETF,ETF
+152634,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty MidSmallcap400 Momentum Quality 100 ETF,Direct,ETF
 152635,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty Non-Cyclical Consumer Index Fund-Regular-IDCW,Regular,IDCW
 152636,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty Non-Cyclical Consumer Index Fund-Direct-IDCW,Direct,IDCW
 152637,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty Non-Cyclical Consumer Index Fund-Direct-Growth,Direct,Growth
-152638,Bajaj Finserv,Debt Scheme,Liquid ETF,Bajaj Finserv Nifty 1D Rate Liquid ETF,ETF,ETF
+152638,Bajaj Finserv,Debt Scheme,Liquid ETF,Bajaj Finserv Nifty 1D Rate Liquid ETF,Direct,ETF
 152639,Bajaj Finserv,Hybrid Scheme,Multi Asset Allocation,Bajaj Finserv Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 152640,Bajaj Finserv,Hybrid Scheme,Multi Asset Allocation,Bajaj Finserv Multi Asset Allocation Fund-Regular-IDCW,Regular,IDCW
 152641,Bajaj Finserv,Hybrid Scheme,Multi Asset Allocation,Bajaj Finserv Multi Asset Allocation Fund-Direct-IDCW,Direct,IDCW
@@ -7154,8 +7154,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152664,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak NIFTY 100 Low Volatility 30 Index Fund-Regular-Growth,Regular,Growth
 152665,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak NIFTY 100 Low Volatility 30 Index Fund-Direct-IDCW,Direct,IDCW
 152666,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak NIFTY 100 Low Volatility 30 Index Fund-Regular-IDCW,Regular,IDCW
-152667,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty 100 ETF,ETF,ETF
-152668,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty Midcap 150 ETF,ETF,ETF
+152667,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty 100 ETF,Direct,ETF
+152668,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty Midcap 150 ETF,Direct,ETF
 152669,Mahindra Manulife,Equity Scheme,Sectoral/ Thematic,Mahindra Manulife Manufacturing Fund-Regular-IDCW,Regular,IDCW
 152670,Mahindra Manulife,Equity Scheme,Sectoral/ Thematic,Mahindra Manulife Manufacturing Fund-Direct-IDCW,Direct,IDCW
 152671,Mahindra Manulife,Equity Scheme,Sectoral/ Thematic,Mahindra Manulife Manufacturing Fund-Regular-Growth,Regular,Growth
@@ -7170,7 +7170,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152680,Helios Capital,Equity Scheme,Sectoral/ Thematic,Helios Fin Srvs Fund-Direct-IDCW,Direct,IDCW
 152681,Helios Capital,Equity Scheme,Sectoral/ Thematic,Helios Fin Srvs Fund-Regular-IDCW,Regular,IDCW
 152682,Helios Capital,Equity Scheme,Sectoral/ Thematic,Helios Financial Services Fund-Regular-Growth,Regular,Growth
-152683,Baroda BNP Paribas,Equity Scheme,Index ETF,Baroda BNP Paribas Nifty Bank ETF,ETF,ETF
+152683,Baroda BNP Paribas,Equity Scheme,Index ETF,Baroda BNP Paribas Nifty Bank ETF,Direct,ETF
 152684,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Quant Fund-Direct-Growth,Direct,Growth
 152685,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Quant Fund-Direct-IDCW Payout,Direct,IDCW
 152686,Aditya Birla Sun Life,Equity Scheme,Sectoral/ Thematic,Aditya Birla Sun Life Quant Fund-Regular-Growth,Regular,Growth
@@ -7196,7 +7196,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152712,Motilal Oswal,Index Funds,Equity Sectoral/Thematic,Motilal Oswal Nifty India Defence Index Fund-Direct-Growth,Direct,Growth
 152713,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY100 Low Volatility 30 Index Fund-Direct-Growth,Direct,Growth
 152714,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY100 Low Volatility 30 Index Fund-Regular-Growth,Regular,Growth
-152715,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty EV and New Age Automotive ETF,ETF,ETF
+152715,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty EV and New Age Automotive ETF,Direct,ETF
 152716,Bandhan,Index Funds,Equity Sectoral/Thematic,Bandhan Nifty Total Market Index Fund-Direct-Growth,Direct,Growth
 152717,Bandhan,Index Funds,Equity Sectoral/Thematic,Bandhan Nifty Total Market Index Fund-Regular-Growth,Regular,Growth
 152718,Mirae,Index Funds,FoF Equity Index,Mirae Asset Nifty200 Alpha 30 ETF FoF-Direct-Growth,Direct,Growth
@@ -7206,14 +7206,14 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152722,Edelweiss,Equity Scheme,Sectoral/ Thematic,Edelweiss Business Cycle Fund-Regular-IDCW,Regular,IDCW
 152723,Edelweiss,Equity Scheme,Sectoral/ Thematic,Edelweiss Business Cycle Fund-Direct-IDCW,Direct,IDCW
 152724,Edelweiss,Equity Scheme,Sectoral/ Thematic,Edelweiss Business Cycle Fund-Regular-Growth,Regular,Growth
-152725,SBI,Gold & Silver Scheme,Silver ETF,SBI Silver ETF,ETF,ETF
+152725,SBI,Gold & Silver Scheme,Silver ETF,SBI Silver ETF,Direct,ETF
 152726,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI PRUDENTIAL ENERGY OPPORTUNITIES FUND-Regular-Growth,Regular,Growth
 152727,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI PRUDENTIAL ENERGY OPPORTUNITIES FUND-Regular-IDCW,Regular,IDCW
 152728,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI PRUDENTIAL ENERGY OPPORTUNITIES FUND-Direct-Growth,Direct,Growth
 152729,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI PRUDENTIAL ENERGY OPPORTUNITIES FUND-Direct-IDCW,Direct,IDCW
 152730,Axis,Equity Scheme,Index-Nifty,Axis Nifty 500 Index Fund-Regular-Growth,Regular,Growth
 152731,Axis,Equity Scheme,Index-Nifty,Axis Nifty 500 Index Fund-Direct-Growth,Direct,Growth
-152732,Aditya Birla Sun Life,Debt Scheme,Gilt ETF,ADITYA BIRLA SUN LIFE CRISIL BROAD BASED GILT ETF,ETF,ETF
+152732,Aditya Birla Sun Life,Debt Scheme,Gilt ETF,ADITYA BIRLA SUN LIFE CRISIL BROAD BASED GILT ETF,Direct,ETF
 152733,SBI,Gold & Silver Scheme,Silver,SBI Silver ETF FoF-Regular-Growth,Regular,Growth
 152734,SBI,Gold & Silver Scheme,Silver,SBI Silver ETF FOF-Regular-IDCW,Regular,IDCW
 152735,SBI,Gold & Silver Scheme,Silver,SBI Silver ETF FoF-Direct-Growth,Direct,Growth
@@ -7222,15 +7222,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152738,Franklin Templeton,Equity Scheme,Multi Cap,Franklin India Multi Cap Fund-Regular-Growth,Regular,Growth
 152739,Franklin Templeton,Equity Scheme,Multi Cap,Franklin India Multi Cap Fund-Direct-Growth,Direct,Growth
 152740,Franklin Templeton,Equity Scheme,Multi Cap,Franklin India Multi Cap Fund-Regular-IDCW,Regular,IDCW
-152741,Shriram,Debt Scheme,Liquid ETF,Shriram Nifty 1D Rate Liquid ETF,ETF,ETF
+152741,Shriram,Debt Scheme,Liquid ETF,Shriram Nifty 1D Rate Liquid ETF,Direct,ETF
 152742,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty India Tourism Index Fund-Direct-Growth,Direct,Growth
 152743,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty India Tourism Index Fund-Direct-IDCW,Direct,IDCW
 152744,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty India Tourism Index Fund-Direct-IDCW Payout,Direct,IDCW
 152745,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty India Tourism Index Fund-Regular-IDCW Payout,Regular,IDCW
 152746,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty India Tourism Index Fund-Regular-Growth,Regular,Growth
 152747,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty India Tourism Index Fund-Regular-IDCW,Regular,IDCW
-152748,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Oil & Gas ETF,ETF,ETF
-152749,SBI,Equity Scheme,Index ETF,SBI Nifty50 Equal Weight ETF,ETF,ETF
+152748,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Oil & Gas ETF,Direct,ETF
+152749,SBI,Equity Scheme,Index ETF,SBI Nifty50 Equal Weight ETF,Direct,ETF
 152750,Navi,Equity Scheme,Index-Nifty,NAVI NIFTY 500 MULTICAP 50-25-25-Regular-Growth,Regular,Growth
 152751,Navi,Equity Scheme,Index-Nifty,NAVI NIFTY 500 MULTICAP 50-25-25-Direct-Growth,Direct,Growth
 152752,Kotak Mahindra,Index Funds,Equity Index,Kotak BSE PSU Index Fund-Regular-Growth,Regular,Growth
@@ -7245,12 +7245,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152761,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Oswal Manufacturing Fund-Regular-IDCW,Regular,IDCW
 152762,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Oswal Manufacturing Fund-Direct-IDCW,Direct,IDCW
 152763,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Owsal Manufacturing Fund-Regular-Growth,Regular,Growth
-152764,Groww,Equity Scheme,Index ETF,GROWW NIFTY EV & NEW AGE AUTOMOTIVE ETF,ETF,ETF
+152764,Groww,Equity Scheme,Index ETF,GROWW NIFTY EV & NEW AGE AUTOMOTIVE ETF,Direct,ETF
 152765,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 50 INDEX FUND-Regular-Growth,Regular,Growth
 152766,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 50 INDEX FUND-Regular-IDCW,Regular,IDCW
 152767,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 50 INDEX FUND-Direct-Growth,Direct,Growth
 152768,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 50 INDEX FUND-Direct-IDCW,Direct,IDCW
-152769,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Metal ETF,ETF,ETF
+152769,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Metal ETF,Direct,ETF
 152770,Groww,Equity Scheme,FoF Sectoral,Groww Nifty EV & New Age Automotive ETF FOF-Direct-Growth,Direct,Growth
 152771,Groww,Equity Scheme,FoF Sectoral,Groww Nifty EV & New Age Automotive ETF FOF-Direct-IDCW,Direct,IDCW
 152772,Groww,Equity Scheme,FoF Sectoral,Groww Nifty EV & New Age Automotive ETF FOF-Regular-IDCW,Regular,IDCW
@@ -7283,7 +7283,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152799,Aditya Birla Sun Life,Index Funds,Equity Sectoral/Thematic,ABSL Nifty India Defence Index Fund-Direct-IDCW Payout,Direct,IDCW
 152800,Aditya Birla Sun Life,Index Funds,Equity Sectoral/Thematic,Aditya Birla Sun Life Nifty India Defence Index Fund-Regular-Growth,Regular,Growth
 152801,Aditya Birla Sun Life,Index Funds,Equity Sectoral/Thematic,ABSL Nifty India Defence Index Fund-Regular-IDCW Payout,Regular,IDCW
-152802,Aditya Birla Sun Life,Debt Scheme,Gilt ETF,Aditya Birla Sun Life Crisil 10 Year Gilt ETF,ETF,ETF
+152802,Aditya Birla Sun Life,Debt Scheme,Gilt ETF,Aditya Birla Sun Life Crisil 10 Year Gilt ETF,Direct,ETF
 152803,Axis,Equity Scheme,Sectoral/ Thematic,Axis Consumption Fund-Direct-IDCW,Direct,IDCW
 152804,Axis,Equity Scheme,Sectoral/ Thematic,Axis Consumption Fund-Regular-Growth,Regular,Growth
 152805,Axis,Equity Scheme,Sectoral/ Thematic,Axis Consumption Fund-Direct-Growth,Direct,Growth
@@ -7292,8 +7292,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152808,Baroda BNP Paribas,Equity Scheme,Dividend Yield,Baroda BNP Paribas Dividend Yield Fund-Regular-IDCW,Regular,IDCW
 152809,Baroda BNP Paribas,Equity Scheme,Dividend Yield,Baroda BNP Paribas Dividend Yield Fund-Direct-IDCW,Direct,IDCW
 152810,Baroda BNP Paribas,Equity Scheme,Dividend Yield,Baroda BNP Paribas Dividend Yield Fund-Direct-Growth,Direct,Growth
-152811,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty500 Multicap 50:25:25 ETF,ETF,ETF
-152812,DSP,Equity Scheme,Index ETF,DSP Nifty Top 10 Equal Weight ETF,ETF,ETF
+152811,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty500 Multicap 50:25:25 ETF,Direct,ETF
+152812,DSP,Equity Scheme,Index ETF,DSP Nifty Top 10 Equal Weight ETF,Direct,ETF
 152813,DSP,Index Funds,Equity Index,DSP Nifty Top 10 Equal Weight Index Fund-Regular-Growth,Regular,Growth
 152814,DSP,Index Funds,Equity Index,DSP Nifty Top 10 Equal Weight Index Fund-Direct-Growth,Direct,Growth
 152815,PGIM India,Equity Scheme,Multi Cap,PGIM India Multi Cap Fund-Direct-Growth,Direct,Growth
@@ -7324,8 +7324,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152842,Nippon Life India,Equity Scheme,Index-Nifty,Nippon India Nifty 500 Equal Weight Index Fund-Direct-Growth,Direct,Growth
 152843,Bandhan,Index Funds,Equity Index,Bandhan BSE Healthcare Index Fund-Regular-Growth,Regular,Growth
 152844,Bandhan,Index Funds,Equity Index,Bandhan BSE Healthcare Index Fund-Direct-Growth,Direct,Growth
-152845,Groww,Equity Scheme,Index ETF,Groww Nifty India Defence ETF,ETF,ETF
-152846,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty India Defence ETF,ETF,ETF
+152845,Groww,Equity Scheme,Index ETF,Groww Nifty India Defence ETF,Direct,ETF
+152846,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty India Defence ETF,Direct,ETF
 152847,Samco,Equity Scheme,Multi Cap,Samco Multi Cap Fund-Direct-Growth,Direct,Growth
 152848,Samco,Equity Scheme,Multi Cap,Samco Multi Cap Fund-Regular-Growth,Regular,Growth
 152849,WhiteOak Capital,Hybrid Scheme,Arbitrage,WhiteOak Capital Arbitrage Fund-Direct-Growth,Direct,Growth
@@ -7336,7 +7336,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152854,Franklin Templeton,Debt Scheme,Medium to Long Duration,Franklin India Medium to Long Duration Fund-Regular-IDCW,Regular,IDCW
 152855,Bandhan,Equity Scheme,Index-Nifty,Bandhan Nifty Midcap 150 Index Fund-Direct-Growth,Direct,Growth
 152856,Bandhan,Equity Scheme,Index-Nifty,Bandhan Nifty Midcap 150 Index Fund-Regular-Growth,Regular,Growth
-152857,Edelweiss,Equity Scheme,Index ETF,Edelweiss Nifty Bank ETF,ETF,ETF
+152857,Edelweiss,Equity Scheme,Index ETF,Edelweiss Nifty Bank ETF,Direct,ETF
 152858,UTI,Index Funds,Equity Index,UTI Nifty 200 Quality 30 Index Fund-Regular-Growth,Regular,Growth
 152859,UTI,Index Funds,Equity Index,UTI Nifty 200 Quality 30 Index Fund-Direct-Growth,Direct,Growth
 152860,Invesco,Equity Scheme,Sectoral/ Thematic,Invesco India Technology Fund-Direct-IDCW,Direct,IDCW
@@ -7353,7 +7353,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152871,Kotak Mahindra,Index Funds,Equity Sectoral/Thematic,Kotak Nifty India Tourism Index Fund-Regular-IDCW,Regular,IDCW
 152872,Kotak Mahindra,Index Funds,Equity Sectoral/Thematic,Kotak Nifty India Tourism Index Fund-Regular-Growth,Regular,Growth
 152873,Kotak Mahindra,Index Funds,Equity Sectoral/Thematic,Kotak Nifty India Tourism Index Fund-Direct-IDCW,Direct,IDCW
-152874,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 500 Momentum 50 ETF,ETF,ETF
+152874,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 500 Momentum 50 ETF,Direct,ETF
 152875,Motilal Oswal,Equity Scheme,Index-Nifty,Motilal Oswal Nifty 500 Momentum 50 Index Fund-Direct-Growth,Direct,Growth
 152876,Motilal Oswal,Equity Scheme,Index-Nifty,Motilal Oswal Nifty 500 Momentum 50 Index Fund-Regular-Growth,Regular,Growth
 152877,Bandhan,Equity Scheme,Sectoral/ Thematic,Bandhan Business Cycle Fund-Regular-Growth,Regular,Growth
@@ -7370,7 +7370,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152888,Axis,Index Funds,Debt Index,Axis CRISIL-IBX AAA Bond NBFC - Jun 2027 Index Fund-Direct-IDCW,Direct,IDCW
 152889,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY LargeMidcap 250 Index Fund-Direct-Growth,Direct,Growth
 152890,HDFC,Equity Scheme,Index-Nifty,HDFC NIFTY LargeMidcap 250 Index Fund-Regular-Growth,Regular,Growth
-152891,Groww,Debt Scheme,Liquid ETF,Groww Nifty 1D Rate Liquid ETF,ETF,ETF
+152891,Groww,Debt Scheme,Liquid ETF,Groww Nifty 1D Rate Liquid ETF,Direct,ETF
 152906,SBI,Equity Scheme,Index-Nifty,SBI Nifty 500 Index Fund-Regular-Growth,Regular,Growth
 152907,SBI,Equity Scheme,Index-Nifty,SBI Nifty 500 Index Fund-Regular-IDCW,Regular,IDCW
 152908,SBI,Equity Scheme,Index-Nifty,SBI Nifty 500 Index Fund-Direct-Growth,Direct,Growth
@@ -7389,15 +7389,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152921,LIC,Equity Scheme,Sectoral/ Thematic,LIC MF Manufacturing Fund-Direct-IDCW,Direct,IDCW
 152922,LIC,Equity Scheme,Sectoral/ Thematic,LIC MF Manufacturing Fund-Regular-Growth,Regular,Growth
 152923,LIC,Equity Scheme,Sectoral/ Thematic,LIC MF Manufacturing Fund-Regular-IDCW,Regular,IDCW
-152924,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Metal ETF,ETF,ETF
+152924,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty Metal ETF,Direct,ETF
 152925,Groww,Equity Scheme,FoF Sectoral,Groww Nifty India Defence ETF FOF-Direct-Growth,Direct,Growth
 152926,Groww,Equity Scheme,FoF Sectoral,Groww Nifty India Defence ETF FOF-Direct-IDCW,Direct,IDCW
 152927,Groww,Equity Scheme,FoF Sectoral,Groww Nifty India Defence ETF FOF-Regular-Growth,Regular,Growth
 152928,Groww,Equity Scheme,FoF Sectoral,Groww Nifty India Defence ETF FOF-Regular-IDCW,Regular,IDCW
-152929,Mirae,Debt Scheme,Banking and PSU ETF,Mirae Asset Nifty PSU Bank ETF,ETF,ETF
+152929,Mirae,Debt Scheme,Banking and PSU ETF,Mirae Asset Nifty PSU Bank ETF,Direct,ETF
 152930,Baroda BNP Paribas,Index Funds,Equity Index,Baroda BNP Paribas Nifty200 Momentum 30 Index Fund-Regular-Growth,Regular,Growth
 152931,Baroda BNP Paribas,Index Funds,Equity Index,Baroda BNP Paribas Nifty200 Momentum 30 Index Fund-Direct-Growth,Direct,Growth
-152932,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty200 Value 30 ETF,ETF,ETF
+152932,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty200 Value 30 ETF,Direct,ETF
 152933,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty200 Value 30 Index Fund-Direct-IDCW,Direct,IDCW
 152934,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty200 Value 30 Index Fund-Regular-Growth,Regular,Growth
 152935,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty200 Value 30 Index Fund-Regular-IDCW,Regular,IDCW
@@ -7422,7 +7422,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152954,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty Capital Markets Index Fund-Regular-Growth,Regular,Growth
 152955,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty Capital Markets Index Fund-Regular-IDCW,Regular,IDCW
 152956,Tata,Index Funds,Equity Sectoral/Thematic,Tata Nifty Capital Markets Index Fund-Regular-IDCW Payout,Regular,IDCW
-152957,Groww,Gold & Silver Scheme,Gold ETF,Groww Gold ETF,ETF,ETF
+152957,Groww,Gold & Silver Scheme,Gold ETF,Groww Gold ETF,Direct,ETF
 152958,Aditya Birla Sun Life,Index Funds,Debt Index,Aditya Birla Sun Life Crisil-IBX AAA NBFC-HFC Index-Dec 2025 Fund-Direct-Growth,Direct,Growth
 152959,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil-IBX AAA NBFC--HFC Index-Dec 2025 Fund-Direct-IDCW Payout,Direct,IDCW
 152960,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil-IBX AAA NBFC-HFC Index-Dec 2025 Fund-Regular-IDCW Payout,Regular,IDCW
@@ -7446,7 +7446,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 152978,Mirae,Equity Scheme,Index-Nifty,Mirae Asset Nifty LargeMidcap 250 Index Fund-Regular-Growth,Regular,Growth
 152979,Mirae,Equity Scheme,Index-Nifty,Mirae Asset Nifty LargeMidcap 250 Index Fund-Regular-IDCW,Regular,IDCW
 152980,Groww,Gold & Silver Scheme,Gold,Groww Gold ETF FOF-Direct-Growth,Direct,Growth
-152981,Edelweiss,Equity Scheme,Index ETF,Edelweiss Nifty500 Multicap Momentum Quality 50 ETF,ETF,ETF
+152981,Edelweiss,Equity Scheme,Index ETF,Edelweiss Nifty500 Multicap Momentum Quality 50 ETF,Direct,ETF
 152982,Edelweiss,Equity Scheme,Index-Nifty,Edelweiss Nifty500 Multicap Momentum Quality 50 Index Fund-Direct-IDCW Payout,Direct,IDCW
 152983,Edelweiss,Equity Scheme,Index-Nifty,Edelweiss Nifty500 Momentum Quality 50 Index Fund-Regular-IDCW Payout,Regular,IDCW
 152985,Edelweiss,Equity Scheme,Index-Nifty,Edelweiss Nifty500 Multicap Momentum Quality 50 Index Fund-Direct-Growth,Direct,Growth
@@ -7501,7 +7501,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153042,Franklin Templeton,Hybrid Scheme,Arbitrage,Franklin India Arbitrage Fund-Regular-Growth,Regular,Growth
 153043,Franklin Templeton,Hybrid Scheme,Arbitrage,Franklin India Arbitrage Fund-Direct-Growth,Direct,Growth
 153044,Franklin Templeton,Hybrid Scheme,Arbitrage,Franklin India Arbitrage Fund-Regular-IDCW,Regular,IDCW
-153045,Mirae,Debt Scheme,Liquid ETF,Mirae Asset Nifty 1D Rate Liquid ETF-Growth ETF,ETF,ETF
+153045,Mirae,Debt Scheme,Liquid ETF,Mirae Asset Nifty 1D Rate Liquid ETF-Growth ETF,Direct,ETF
 153046,Invesco,Hybrid Scheme,Multi Asset Allocation,Invesco India Multi Asset Allocation Fund-Regular-Growth,Regular,Growth
 153047,Invesco,Hybrid Scheme,Multi Asset Allocation,Invesco India Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 153048,Invesco,Hybrid Scheme,Multi Asset Allocation,Invesco India Multi Asset Allocation Fund-Regular-IDCW,Regular,IDCW
@@ -7630,7 +7630,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153177,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil-IBX Fin Srvs 3 to 6 M Debt Index Fund-Regular-Growth,Regular,Growth
 153178,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil-IBX Fin Srvs 3 to 6 M Debt Index Fund-Regular-IDCW Payout,Regular,IDCW
 153179,Aditya Birla Sun Life,Index Funds,Debt Index,ABSL Crisil-IBX Fin Srvs 3 to 6 M Debt Index Fund-Direct-Growth,Direct,Growth
-153180,Edelweiss,Equity Scheme,Index ETF,Edelweiss BSE Capital Markets & Insurance ETF,ETF,ETF
+153180,Edelweiss,Equity Scheme,Index ETF,Edelweiss BSE Capital Markets & Insurance ETF,Direct,ETF
 153181,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI Prudential Rural Opportunities Fund-Regular-Growth,Regular,Growth
 153182,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI Prudential Rural Opportunities Fund-Direct-IDCW,Direct,IDCW
 153183,ICICI Prudential,Equity Scheme,Sectoral/ Thematic,ICICI Prudential Rural Opportunities Fund-Regular-IDCW,Regular,IDCW
@@ -7641,7 +7641,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153188,Motilal Oswal,Hybrid Scheme,Arbitrage,Motilal Oswal Arbitrage Fund-Regular-Growth,Regular,Growth
 153189,WhiteOak Capital,Equity Scheme,Sectoral/ Thematic,WhiteOak Capital Quality Equity Fund-Direct-Growth,Direct,Growth
 153190,WhiteOak Capital,Equity Scheme,Sectoral/ Thematic,WhiteOak Capital Quality Equity Fund-Regular-Growth,Regular,Growth
-153191,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty India New Age Consumption ETF,ETF,ETF
+153191,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty India New Age Consumption ETF,Direct,ETF
 153192,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty India New Age Consumption ETF FoF-Direct-Growth,Direct,Growth
 153193,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty India New Age Consumption ETF FoF-Direct-IDCW,Direct,IDCW
 153194,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset Nifty India New Age Consumption ETF FoF-Regular-Growth,Regular,Growth
@@ -7676,8 +7676,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153225,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Energy Opportunities Fund-Direct-Growth,Direct,Growth
 153226,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Energy Opportunities Fund-Regular-Growth,Regular,Growth
 153227,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Energy Opportunities Fund-Direct-IDCW,Direct,IDCW
-153228,DSP,Equity Scheme,Index ETF,DSP BSE SENSEX Next 30 ETF,ETF,ETF
-153229,Groww,Debt Scheme,Banking and PSU ETF,Groww Nifty India Railways PSU ETF,ETF,ETF
+153228,DSP,Equity Scheme,Index ETF,DSP BSE SENSEX Next 30 ETF,Direct,ETF
+153229,Groww,Debt Scheme,Banking and PSU ETF,Groww Nifty India Railways PSU ETF,Direct,ETF
 153230,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty India Railways PSU Index Fund-Direct-Growth,Direct,Growth
 153231,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty India Railways PSU Index Fund-Direct-IDCW,Direct,IDCW
 153232,Groww,Index Funds,Equity Sectoral/Thematic,Groww Nifty India Railways PSU Index Fund-Regular-Growth,Regular,Growth
@@ -7757,8 +7757,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153311,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL - IBX AAA Bond Fin Srvs Index Dec 2026 Fund-Regular-Growth,Regular,Growth
 153312,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL - IBX AAA Bond Fin Srvs Index Dec 2026 Fund-Direct-IDCW,Direct,IDCW
 153313,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL - IBX AAA Bond Fin Srvs Index Dec 2026 Fund-Direct-Growth,Direct,Growth
-153314,Kotak Mahindra,Equity Scheme,Index ETF,Kotak MSCI India ETF,ETF,ETF
-153315,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 100 Equal Weight ETF,ETF,ETF
+153314,Kotak Mahindra,Equity Scheme,Index ETF,Kotak MSCI India ETF,Direct,ETF
+153315,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 100 Equal Weight ETF,Direct,ETF
 153320,SBI,Index Funds,Equity Sectoral/Thematic,SBI Nifty IT Index Fund-Direct-Growth,Direct,Growth
 153321,SBI,Index Funds,Equity Sectoral/Thematic,SBI Nifty IT Index Fund-Direct-IDCW,Direct,IDCW
 153322,SBI,Index Funds,Equity Sectoral/Thematic,SBI Nifty IT Index Fund-Regular-IDCW,Regular,IDCW
@@ -7768,15 +7768,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153326,Helios Capital,Equity Scheme,Mid Cap,Helios Mid Cap Fund-Direct-Growth,Direct,Growth
 153327,Helios Capital,Equity Scheme,Mid Cap,Helios Mid Cap Fund-Regular-Growth,Regular,Growth
 153328,Groww,Index Funds,FoF Equity Index,Groww Nifty 200 ETF FOF-Direct-Growth,Direct,Growth
-153329,Groww,Equity Scheme,Index ETF,Groww Nifty 200 ETF,ETF,ETF
+153329,Groww,Equity Scheme,Index ETF,Groww Nifty 200 ETF,Direct,ETF
 153330,Angel One,Index Funds,Equity Sectoral/Thematic,ANGEL ONE NIFTY TOTAL MARKET INDEX FUND-Direct-Growth,Direct,Growth
 153331,Angel One,Index Funds,Equity Sectoral/Thematic,ANGEL ONE NIFTY TOTAL MARKET INDEX FUND-Regular-Growth,Regular,Growth
-153332,Angel One,Equity Scheme,Index ETF,ANGEL ONE NIFTY TOTAL MARKET ETF,ETF,ETF
+153332,Angel One,Equity Scheme,Index ETF,ANGEL ONE NIFTY TOTAL MARKET ETF,Direct,ETF
 153333,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund-Direct-IDCW,Direct,IDCW
 153334,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund-Regular-Growth,Regular,Growth
 153335,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund-Direct-Growth,Direct,Growth
 153336,Edelweiss,Index Funds,Debt Index,Edelweiss CRISIL IBX AAA Bond NBFC HFC Jun 2027 Index Fund-Regular-IDCW,Regular,IDCW
-153337,Union,Gold & Silver Scheme,Gold ETF,Union Gold ETF,ETF,ETF
+153337,Union,Gold & Silver Scheme,Gold ETF,Union Gold ETF,Direct,ETF
 153338,Union,Gold & Silver Scheme,Gold,Union Gold ETF FoF-Regular-Growth,Regular,Growth
 153339,Union,Gold & Silver Scheme,Gold,Union Gold ETF FoF-Direct-IDCW,Direct,IDCW
 153340,Union,Gold & Silver Scheme,Gold,Union Gold ETF FoF-Direct-Growth,Direct,Growth
@@ -7796,7 +7796,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153354,Kotak Mahindra,Index Funds,Equity Sectoral/Thematic,KOTAK NIFTY COMMODITIES INDEX FUND-Direct-IDCW,Direct,IDCW
 153355,WhiteOak Capital,Hybrid Scheme,Equity Savings,WhiteOak Capital Equity Savings Fund-Direct-Growth,Direct,Growth
 153356,WhiteOak Capital,Hybrid Scheme,Equity Savings,WhiteOak Capital Equity Savings Fund-Regular-Growth,Regular,Growth
-153357,360 ONE,Gold & Silver Scheme,Gold ETF,360 ONE Gold ETF,ETF,ETF
+153357,360 ONE,Gold & Silver Scheme,Gold ETF,360 ONE Gold ETF,Direct,ETF
 153362,Navi,Equity Scheme,Index-Nifty,Navi Nifty Smallcap 250 Momentum quality index fund-Direct-Growth,Direct,Growth
 153363,Navi,Equity Scheme,Index-Nifty,Navi Nifty Smallcap 250 Momentum quality index fund-Regular-Growth,Regular,Growth
 153364,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Oswal Active Momentum Fund-Direct-Growth,Direct,Growth
@@ -7813,13 +7813,13 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153375,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Regular-Growth,Regular,Growth
 153376,Unifi,Hybrid Scheme,FoF Dynamic Asset Allocation,Unifi Dynamic Asset Allocation Fund-Direct-Growth,Direct,Growth
 153377,Unifi,Hybrid Scheme,FoF Dynamic Asset Allocation,Unifi Dynamic Asset Allocation Fund-Regular-Growth,Regular,Growth
-153378,ICICI Prudential,Debt Scheme,Liquid ETF,ICICI Prudential BSE Liquid Rate ETF-Growth ETF,ETF,ETF
-153379,Mirae,Equity Scheme,Index ETF,Mirae Asset BSE 200 Equal Weight ETF,ETF,ETF
+153378,ICICI Prudential,Debt Scheme,Liquid ETF,ICICI Prudential BSE Liquid Rate ETF-Growth ETF,Direct,ETF
+153379,Mirae,Equity Scheme,Index ETF,Mirae Asset BSE 200 Equal Weight ETF,Direct,ETF
 153380,Mirae,Index Funds,FoF Equity Index,Mirae Asset BSE 200 Equal Weight ETF FoF-Direct-Growth,Direct,Growth
 153381,Mirae,Index Funds,FoF Equity Index,Mirae Asset BSE 200 Equal Weight ETF FoF-Direct-IDCW,Direct,IDCW
 153382,Mirae,Index Funds,FoF Equity Index,Mirae Asset BSE 200 Equal Weight ETF FoF-Regular-Growth,Regular,Growth
 153383,Mirae,Index Funds,FoF Equity Index,Mirae Asset BSE 200 Equal Weight ETF FoF-Regular-IDCW,Regular,IDCW
-153384,Mirae,Equity Scheme,Index ETF,Mirae Asset BSE Select IPO ETF,ETF,ETF
+153384,Mirae,Equity Scheme,Index ETF,Mirae Asset BSE Select IPO ETF,Direct,ETF
 153385,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset BSE Select IPO ETF FoF-Direct-Growth,Direct,Growth
 153386,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset BSE Select IPO ETF FoF-Direct-IDCW,Direct,IDCW
 153387,Mirae,Equity Scheme,FoF Sectoral,Mirae Asset BSE Select IPO ETF FoF-Regular-Growth,Regular,Growth
@@ -7832,25 +7832,25 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153394,ICICI Prudential,Equity Scheme,FoF Sectoral,ICICI Prudential Nifty EV & New Age Automotive ETF FOF-Direct-Growth,Direct,Growth
 153395,ICICI Prudential,Equity Scheme,FoF Sectoral,ICICI Nifty EV & New Age Automotive ETF FOF-Direct-IDCW,Direct,IDCW
 153396,ICICI Prudential,Equity Scheme,FoF Sectoral,ICICI Prudential Nifty EV & New Age Automotive ETF FOF-Regular-Growth,Regular,Growth
-153397,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty EV & New Age Automotive ETF,ETF,ETF
-153398,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Midcap 150 ETF,ETF,ETF
+153397,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty EV & New Age Automotive ETF,Direct,ETF
+153398,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty Midcap 150 ETF,Direct,ETF
 153399,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 150 INDEX FUND-Regular-Growth,Regular,Growth
 153400,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 150 INDEX FUND-Regular-IDCW,Regular,IDCW
 153401,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 150 INDEX FUND-Direct-Growth,Direct,Growth
 153402,Kotak Mahindra,Equity Scheme,Index-Nifty,KOTAK NIFTY MIDCAP 150 INDEX FUND-Direct-IDCW,Direct,IDCW
-153403,HDFC,Debt Scheme,Liquid ETF,HDFC NIFTY 1D RATE LIQUID ETF,ETF,ETF
+153403,HDFC,Debt Scheme,Liquid ETF,HDFC NIFTY 1D RATE LIQUID ETF,Direct,ETF
 153404,HDFC,Index Funds,Equity Index,HDFC Nifty Top 20 Equal Weight Index Fund-Regular-Growth,Regular,Growth
 153405,HDFC,Index Funds,Equity Index,HDFC Nifty Top 20 Equal Weight Index Fund-Direct-Growth,Direct,Growth
-153406,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Capital Market ETF,ETF,ETF
+153406,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Capital Market ETF,Direct,ETF
 153407,Bandhan,Index Funds,Debt Index,Bandhan CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Direct-Growth,Direct,Growth
 153408,Bandhan,Index Funds,Debt Index,Bandhan CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Regular-Growth,Regular,Growth
 153409,ICICI Prudential,Index Funds,Debt Index,ICICI CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Regular-Growth,Regular,Growth
 153410,ICICI Prudential,Index Funds,Debt Index,ICICI CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Direct-Annual IDCW,Direct,IDCW
 153411,ICICI Prudential,Index Funds,Debt Index,ICICI CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Direct-Growth,Direct,Growth
 153412,ICICI Prudential,Index Funds,Debt Index,ICICI CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Regular-Annual IDCW,Regular,IDCW
-153413,Zerodha,Gold & Silver Scheme,Silver ETF,Zerodha Silver ETF,ETF,ETF
-153414,Axis,Equity Scheme,Index ETF,Axis Nifty500 Value 50 ETF,ETF,ETF
-153415,360 ONE,Gold & Silver Scheme,Silver ETF,360 ONE Silver ETF,ETF,ETF
+153413,Zerodha,Gold & Silver Scheme,Silver ETF,Zerodha Silver ETF,Direct,ETF
+153414,Axis,Equity Scheme,Index ETF,Axis Nifty500 Value 50 ETF,Direct,ETF
+153415,360 ONE,Gold & Silver Scheme,Silver ETF,360 ONE Silver ETF,Direct,ETF
 153416,Edelweiss,Debt Scheme,Low Duration,Edelweiss Low Duration Fund-Direct-Growth,Direct,Growth
 153417,Edelweiss,Debt Scheme,Low Duration,Edelweiss Low Duration Fund-Regular-IDCW Payout,Regular,IDCW
 153418,Edelweiss,Debt Scheme,Low Duration,Edelweiss Low Duration Fund-Direct-IDCW Payout,Direct,IDCW
@@ -7869,7 +7869,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153432,SBI,Index Funds,Equity Index,SBI BSE PSU BANK INDEX FUND-Direct-Growth,Direct,Growth
 153433,SBI,Index Funds,Equity Index,SBI BSE PSU BANK INDEX FUND-Direct-IDCW,Direct,IDCW
 153434,SBI,Index Funds,Equity Index,SBI BSE PSU BANK INDEX FUND-Regular-Growth,Regular,Growth
-153435,SBI,Debt Scheme,Index ETF,SBI BSE PSU BANK ETF,ETF,ETF
+153435,SBI,Debt Scheme,Index ETF,SBI BSE PSU BANK ETF,Direct,ETF
 153436,Zerodha,Debt Scheme,Overnight,Zerodha Overnight Fund-Direct-Growth,Direct,Growth
 153437,Bajaj Finserv,Debt Scheme,Overnight,Bajaj Finserv Overnight Fund-Direct-IDCW,Direct,IDCW
 153438,Bajaj Finserv,Debt Scheme,Overnight,Bajaj Finserv Overnight Fund-Direct-Unclaimed IDCW,Direct,IDCW
@@ -7882,8 +7882,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153448,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Energy Opportunities Fund-Direct-IDCW,Direct,IDCW
 153449,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Energy Opportunities Fund-Regular-Growth,Regular,Growth
 153450,Kotak Mahindra,Equity Scheme,Sectoral/ Thematic,Kotak Energy Opportunities Fund-Regular-IDCW,Regular,IDCW
-153451,Angel One,Debt Scheme,Liquid ETF,ANGEL ONE NIFTY 1D RATE LIQUID ETF,ETF,ETF
-153452,Groww,Equity Scheme,Index ETF,Groww Nifty 500 Momentum 50 ETF,ETF,ETF
+153451,Angel One,Debt Scheme,Liquid ETF,ANGEL ONE NIFTY 1D RATE LIQUID ETF,Direct,ETF
+153452,Groww,Equity Scheme,Index ETF,Groww Nifty 500 Momentum 50 ETF,Direct,ETF
 153453,Groww,Index Funds,FoF Equity Index,Groww Nifty 500 Momentum 50 ETF FOF-Direct-Growth,Direct,Growth
 153454,Groww,Index Funds,FoF Equity Index,Groww Nifty 500 Momentum 50 ETF FOF-Direct-IDCW,Direct,IDCW
 153455,Groww,Index Funds,FoF Equity Index,Groww Nifty 500 Momentum 50 ETF FOF-Regular-IDCW,Regular,IDCW
@@ -7946,19 +7946,19 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153516,UTI,Equity Scheme,Multi Cap,UTI Multi Cap Fund-Regular-Growth,Regular,Growth
 153517,HDFC,Index Funds,Debt Index,HDFC CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Direct-Growth,Direct,Growth
 153518,HDFC,Index Funds,Debt Index,HDFC CRISIL-IBX Fin Srvs 3-6 M Debt Index Fund-Regular-Growth,Regular,Growth
-153519,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 50 Equal Weight ETF,ETF,ETF
-153524,Groww,Gold & Silver Scheme,Silver ETF,Groww Silver ETF,ETF,ETF
+153519,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty 50 Equal Weight ETF,Direct,ETF
+153524,Groww,Gold & Silver Scheme,Silver ETF,Groww Silver ETF,Direct,ETF
 153525,Groww,Gold & Silver Scheme,Silver,Groww Silver ETF FOF-Direct-Growth,Direct,Growth
 153526,Groww,Gold & Silver Scheme,Silver,Groww Silver ETF FOF-Direct-IDCW,Direct,IDCW
 153527,Groww,Gold & Silver Scheme,Silver,Groww Silver ETF FOF-Regular-Growth,Regular,Growth
 153528,Groww,Gold & Silver Scheme,Silver,Groww Silver ETF FOF-Regular-IDCW,Regular,IDCW
 153529,Angel One,Equity Scheme,Index-Nifty,ANGEL ONE NIFTY 50 INDEX FUND-Direct-Growth,Direct,Growth
 153530,Angel One,Equity Scheme,Index-Nifty,ANGEL ONE NIFTY 50 INDEX FUND-Regular-Growth,Regular,Growth
-153531,Angel One,Equity Scheme,Index ETF,ANGEL ONE NIFTY 50 ETF,ETF,ETF
-153532,Motilal Oswal,Equity Scheme,Index ETF,MOTILAL OSWAL NIFTY 50 EQUAL WEIGHT ETF,ETF,ETF
+153531,Angel One,Equity Scheme,Index ETF,ANGEL ONE NIFTY 50 ETF,Direct,ETF
+153532,Motilal Oswal,Equity Scheme,Index ETF,MOTILAL OSWAL NIFTY 50 EQUAL WEIGHT ETF,Direct,ETF
 153533,Samco,Equity Scheme,Large & Mid Cap,Samco Large & Mid Cap Fund-Regular-Growth,Regular,Growth
 153534,Samco,Equity Scheme,Large & Mid Cap,Samco Large & Mid Cap Fund-Direct-Growth,Direct,Growth
-153535,Motilal Oswal,Equity Scheme,Index ETF,MOTILAL OSWAL NIFTY NEXT 50 ETF,ETF,ETF
+153535,Motilal Oswal,Equity Scheme,Index ETF,MOTILAL OSWAL NIFTY NEXT 50 ETF,Direct,ETF
 153536,Baroda BNP Paribas,Hybrid Scheme,FoF Arbitrage,Baroda BNP Paribas Income Plus Arbitrage Active FOF-Direct-Growth,Direct,Growth
 153538,Baroda BNP Paribas,Hybrid Scheme,FoF Arbitrage,Baroda BNP Paribas Income Plus Arbitrage Active FOF-Regular-IDCW Payout,Regular,IDCW
 153540,Baroda BNP Paribas,Hybrid Scheme,FoF Arbitrage,Baroda BNP Paribas Income Plus Arbitrage Active FOF-Direct-IDCW Payout,Direct,IDCW
@@ -7981,15 +7981,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153561,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Oswal Services Fund-Regular-Growth,Regular,Growth
 153562,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Oswal Services Fund-Regular-IDCW,Regular,IDCW
 153563,Motilal Oswal,Equity Scheme,Sectoral/ Thematic,Motilal Oswal Services Fund-Direct-IDCW,Direct,IDCW
-153564,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE India Infrastructure ETF,ETF,ETF
+153564,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal BSE India Infrastructure ETF,Direct,ETF
 153565,Nippon Life India,Index Funds,Equity Index,Nippon India BSE Sensex Next 30 Index-Direct-IDCW Payout,Direct,IDCW
 153566,Nippon Life India,Index Funds,Equity Index,Nippon India BSE Sensex Next 30 Index Fund-Regular-Growth,Regular,Growth
 153567,Nippon Life India,Index Funds,Equity Index,Nippon India BSE Sensex Next 30 Index Fund-Direct-Growth,Direct,Growth
 153568,Nippon Life India,Index Funds,Equity Index,Nippon India BSE Sensex Next 30 Index Fund-Regular-IDCW Payout,Regular,IDCW
-153569,Nippon Life India,Equity Scheme,Index ETF,Nippon India BSE Sensex Next 30 ETF,ETF,ETF
+153569,Nippon Life India,Equity Scheme,Index ETF,Nippon India BSE Sensex Next 30 ETF,Direct,ETF
 153570,Unifi,Debt Scheme,Liquid,Unifi Liquid Fund-Direct-Growth,Direct,Growth
 153571,Unifi,Debt Scheme,Liquid,Unifi Liquid Fund-Regular-Growth,Regular,Growth
-153572,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty India Manufacturing ETF,ETF,ETF
+153572,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty India Manufacturing ETF,Direct,ETF
 153573,Union,Hybrid Scheme,FoF Arbitrage,Union Income Plus Arbitrage Active FOF-Regular-Growth,Regular,Growth
 153574,Union,Hybrid Scheme,FoF Arbitrage,Union Income Plus Arbitrage Active FOF-Regular-IDCW,Regular,IDCW
 153575,Union,Hybrid Scheme,FoF Arbitrage,Union Income Plus Arbitrage Active FOF-Direct-Growth,Direct,Growth
@@ -8000,7 +8000,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153580,Tata,Equity Scheme,Index-Nifty,Tata Nifty Midcap 150 Index Fund-Regular-Growth,Regular,Growth
 153581,Tata,Equity Scheme,Index-Nifty,Tata Nifty Midcap 150 Index Fund-Direct-Growth,Direct,Growth
 153582,Tata,Equity Scheme,Index-Nifty,Tata Nifty Midcap 150 Index Fund-Regular-IDCW Payout,Regular,IDCW
-153583,Groww,Equity Scheme,Index ETF,Groww Nifty 500 Low Volatility 50 ETF,ETF,ETF
+153583,Groww,Equity Scheme,Index ETF,Groww Nifty 500 Low Volatility 50 ETF,Direct,ETF
 153588,DSP,Index Funds,Equity Sectoral/Thematic,DSP Nifty IT Index Fund-Regular-Growth,Regular,Growth
 153589,DSP,Index Funds,Equity Sectoral/Thematic,DSP Nifty IT Index Fund-Regular-IDCW,Regular,IDCW
 153590,DSP,Index Funds,Equity Sectoral/Thematic,DSP Nifty IT Index Fund-Direct-Growth,Direct,Growth
@@ -8019,7 +8019,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153604,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Health and Wellness Fund-Direct-Growth,Direct,Growth
 153605,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Health and Wellness Fund-Direct-IDCW Payout,Direct,IDCW
 153607,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Health and Wellness Fund-Regular-IDCW Payout,Regular,IDCW
-153608,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty PSE ETF,ETF,ETF
+153608,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty PSE ETF,Direct,ETF
 153609,Bajaj Finserv,Equity Scheme,Small Cap,BAJAJ FINSERV SMALL CAP FUND-Regular-Growth,Regular,Growth
 153610,Bajaj Finserv,Equity Scheme,Small Cap,BAJAJ FINSERV SMALL CAP FUND-Regular-IDCW,Regular,IDCW
 153611,Bajaj Finserv,Equity Scheme,Small Cap,BAJAJ FINSERV SMALL CAP FUND-Direct-IDCW,Direct,IDCW
@@ -8028,15 +8028,15 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153614,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty Top 15 Equal Weight Index Fund-Direct-Growth,Direct,Growth
 153615,ICICI Prudential,Index Funds,Equity Index,ICICI Nifty Top 15 Equal Weight Index Fund-Regular-IDCW,Regular,IDCW
 153616,ICICI Prudential,Index Funds,Equity Index,ICICI Prudential Nifty Top 15 Equal Weight Index Fund-Direct-IDCW,Direct,IDCW
-153617,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Top 15 Equal Weight ETF,ETF,ETF
-153618,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty India Tourism ETF,ETF,ETF
+153617,ICICI Prudential,Equity Scheme,Index ETF,ICICI Prudential Nifty Top 15 Equal Weight ETF,Direct,ETF
+153618,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty India Tourism ETF,Direct,ETF
 153619,HDFC,Equity Scheme,Sectoral/ Thematic,HDFC INNOVATION FUND-Regular-Growth,Regular,Growth
 153620,HDFC,Equity Scheme,Sectoral/ Thematic,HDFC INNOVATION FUND-Direct-Growth,Direct,Growth
 153621,Axis,Equity Scheme,Sectoral/ Thematic,Axis Services Opportunities Fund-Regular-Growth,Regular,Growth
 153622,Axis,Equity Scheme,Sectoral/ Thematic,Axis Services Opportunities Fund-Direct-IDCW,Direct,IDCW
 153623,Axis,Equity Scheme,Sectoral/ Thematic,Axis Services Opportunities Fund-Regular-IDCW,Regular,IDCW
 153624,Axis,Equity Scheme,Sectoral/ Thematic,Axis Services Opportunities Fund-Direct-Growth,Direct,Growth
-153625,Groww,Equity Scheme,Index ETF,Groww Nifty India Internet ETF,ETF,ETF
+153625,Groww,Equity Scheme,Index ETF,Groww Nifty India Internet ETF,Direct,ETF
 153626,Groww,Equity Scheme,FoF Sectoral,Groww Nifty India Internet ETF FOF-Direct-Growth,Direct,Growth
 153627,JM Financial,Equity Scheme,Large & Mid Cap,JM Large & Mid Cap Fund-Regular-Growth,Regular,Growth
 153628,JM Financial,Equity Scheme,Large & Mid Cap,JM Large & Mid Cap Fund-Regular-IDCW,Regular,IDCW
@@ -8053,7 +8053,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153639,Mirae,Hybrid Scheme,FoF Arbitrage,Mirae Asset Income plus Arbitrage Active FOF-Direct-IDCW,Direct,IDCW
 153640,Mirae,Hybrid Scheme,FoF Arbitrage,Mirae Asset Income plus Arbitrage Active FOF-Regular-Growth,Regular,Growth
 153641,Mirae,Hybrid Scheme,FoF Arbitrage,Mirae Asset Income plus Arbitrage Active FOF-Regular-IDCW,Regular,IDCW
-153642,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty India Internet ETF,ETF,ETF
+153642,Mirae,Equity Scheme,Index ETF,Mirae Asset Nifty India Internet ETF,Direct,ETF
 153643,HDFC,Equity Scheme,Sectoral/ Thematic,HDFC INNOVATION FUND-Direct-IDCW,Direct,IDCW
 153644,Trust,Equity Scheme,Multi Cap,TRUSTMF MULTI CAP FUND-Direct-Growth,Direct,Growth
 153645,Trust,Equity Scheme,Multi Cap,TRUSTMF MULTI CAP FUND-Regular-Growth,Regular,Growth
@@ -8066,7 +8066,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153654,Union,Debt Scheme,Low Duration,Union Low Duration Fund-Direct-Growth,Direct,Growth
 153655,Union,Debt Scheme,Low Duration,Union Low Duration Fund-Direct-IDCW,Direct,IDCW
 153656,Zerodha,Gold & Silver Scheme,Silver,Zerodha Silver ETF FoF-Direct-Growth,Direct,Growth
-153657,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty200 Quality 30 ETF,ETF,ETF
+153657,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty200 Quality 30 ETF,Direct,ETF
 153658,Kotak Mahindra,Index Funds,Equity Index,KOTAK NIFTY 200 QUALITY 30 INDEX FUND-Direct-IDCW,Direct,IDCW
 153659,Kotak Mahindra,Index Funds,Equity Index,KOTAK NIFTY 200 QUALITY 30 INDEX FUND-Regular-Growth,Regular,Growth
 153660,Kotak Mahindra,Index Funds,Equity Index,KOTAK NIFTY 200 QUALITY 30 INDEX FUND-Direct-Growth,Direct,Growth
@@ -8099,12 +8099,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153691,Nippon Life India,Equity Scheme,Sectoral/ Thematic,Nippon India MNC Fund-Regular-Growth,Regular,Growth
 153692,Nippon Life India,Equity Scheme,Sectoral/ Thematic,Nippon India MNC Fund-Regular-IDCW Payout,Regular,IDCW
 153693,Nippon Life India,Equity Scheme,Sectoral/ Thematic,Nippon India MNC Fund-Direct-Growth,Direct,Growth
-153694,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Midcap150 Momentum 50 ETF,ETF,ETF
+153694,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Midcap150 Momentum 50 ETF,Direct,ETF
 153695,Invesco,Hybrid Scheme,FoF Arbitrage,Invesco India Income Plus Arbitrage Active FoF-Regular-Growth,Regular,Growth
 153696,Invesco,Hybrid Scheme,FoF Arbitrage,Invesco India Income Plus Arbitrage Active FoF-Regular-IDCW,Regular,IDCW
 153697,Invesco,Hybrid Scheme,FoF Arbitrage,Invesco India Income Plus Arbitrage Active FoF-Direct-Growth,Direct,Growth
 153698,Invesco,Hybrid Scheme,FoF Arbitrage,Invesco India Income Plus Arbitrage Active FoF-Direct-IDCW,Direct,IDCW
-153699,Groww,Equity Scheme,Index ETF,Groww Nifty 50 ETF,ETF,ETF
+153699,Groww,Equity Scheme,Index ETF,Groww Nifty 50 ETF,Direct,ETF
 153700,360 ONE,Debt Scheme,Overnight,360 ONE Overnight Fund-Regular-Growth,Regular,Growth
 153701,360 ONE,Debt Scheme,Overnight,360 ONE Overnight Fund-Direct-IDCW,Direct,IDCW
 153702,360 ONE,Debt Scheme,Overnight,360 ONE Overnight Fund-Regular-IDCW,Regular,IDCW
@@ -8129,8 +8129,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153721,Bandhan,Equity Scheme,Sectoral/ Thematic,Bandhan Multi-Factor Fund-Regular-Growth,Regular,Growth
 153722,Bandhan,Equity Scheme,Sectoral/ Thematic,Bandhan Multi-Factor Fund-Direct-Growth,Direct,Growth
 153723,Bandhan,Equity Scheme,Sectoral/ Thematic,Bandhan Multi-Factor Fund-Regular-IDCW,Regular,IDCW
-153724,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Alpha 50 ETF,ETF,ETF
-153725,Nippon Life India,Debt Scheme,Liquid ETF,Nippon India Nifty 1D Rate Liquid ETF,ETF,ETF
+153724,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Alpha 50 ETF,Direct,ETF
+153725,Nippon Life India,Debt Scheme,Liquid ETF,Nippon India Nifty 1D Rate Liquid ETF,Direct,ETF
 153726,Bank of India,Equity Scheme,Mid Cap,Bank of India Mid Cap Fund-Regular-Growth,Regular,Growth
 153727,Bank of India,Equity Scheme,Mid Cap,Bank of India Mid Cap Fund-Regular-IDCW,Regular,IDCW
 153728,Bank of India,Equity Scheme,Mid Cap,Bank of India Mid Cap Fund-Direct-Growth,Direct,Growth
@@ -8149,7 +8149,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153741,Aditya Birla Sun Life,Index Funds,Equity Index,ABSL BSE 500 Quality 50 Index Fund-Direct-IDCW Payout,Direct,IDCW
 153742,Aditya Birla Sun Life,Index Funds,Equity Index,Aditya Birla Sun Life BSE 500 Quality 50 Index Fund-Regular-Growth,Regular,Growth
 153743,Aditya Birla Sun Life,Index Funds,Equity Index,ABSL BSE 500 Quality 50 Index Fund-Regular-IDCW Payout,Regular,IDCW
-153744,Groww,Equity Scheme,Index ETF,Groww BSE Power ETF,ETF,ETF
+153744,Groww,Equity Scheme,Index ETF,Groww BSE Power ETF,Direct,ETF
 153745,Groww,Equity Scheme,FoF Sectoral,Groww BSE Power ETF FOF-Direct-Growth,Direct,Growth
 153746,Groww,Equity Scheme,FoF Sectoral,Groww BSE Power ETF FOF-Direct-IDCW,Direct,IDCW
 153747,Groww,Equity Scheme,FoF Sectoral,Groww BSE Power ETF FOF-Regular-IDCW,Regular,IDCW
@@ -8175,12 +8175,12 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153777,Edelweiss,Hybrid Scheme,FoF Multi Asset,Edelweiss Multi Asset Omni FoF-Direct-IDCW,Direct,IDCW
 153778,Edelweiss,Hybrid Scheme,FoF Multi Asset,Edelweiss Multi Asset Omni FoF-Regular-IDCW,Regular,IDCW
 153779,Edelweiss,Hybrid Scheme,FoF Multi Asset,Edelweiss Multi Asset Omni FoF-Regular-Growth,Regular,Growth
-153780,Motilal Oswal,Gold & Silver Scheme,Gold ETF,Motilal Oswal Gold ETF,ETF,ETF
+153780,Motilal Oswal,Gold & Silver Scheme,Gold ETF,Motilal Oswal Gold ETF,Direct,ETF
 153781,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak Nifty Alpha 50 Index Fund-Direct-Growth,Direct,Growth
 153782,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak Nifty Alpha 50 Index Fund-Direct-IDCW,Direct,IDCW
 153783,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak Nifty Alpha 50 Index Fund-Regular-IDCW,Regular,IDCW
 153784,Kotak Mahindra,Equity Scheme,Index-Nifty,Kotak Nifty Alpha 50 Index Fund-Regular-Growth,Regular,Growth
-153785,Groww,Equity Scheme,Index ETF,Groww Nifty Next 50 ETF,ETF,ETF
+153785,Groww,Equity Scheme,Index ETF,Groww Nifty Next 50 ETF,Direct,ETF
 153786,Groww,Equity Scheme,Index-Nifty,Groww Nifty Next 50 Index Fund-Direct-Growth,Direct,Growth
 153787,Jio BlackRock,Equity Scheme,Index-Nifty,JioBlackRock Nifty 50 Index Fund-Direct-Growth,Direct,Growth
 153788,Jio BlackRock,Equity Scheme,Index-Nifty,JioBlackRock Nifty Midcap 150 Index Fund-Direct-Growth,Direct,Growth
@@ -8189,7 +8189,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153791,Jio BlackRock,Index Funds,Debt Index,JioBlackRock Nifty 8-13 yr G-Sec Index Fund-Direct-Growth,Direct,Growth
 153794,Baroda BNP Paribas,Gold & Silver Scheme,Gold,Baroda BNP Paribas Gold ETF FoFs-Regular-Growth,Regular,Growth
 153795,Baroda BNP Paribas,Gold & Silver Scheme,Gold,Baroda BNP Paribas Gold ETF FoFs-Direct-Growth,Direct,Growth
-153796,SBI,Debt Scheme,Liquid ETF,SBI Nifty 1D Rate Liquid ETF-Growth ETF,ETF,ETF
+153796,SBI,Debt Scheme,Liquid ETF,SBI Nifty 1D Rate Liquid ETF-Growth ETF,Direct,ETF
 153797,Groww,Equity Scheme,Index-Nifty,Groww Nifty Next 50 Index Fund-Direct-IDCW,Direct,IDCW
 153798,Groww,Equity Scheme,Index-Nifty,Groww Nifty Next 50 Index Fund-Regular-Growth,Regular,Growth
 153799,Groww,Equity Scheme,Index-Nifty,Groww Nifty Next 50 Index Fund-Regular-IDCW,Regular,IDCW
@@ -8203,8 +8203,8 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153807,Nippon Life India,Index Funds,Equity Sectoral/Thematic,Nippon India Nifty India Manufacturing Index-Direct-IDCW,Direct,IDCW
 153808,Nippon Life India,Index Funds,Equity Sectoral/Thematic,Nippon India Nifty India Manufacturing Index-Regular-IDCW,Regular,IDCW
 153809,Nippon Life India,Index Funds,Equity Sectoral/Thematic,Nippon India Nifty India Manufacturing Index-Regular-Growth,Regular,Growth
-153810,Nippon Life India,Equity Scheme,Index ETF,Nippon India Nifty India Manufacturing ETF,ETF,ETF
-153811,Zerodha,Debt Scheme,Bond ETF,Zerodha Nifty 8-13 Yr G-Sec ETF,ETF,ETF
+153810,Nippon Life India,Equity Scheme,Index ETF,Nippon India Nifty India Manufacturing ETF,Direct,ETF
+153811,Zerodha,Debt Scheme,Bond ETF,Zerodha Nifty 8-13 Yr G-Sec ETF,Direct,ETF
 153812,Mirae,Gold & Silver Scheme,Gold & Silver,Mirae Asset Gold Silver Passive FoF-Direct-Growth,Direct,Growth
 153813,Mirae,Gold & Silver Scheme,Gold & Silver,Mirae Asset Gold Silver Passive FoF-Direct-IDCW,Direct,IDCW
 153814,Mirae,Gold & Silver Scheme,Gold & Silver,Mirae Asset Gold Silver Passive FoF-Regular-Growth,Regular,Growth
@@ -8213,13 +8213,13 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153817,Mirae,Hybrid Scheme,FoF Multi Asset,Mirae Asset Multi Factor Passive FOF-Direct-IDCW,Direct,IDCW
 153818,Mirae,Hybrid Scheme,FoF Multi Asset,Mirae Asset Multi Factor Passive FOF-Regular-Growth,Regular,Growth
 153819,Mirae,Hybrid Scheme,FoF Multi Asset,Mirae Asset Multi Factor Passive FOF-Regular-IDCW,Regular,IDCW
-153820,Motilal Oswal,Gold & Silver Scheme,Silver ETF,Motilal Oswal Silver ETF,ETF,ETF
+153820,Motilal Oswal,Gold & Silver Scheme,Silver ETF,Motilal Oswal Silver ETF,Direct,ETF
 153821,Groww,Hybrid Scheme,Multi Asset Allocation,Groww Multi Asset Allocation Fund-Direct-Growth,Direct,Growth
 153822,Union,Equity Scheme,FoF Sectoral,Union Diversified Equity All Cap Active FOF-Regular-Growth,Regular,Growth
 153823,Union,Equity Scheme,FoF Sectoral,Union Diversified Equity All Cap Active FOF-Regular-IDCW,Regular,IDCW
 153824,Union,Equity Scheme,FoF Sectoral,Union Diversified Equity All Cap Active FOF-Direct-Growth,Direct,Growth
 153825,Union,Equity Scheme,FoF Sectoral,Union Diversified Equity All Cap Active FOF-Direct-IDCW,Direct,IDCW
-153826,Angel One,Gold & Silver Scheme,Gold ETF,ANGEL ONE GOLD ETF,ETF,ETF
+153826,Angel One,Gold & Silver Scheme,Gold ETF,ANGEL ONE GOLD ETF,Direct,ETF
 153827,Angel One,Gold & Silver Scheme,Gold,ANGEL ONE GOLD ETF FOF-Direct-Growth,Direct,Growth
 153828,Angel One,Gold & Silver Scheme,Gold,ANGEL ONE GOLD ETF FOF-Regular-Growth,Regular,Growth
 153829,Axis,Equity Scheme,Index-Nifty,Axis Nifty500 Quality 50 Index Fund-Direct-Growth,Direct,Growth
@@ -8228,10 +8228,10 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153832,SBI,Hybrid Scheme,FoF Dynamic Asset Allocation,SBI Dynamic Asset Allocation Active FoF-Direct-Growth,Direct,Growth
 153833,SBI,Hybrid Scheme,FoF Dynamic Asset Allocation,SBI Dynamic Asset Allocation Active FoF-Direct-ICDW,Direct,IDCW
 153834,SBI,Hybrid Scheme,FoF Dynamic Asset Allocation,SBI Dynamic Asset Allocation Active FoF-Regular-IDCW,Regular,IDCW
-153837,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty Smallcap 100 ETF,ETF,ETF
+153837,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty Smallcap 100 ETF,Direct,ETF
 153838,Bandhan,Index Funds,Equity Index,Bandhan BSE India Sector Leaders Index Fund-Direct-Growth,Direct,Growth
 153839,Bandhan,Index Funds,Equity Index,Bandhan BSE India Sector Leaders Index Fund-Regular-Growth,Regular,Growth
-153841,Edelweiss,Equity Scheme,Index ETF,Edelweiss Nifty LargeMidcap 250 ETF,ETF,ETF
+153841,Edelweiss,Equity Scheme,Index ETF,Edelweiss Nifty LargeMidcap 250 ETF,Direct,ETF
 153844,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Business Conglomerates Fund-Regular-Growth,Regular,Growth
 153845,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Business Conglomerates Fund-Direct-IDCW Payout,Direct,IDCW
 153846,Baroda BNP Paribas,Equity Scheme,Sectoral/ Thematic,Baroda BNP Paribas Business Conglomerates Fund-Regular-IDCW Payout,Regular,IDCW
@@ -8254,7 +8254,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153871,Wealth Company,Equity Scheme,Flexi Cap,THE WEALTH COMPANY FLEXI CAP Fund-Regular-IDCW,Regular,IDCW
 153872,Wealth Company,Equity Scheme,Flexi Cap,THE WEALTH COMPANY FLEXI CAP Fund-Direct-Growth,Direct,Growth
 153873,Wealth Company,Equity Scheme,Flexi Cap,THE WEALTH COMPANY FLEXI CAP Fund-Direct-IDCW,Direct,IDCW
-153874,DSP,Equity Scheme,Index ETF,DSP Nifty500 Flexicap Quality 30 ETF,ETF,ETF
+153874,DSP,Equity Scheme,Index ETF,DSP Nifty500 Flexicap Quality 30 ETF,Direct,ETF
 153875,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL-IBX Fin Srvs 9 to 12 M Debt Index Fund-Direct-Growth,Direct,Growth
 153876,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL-IBX Fin Srvs 9 to 12 M Debt Index Fund-Direct-IDCW,Direct,IDCW
 153877,Kotak Mahindra,Index Funds,Debt Index,Kotak CRISIL-IBX Fin Srvs 9 to 12 M Debt Index Fund-Regular-Growth,Regular,Growth
@@ -8279,10 +8279,10 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 153896,Wealth Company,Equity Scheme,Sectoral/ Thematic,THE WEALTH COMPANY ETHICAL Fund-Regular-IDCW,Regular,IDCW
 153897,Wealth Company,Equity Scheme,Sectoral/ Thematic,THE WEALTH COMPANY ETHICAL Fund-Regular-Growth,Regular,Growth
 153898,Wealth Company,Equity Scheme,Sectoral/ Thematic,THE WEALTH COMPANY ETHICAL Fund-Direct-IDCW,Direct,IDCW
-153899,Groww,Equity Scheme,Index ETF,Groww Nifty Realty ETF,ETF,ETF
-153904,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 200 Momentum 30 ETF,ETF,ETF
-153905,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty 50 ETF,ETF,ETF
+153899,Groww,Equity Scheme,Index ETF,Groww Nifty Realty ETF,Direct,ETF
+153904,Kotak Mahindra,Equity Scheme,Index ETF,Kotak Nifty 200 Momentum 30 ETF,Direct,ETF
+153905,Zerodha,Equity Scheme,Index ETF,Zerodha Nifty 50 ETF,Direct,ETF
 153906,Zerodha,Equity Scheme,Index-Nifty,Zerodha Nifty 50 Index Fund-Direct-Growth,Direct,Growth
-153920,Edelweiss,Debt Scheme,Liquid ETF,Edelweiss Nifty 1D Rate Liquid ETF - Growth ETF,ETF,ETF
-153928,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 100 ETF,ETF,ETF
-153931,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Energy ETF,ETF,ETF
+153920,Edelweiss,Debt Scheme,Liquid ETF,Edelweiss Nifty 1D Rate Liquid ETF - Growth ETF,Direct,ETF
+153928,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty 100 ETF,Direct,ETF
+153931,Motilal Oswal,Equity Scheme,Index ETF,Motilal Oswal Nifty Energy ETF,Direct,ETF
