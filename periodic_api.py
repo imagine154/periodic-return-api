@@ -1,3 +1,10 @@
+"""
+periodic_api.py
+Backend for Mutual Fund & ETF Return Analyzer
+✅ Supports only 'Mutual Fund' and 'ETF'
+✅ Fully compatible with rebuilt frontend (HTML)
+"""
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
@@ -26,12 +33,12 @@ CORS(app, resources={
 # --------------------------------------------------------------------
 schemes_df = pd.read_csv("schemeswithcodes.csv")
 
-# Add instrument type (Mutual Fund or ETF)
+# Add instrument type
 schemes_df["instrumentType"] = schemes_df["schemeSubCategory"].apply(
     lambda x: "ETF" if "ETF" in str(x).upper() else "Mutual Fund"
 )
 
-# Normalize for filtering
+# Normalize columns for consistent filtering
 def normalize_series(series):
     return series.astype(str).str.strip().str.lower()
 
@@ -42,7 +49,7 @@ schemes_df["Plan_norm"] = normalize_series(schemes_df["Plan"])
 schemes_df["Option_norm"] = normalize_series(schemes_df["Option"])
 
 # --------------------------------------------------------------------
-# Utility helpers
+# Utility Helpers
 # --------------------------------------------------------------------
 def parse_multi_param(param_name):
     """Parse query parameters that may be comma-separated or repeated."""
@@ -55,10 +62,9 @@ def parse_multi_param(param_name):
             parsed.append(v.strip())
     return parsed
 
-
 def norm_list(vals):
+    """Normalize to lowercase, strip spaces, and filter empties."""
     return [v.strip().lower() for v in vals if isinstance(v, str) and v.strip()]
-
 
 # --------------------------------------------------------------------
 # API: Schemes List
@@ -75,32 +81,28 @@ def get_scheme_list():
     plan_filter = norm_list(parse_multi_param("plan"))
     option_filter = norm_list(parse_multi_param("option"))
 
-    # Clean out empty filters
-    amc_filter = [v for v in amc_filter if v]
-    cat_filter = [v for v in cat_filter if v]
-    subcat_filter = [v for v in subcat_filter if v]
-    plan_filter = [v for v in plan_filter if v]
-    option_filter = [v for v in option_filter if v]
-
     df = schemes_df.copy()
 
-    # --- Type filter (Mutual Fund / ETF / Both)
-    if selected_type.lower() != "both":
-        df = df[df["instrumentType"].str.lower().str.strip() == selected_type.lower().strip()]
+    # --- Type filter ---
+    if selected_type.lower() == "etf":
+        df = df[df["instrumentType"].str.lower() == "etf"]
+        df = df[df["Option_norm"] == "etf"]  # enforce ETF-only option
+    else:
+        df = df[df["instrumentType"].str.lower() == "mutual fund"]
 
-    # --- Apply dropdown filters (case-insensitive partial match)
+    # --- Apply dropdown filters ---
     if amc_filter:
         df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
     if cat_filter:
         df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
     if subcat_filter:
         df = df[df["SubCategory_norm"].apply(lambda x: any(v in x for v in subcat_filter))]
-    if plan_filter:
+    if plan_filter and selected_type.lower() != "etf":
         df = df[df["Plan_norm"].apply(lambda x: any(v in x for v in plan_filter))]
     if option_filter:
         df = df[df["Option_norm"].apply(lambda x: any(v in x for v in option_filter))]
 
-    # --- Search (broad matching across columns)
+    # --- Search (optional) ---
     if q:
         q_norm = q.strip().lower()
         df = df[
@@ -110,18 +112,81 @@ def get_scheme_list():
             | df["schemeSubCategory"].str.lower().str.contains(q_norm, na=False)
             ]
 
-    result_count = len(df)
-    print(f"✅ Search='{q}', Type='{selected_type}', Rows={result_count}, AMC={amc_filter}")
+    print(f"✅ Schemes: {len(df)} rows | Type={selected_type}")
 
-    # Limit to 300 for performance
+    # Limit results for performance
     return jsonify(df.to_dict(orient="records"))
 
+# --------------------------------------------------------------------
+# API: Stats (Dropdown values)
+# --------------------------------------------------------------------
+@app.route("/api/stats", methods=["GET"])
+def get_stats():
+    df = schemes_df.copy()
+    type_param = request.args.get("type", "Mutual Fund")
+    plan_param = request.args.get("plan")
+    option_param = request.args.get("option")
+
+    if type_param.lower() == "etf":
+        df = df[df["instrumentType"].str.lower() == "etf"]
+        df = df[df["Option_norm"] == "etf"]
+    else:
+        df = df[df["instrumentType"].str.lower() == "mutual fund"]
+
+    if plan_param and type_param.lower() != "etf":
+        df = df[df["Plan_norm"] == plan_param.lower()]
+    if option_param:
+        df = df[df["Option_norm"] == option_param.lower()]
+
+    stats = {
+        "total": len(df),
+        "mutual_funds": int((df["instrumentType"] == "Mutual Fund").sum()),
+        "etfs": int((df["instrumentType"] == "ETF").sum()),
+        "amcs": sorted(df["AMC"].dropna().unique().tolist()),
+        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
+        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
+        "plans": sorted(df["Plan"].dropna().unique().tolist()),
+        "options": sorted(df["Option"].dropna().unique().tolist()),
+    }
+
+    print(f"📊 Stats ({type_param}) — Total={stats['total']}")
+    return jsonify(stats)
+
+# --------------------------------------------------------------------
+# API: Dependent Filters
+# --------------------------------------------------------------------
+@app.route("/api/dependent_filters", methods=["GET"])
+def get_dependent_filters():
+    selected_type = request.args.get("type", "Mutual Fund")
+    amc_filter = norm_list(parse_multi_param("amc"))
+    cat_filter = norm_list(parse_multi_param("category"))
+
+    df = schemes_df.copy()
+    if selected_type.lower() == "etf":
+        df = df[df["instrumentType"].str.lower() == "etf"]
+        df = df[df["Option_norm"] == "etf"]
+    else:
+        df = df[df["instrumentType"].str.lower() == "mutual fund"]
+
+    if amc_filter:
+        df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
+    if cat_filter:
+        df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
+
+    stats = {
+        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
+        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
+        "plans": sorted(df["Plan"].dropna().unique().tolist()),
+        "options": sorted(df["Option"].dropna().unique().tolist()),
+    }
+
+    return jsonify(stats)
 
 # --------------------------------------------------------------------
 # API: Periodic Returns
 # --------------------------------------------------------------------
 @app.route("/api/periodic_returns", methods=["GET"])
-def get_periodic_returns():
+def get_periodic_returns_api():
     amfi_code = request.args.get("code")
     if not amfi_code:
         return jsonify({"error": "Missing 'code' param"}), 400
@@ -137,93 +202,20 @@ def get_periodic_returns():
         "results": results
     })
 
-
 # --------------------------------------------------------------------
-# API: Stats (unique dropdown options)
+# Root / Health Check
 # --------------------------------------------------------------------
-@app.route("/api/stats", methods=["GET"])
-def get_stats():
-    """
-    Returns available filters (AMCs, categories, subcategories, plans, options)
-    and counts for Mutual Funds and ETFs.
-    Supports optional query params:
-      - type: "Mutual Fund" or "ETF"
-      - plan: e.g., "Direct"
-      - option: e.g., "Growth"
-    """
-    df = schemes_df.copy()
-
-    # --- Optional filtering for faster subset ---
-    type_param = request.args.get("type")
-    plan_param = request.args.get("plan")
-    option_param = request.args.get("option")
-
-    if type_param:
-        df = df[df["instrumentType"].str.lower() == type_param.lower()]
-
-    if plan_param:
-        df = df[df["Plan"].str.lower() == plan_param.lower()]
-
-    if option_param:
-        df = df[df["Option"].str.lower() == option_param.lower()]
-
-    # --- Stats computation ---
-    stats = {
-        "total": len(df),
-        "mutual_funds": int((df["instrumentType"] == "Mutual Fund").sum()),
-        "etfs": int((df["instrumentType"] == "ETF").sum()),
-        "amcs": sorted(df["AMC"].dropna().unique().tolist()),
-        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
-        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
-        "plans": sorted(df["Plan"].dropna().unique().tolist()),
-        "options": sorted(df["Option"].dropna().unique().tolist()),
-    }
-
-    print(
-        f"📊 Stats served: {stats['total']} total "
-        f"({stats['mutual_funds']} MF, {stats['etfs']} ETF) "
-        f"[Filters: type={type_param}, plan={plan_param}, option={option_param}]"
-    )
-
-    return jsonify(stats)
-
-
-@app.route("/api/scheme_names", methods=["GET"])
-def get_scheme_names():
-    selected_type = request.args.get("type", "Mutual Fund")
-    df = schemes_df.copy()
-    if selected_type != "Both":
-        df = df[df["instrumentType"] == selected_type]
-    result = df[["schemeCode", "schemeName"]].to_dict(orient="records")
-    return jsonify(result)
-@app.route("/api/dependent_filters", methods=["GET"])
-def get_dependent_filters():
-    """Return dependent dropdown options based on current selections."""
-    selected_type = request.args.get("type", "Mutual Fund")
-    amc_filter = norm_list(parse_multi_param("amc"))
-    cat_filter = norm_list(parse_multi_param("category"))
-
-    df = schemes_df.copy()
-
-    # Apply type filter
-    if selected_type.lower() != "both":
-        df = df[df["instrumentType"].str.lower() == selected_type.lower()]
-
-    # Apply AMC filter
-    if amc_filter:
-        df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
-
-    # Apply Category filter
-    if cat_filter:
-        df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
-
-    stats = {
-        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
-        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
-        "plans": sorted(df["Plan"].dropna().unique().tolist()),
-        "options": sorted(df["Option"].dropna().unique().tolist()),
-    }
-    return jsonify(stats)
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "message": "Mutual Fund & ETF Return Analyzer API is running",
+        "endpoints": [
+            "/api/stats",
+            "/api/schemes",
+            "/api/dependent_filters",
+            "/api/periodic_returns?code=<scheme_code>",
+        ]
+    })
 
 # --------------------------------------------------------------------
 # Run Server
