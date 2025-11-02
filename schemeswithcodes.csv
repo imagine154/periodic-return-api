@@ -967,7 +967,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 111809,Aditya Birla Sun Life,Debt Scheme,Medium Duration,Aditya Birla Sun Life Medium Term Plan-Regular-Quarterly IDCW,Regular,IDCW
 111811,Aditya Birla Sun Life,Debt Scheme,Medium Duration,Aditya Birla Sun Life Medium Term Plan-Regular-Annual IDCW,Regular,IDCW
 111812,Aditya Birla Sun Life,Debt Scheme,Medium Duration,Aditya Birla Sun Life Medium Term Plan-Regular-IDCW,Regular,IDCW
-111848,Aditya Birla Sun Life,Debt Scheme,Dynamic Bond,Aditya Birla Sun Life Dynamic Bond Fund-Discipline Advantage Plan-Regular-Growth,Regular,Growth
+111848,Aditya Birla Sun Life,Debt Scheme,Dynamic Bond,Aditya Birla Sun Life Dynamic Bond Fund-Regular-Discipline Advantage,Regular,Discipline Advantage
 111903,Taurus,Equity Scheme,Sectoral/ Thematic,Taurus Ethical Fund-Regular-Bonus,Regular,Bonus
 111935,Edelweiss,Equity Scheme,Large Cap,Edelweiss Large Cap Fund -Plan B-Regular-Growth,Regular,Growth
 111936,Edelweiss,Equity Scheme,Large Cap,Edelweiss Large Cap Fund-Regular-IDCW,Regular,IDCW
@@ -2690,7 +2690,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 130861,Nippon Life India,Equity Scheme,FOF Overseas,Nippon India Japan Equity Fund-Direct-Bonus,Direct,Bonus
 130863,Nippon Life India,Equity Scheme,FOF Overseas,Nippon India Japan Equity Fund-Regular-Growth,Regular,Growth
 130864,Nippon Life India,Equity Scheme,FOF Overseas,NIPPON INDIA - JAPAN EQUITY FUND-Direct-IDCW,Direct,IDCW
-130904,JM Financial,Hybrid Scheme,Aggressive Hybrid,JM Aggressive Hybrid Fund-Direct-Annual Bonus,Direct,Annual Bonus
+130904,JM Financial,Hybrid Scheme,Aggressive Hybrid,JM Aggressive Hybrid Fund-Direct-Annual Bonus,Direct,Bonus
 131051,ICICI Prudential,Debt Scheme,Gilt with 10 year constant duration,ICICI Prudential Constant Maturity Gilt Fund-Regular-Growth,Regular,Growth
 131054,ICICI Prudential,Debt Scheme,Gilt,ICICI Constant Maturity Gilt Fund-Direct-Quarterly IDCW,Direct,IDCW
 131057,ICICI Prudential,Debt Scheme,Gilt,ICICI Constant Maturity Gilt Fund-Regular-Quarterly IDCW,Regular,IDCW
@@ -2827,7 +2827,7 @@ schemeCode,AMC,schemeCategory,schemeSubCategory,schemeName,Plan,Option
 133386,Motilal Oswal,Equity Scheme,ELSS,Motilal Oswal ELSS Tax Saver Fund-Direct-Growth,Direct,Growth
 133387,UTI,Debt Scheme,Money Market,UTI Money Market Fund-Direct-Monthly IDCW,Direct,IDCW
 133390,JM Financial,Debt Scheme,Dynamic Bond,JM Dynamic Bond Fund-Regular-Monthly IDCW,Regular,IDCW
-133395,JM Financial,Hybrid Scheme,Arbitrage,JM Arbitrage Fund-Direct-Annual Bonus,Direct,Annual Bonus
+133395,JM Financial,Hybrid Scheme,Arbitrage,JM Arbitrage Fund-Direct-Annual Bonus,Direct,Bonus
 133402,JM Financial,Hybrid Scheme,Aggressive Hybrid,JM Aggressive Hybrid Fund-Direct-Half - Yearly IDCW,Direct,IDCW
 133404,JM Financial,Hybrid Scheme,Aggressive Hybrid,JM Aggressive Hybrid Fund-Regular-Monthly IDCW,Regular,IDCW
 133405,JM Financial,Hybrid Scheme,Aggressive Hybrid,JM Aggressive Hybrid Fund-Regular-Quarterly IDCW,Regular,IDCW
