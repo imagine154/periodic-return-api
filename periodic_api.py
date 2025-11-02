@@ -71,51 +71,77 @@ def norm_list(vals):
 # --------------------------------------------------------------------
 @app.route("/api/schemes", methods=["GET"])
 def get_scheme_list():
-    q = request.args.get("q", "").lower().strip()
-    selected_type = request.args.get("type", "Mutual Fund")
+    """Return filtered scheme list safely for all combinations of type, plan, option, AMC, category, and subcategory."""
+    try:
+        q = request.args.get("q", "").lower().strip()
+        selected_type = request.args.get("type", "Mutual Fund")
 
-    # Parse filters
-    amc_filter = norm_list(parse_multi_param("amc"))
-    cat_filter = norm_list(parse_multi_param("category"))
-    subcat_filter = norm_list(parse_multi_param("subcategory"))
-    plan_filter = norm_list(parse_multi_param("plan"))
-    option_filter = norm_list(parse_multi_param("option"))
+        # Parse filters
+        amc_filter = norm_list(parse_multi_param("amc"))
+        cat_filter = norm_list(parse_multi_param("category"))
+        subcat_filter = norm_list(parse_multi_param("subcategory"))
+        plan_filter = norm_list(parse_multi_param("plan"))
+        option_filter = norm_list(parse_multi_param("option"))
 
-    df = schemes_df.copy()
+        # Clean up empty filters
+        filters = {
+            "amc": [v for v in amc_filter if v],
+            "category": [v for v in cat_filter if v],
+            "subcategory": [v for v in subcat_filter if v],
+            "plan": [v for v in plan_filter if v],
+            "option": [v for v in option_filter if v],
+        }
 
-    # --- Type filter ---
-    if selected_type.lower() == "etf":
-        df = df[df["instrumentType"].str.lower() == "etf"]
-        df = df[df["Option_norm"] == "etf"]  # enforce ETF-only option
-    else:
-        df = df[df["instrumentType"].str.lower() == "mutual fund"]
+        df = schemes_df.copy()
 
-    # --- Apply dropdown filters ---
-    if amc_filter:
-        df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
-    if cat_filter:
-        df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
-    if subcat_filter:
-        df = df[df["SubCategory_norm"].apply(lambda x: any(v in x for v in subcat_filter))]
-    if plan_filter and selected_type.lower() != "etf":
-        df = df[df["Plan_norm"].apply(lambda x: any(v in x for v in plan_filter))]
-    if option_filter:
-        df = df[df["Option_norm"].apply(lambda x: any(v in x for v in option_filter))]
+        # --- Type filter ---
+        if selected_type.lower() != "both":
+            df = df[df["instrumentType"].str.lower().str.strip() == selected_type.lower().strip()]
 
-    # --- Search (optional) ---
-    if q:
-        q_norm = q.strip().lower()
-        df = df[
-            df["schemeName"].str.lower().str.contains(q_norm, na=False)
-            | df["AMC"].str.lower().str.contains(q_norm, na=False)
-            | df["schemeCategory"].str.lower().str.contains(q_norm, na=False)
-            | df["schemeSubCategory"].str.lower().str.contains(q_norm, na=False)
-            ]
+        # --- Defensive filtering ---
+        def safe_filter(df, column, values):
+            """Apply case-insensitive substring filter safely."""
+            if not values or column not in df.columns:
+                return df
+            norm_col = column + "_norm"
+            if norm_col not in df.columns:
+                df[norm_col] = df[column].astype(str).str.strip().str.lower()
+            vals = [v.lower().strip() for v in values if v]
+            return df[df[norm_col].apply(lambda x: any(v in x for v in vals))]
 
-    print(f"✅ Schemes: {len(df)} rows | Type={selected_type}")
+        df = safe_filter(df, "AMC", filters["amc"])
+        df = safe_filter(df, "schemeCategory", filters["category"])
+        df = safe_filter(df, "schemeSubCategory", filters["subcategory"])
+        df = safe_filter(df, "Plan", filters["plan"])
+        df = safe_filter(df, "Option", filters["option"])
 
-    # Limit results for performance
-    return jsonify(df.to_dict(orient="records"))
+        # --- Search filter ---
+        if q:
+            q_norm = q.lower()
+            df = df[
+                df["schemeName"].str.lower().str.contains(q_norm, na=False)
+                | df["AMC"].str.lower().str.contains(q_norm, na=False)
+                | df["schemeCategory"].str.lower().str.contains(q_norm, na=False)
+                | df["schemeSubCategory"].str.lower().str.contains(q_norm, na=False)
+                ]
+
+        # --- Limit and result ---
+        df = df.drop_duplicates(subset=["schemeCode"]).fillna("")
+        result_count = len(df)
+        print(
+            f"✅ /api/schemes query ok: Type={selected_type}, Plan={filters['plan']}, "
+            f"Option={filters['option']}, AMC={filters['amc']}, Category={filters['category']}, "
+            f"SubCat={filters['subcategory']}, Count={result_count}"
+        )
+
+        return jsonify(df.to_dict(orient="records"))
+
+    except Exception as e:
+        import traceback
+        print("❌ Error in /api/schemes:", str(e))
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
 
 # --------------------------------------------------------------------
 # API: Stats (Dropdown values)
