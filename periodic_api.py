@@ -324,16 +324,19 @@ def get_dependent_filters():
         df = safe_filter(df, "Option", option_filter)
 
         # Build the dependent dropdown lists dynamically
+        # Build the dependent dropdown lists dynamically
         amcs = sorted(df["AMC"].dropna().unique().tolist()) if "AMC" in df.columns else []
         categories = sorted(df["schemeCategory"].dropna().unique().tolist()) if "schemeCategory" in df.columns else []
         subcategories = sorted(df["schemeSubCategory"].dropna().unique().tolist()) if "schemeSubCategory" in df.columns else []
         options = sorted(df["Option"].dropna().unique().tolist()) if "Option" in df.columns else []
+        plans = sorted(df["Plan"].dropna().unique().tolist()) if "Plan" in df.columns else []
 
         return jsonify({
             "amcs": amcs,
             "categories": categories,
             "subcategories": subcategories,
-            "options": options
+            "options": options,
+            "plans": plans
         })
 
     except Exception as e:
