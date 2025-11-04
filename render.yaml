@@ -4,17 +4,17 @@ services:
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn periodic_api:app"
+    startCommand: "gunicorn periodic_api:app --timeout 600 --workers 1 --threads 1"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
 
-cronJobs:
-  - name: batch-precompute
-    schedule: "30 0 * * *"  # 6:00 AM IST
-    env: python
-    command: |
-      for i in $(seq 0 500 9000); do
-        curl -X POST "https://periodic-return-api.onrender.com/api/precompute_all?start=$i&batch=500"
-        sleep 60
-      done
+#cronJobs:
+#  - name: batch-precompute
+#    schedule: "30 0 * * *"  # 6:00 AM IST
+#    env: python
+#    command: |
+#      for i in $(seq 0 500 9000); do
+#        curl -X POST "https://periodic-return-api.onrender.com/api/precompute_all?start=$i&batch=500"
+#        sleep 60
+#      done
