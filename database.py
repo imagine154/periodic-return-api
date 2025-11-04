@@ -123,9 +123,16 @@ def get_schemes_from_db(filters=None):
     if filters:
         for k, v in filters.items():
             if v:
-                base += f" AND LOWER({k}) LIKE %s"
-                params.append(f"%{v.lower()}%")
-    cursor.execute(base, params)
+                # handle list or string
+                if isinstance(v, list):
+                    or_clauses = []
+                    for val in v:
+                        or_clauses.append(f"LOWER({k}) LIKE %s")
+                        params.append(f"%{val.lower()}%")
+                    base += " AND (" + " OR ".join(or_clauses) + ")"
+                else:
+                    base += f" AND LOWER({k}) LIKE %s"
+                    params.append(f"%{v.lower()}%")
     return cursor.fetchall()
 
 # --------------------------------------------------------------------
