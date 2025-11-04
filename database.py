@@ -166,3 +166,13 @@ def get_all_cached_returns(limit=200):
         LIMIT %s
     """, (limit,))
     return cursor.fetchall()
+
+def safe_upsert(DB, *args, **kwargs):
+    try:
+        DB.upsert_fund_results_json(*args, **kwargs)
+    except psycopg2.OperationalError:
+        print("🔁 [DB] Connection dropped, reconnecting...")
+        DB.connect()  # or re-init your connection object
+        DB.upsert_fund_results_json(*args, **kwargs)
+    except Exception as e:
+        print(f"💾 [DB] upsert failed: {e}")

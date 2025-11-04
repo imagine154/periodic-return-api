@@ -478,19 +478,23 @@ def returns_summary():
 @app.route("/api/precompute_all", methods=["POST"])
 def precompute_all():
     """
-    Compute and cache returns for all schemes in manageable batches with retry and throttling.
+    Compute and cache returns for all schemes in manageable batches with retry,
+    throttling, and database reconnection.
+
     Optional query params:
       - start: index to start from (default 0)
-      - batch: number of schemes to process in this run (default 500)
+      - batch: number of schemes to process in this run (default 100)
     Example:
-      /api/precompute_all?start=0&batch=500
+      /api/precompute_all?start=0&batch=100
     """
+
     import time
+    import gc
     from datetime import datetime
 
     try:
         start_index = int(request.args.get("start", 0))
-        batch_size = int(request.args.get("batch", 500))
+        batch_size = int(request.args.get("batch", 100))
         end_index = start_index + batch_size
 
         codes = schemes_df["schemeCode"].dropna().unique().tolist()
@@ -505,22 +509,25 @@ def precompute_all():
             try:
                 scheme_name, results = None, None
 
-                # Retry mechanism (up to 3 attempts)
+                # Retry fetch up to 3 times for unstable mfapi responses
                 for attempt in range(3):
-                    nav_df, scheme_name = fetch_nav_history(code)
-                    if nav_df is not None and not nav_df.empty:
-                        results = calculate_periodic_returns(nav_df)
-                        break
-                    else:
-                        print(f"⚠️ [{code}] Empty NAV data (attempt {attempt+1}/3). Retrying in 1s...")
-                        time.sleep(1)
+                    try:
+                        nav_df, scheme_name = fetch_nav_history(code)
+                        if nav_df is not None and not nav_df.empty:
+                            results = calculate_periodic_returns(nav_df)
+                            break
+                        else:
+                            print(f"⚠️ [{code}] Empty NAV data (attempt {attempt+1}/3). Retrying in 2s...")
+                            time.sleep(2)
+                    except Exception as e:
+                        print(f"⚠️ [{code}] fetch attempt {attempt+1} failed: {e}")
+                        time.sleep(2)
 
-                # If still no data after retries
                 if results is None:
                     failed.append({"code": code, "reason": "no nav after retries"})
                     continue
 
-                # ✅ Save results to DB
+                # ✅ Save results to DB (safe with reconnect)
                 if DB_AVAILABLE and hasattr(DB, "upsert_fund_results_json"):
                     try:
                         row = schemes_df[schemes_df["schemeCode"] == code]
@@ -532,23 +539,50 @@ def precompute_all():
                                 "option": row.iloc[0].get("Option")
                             }
 
-                        DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
+                        try:
+                            DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
+                        except Exception as e:
+                            # Handle dropped DB connection gracefully
+                            if "closed" in str(e).lower() or "ssl" in str(e).lower():
+                                print(f"🔁 [DB] reconnecting after failure for {code}: {e}")
+                                try:
+                                    if hasattr(DB, "conn"):
+                                        DB.conn.close()
+                                    if hasattr(DB, "cursor"):
+                                        DB.cursor.close()
+                                    import psycopg2
+                                    from psycopg2.extras import RealDictCursor, Json
+                                    DB.conn = psycopg2.connect(DB.DATABASE_URL, sslmode="require")
+                                    DB.cursor = DB.conn.cursor(cursor_factory=RealDictCursor)
+                                    DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
+                                except Exception as inner_e:
+                                    print(f"💾 [DB] re-upsert failed for {code}: {inner_e}")
+                                    failed.append({"code": code, "error": str(inner_e)})
+                            else:
+                                print(f"💾 [DB] upsert failed for {code}: {e}")
+                                failed.append({"code": code, "error": str(e)})
+
                     except Exception as e:
-                        print(f"💾 [DB] upsert failed for {code}: {e}")
+                        print(f"💾 [DB] critical error for {code}: {e}")
                         failed.append({"code": code, "error": str(e)})
 
                 processed += 1
 
-                # Progress log every 50 schemes
+                # ✅ Log progress periodically
                 if processed % 50 == 0:
                     print(f"✅ [{datetime.now().strftime('%H:%M:%S')}] Processed {processed} schemes...")
 
-                # Throttle to avoid rate limit (0.5s per request)
-                time.sleep(0.5)
+                # ✅ Free memory aggressively (important for Render)
+                del nav_df, results
+                gc.collect()
+
+                # ✅ Throttle (to respect mfapi.in rate limit)
+                time.sleep(0.4)
 
             except Exception as e:
                 print(f"❌ [precompute_all] failed for {code}: {e}")
                 failed.append({"code": code, "error": str(e)})
+                time.sleep(0.5)
 
         next_start = end_index if end_index < total_schemes else None
         elapsed = datetime.now().strftime("%H:%M:%S")
