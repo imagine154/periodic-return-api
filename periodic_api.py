@@ -323,12 +323,24 @@ def get_dependent_filters():
 
             filtered_df = df
 
-        stats = {
-                "categories": sorted(filtered_df["schemeCategory"].dropna().unique().tolist()),
-            "subcategories": sorted(filtered_df["schemeSubCategory"].dropna().unique().tolist()),
-            "plans": sorted(filtered_df["Plan"].dropna().unique().tolist()),
-            "options": sorted(filtered_df["Option"].dropna().unique().tolist()),
+            # Normalize columns for DB or CSV consistency
+        rename_map = {
+            "category": "schemeCategory",
+            "subcategory": "schemeSubCategory"
         }
+        filtered_df = filtered_df.rename(columns=rename_map)
+
+        # Safely get column values (handle missing keys gracefully)
+        def safe_list(df, col):
+            return sorted(df[col].dropna().unique().tolist()) if col in df.columns else []
+
+        stats = {
+            "categories": safe_list(filtered_df, "schemeCategory"),
+            "subcategories": safe_list(filtered_df, "schemeSubCategory"),
+            "plans": safe_list(filtered_df, "Plan"),
+            "options": safe_list(filtered_df, "Option"),
+        }
+
 
         return jsonify(stats)
 
