@@ -285,69 +285,62 @@ def get_stats():
 # --------------------------------------------------------------------
 @app.route("/api/dependent_filters", methods=["GET"])
 def get_dependent_filters():
+    """
+    Returns dependent dropdown values based on selected filters:
+    type (Mutual Fund / ETF), plan, amc, category, subcategory, option
+    """
+
     try:
         selected_type = request.args.get("type", "Mutual Fund")
+        plan_filter = norm_list(parse_multi_param("plan"))
         amc_filter = norm_list(parse_multi_param("amc"))
         cat_filter = norm_list(parse_multi_param("category"))
+        subcat_filter = norm_list(parse_multi_param("subcategory"))
+        option_filter = norm_list(parse_multi_param("option"))
 
-        # Use DB-backed filtered scheme fetch if available
-        filtered_df = None
-        if DB_AVAILABLE and hasattr(DB, "get_schemes_from_db"):
-            try:
-                filters = {}
-                if selected_type:
-                    filters["type"] = selected_type
-                if amc_filter:
-                    filters["amc"] = ",".join(amc_filter)
-                if cat_filter:
-                    filters["category"] = ",".join(cat_filter)
-                rows = DB.get_schemes_from_db(filters if filters else None)
-                # convert rows to pandas DataFrame for familiar operations
-                filtered_df = pd.DataFrame([dict(r) for r in rows]) if rows else pd.DataFrame()
-            except Exception as e:
-                print("[/api/dependent_filters] DB get_schemes_from_db failed, falling back:", e)
+        df = schemes_df.copy()
 
-        if filtered_df is None:
-            # CSV fallback
-            df = schemes_df.copy()
-            if selected_type.lower() == "etf":
-                df = df[df["instrumentType"].str.lower() == "etf"]
-                df = df[df["Option_norm"] == "etf"]
-            else:
-                df = df[df["instrumentType"].str.lower() == "mutual fund"]
+        # Type filter (Mutual Fund or ETF)
+        if selected_type.lower() == "etf":
+            df = df[df["instrumentType"].str.lower() == "etf"]
+        else:
+            df = df[df["instrumentType"].str.lower() == "mutual fund"]
 
-            if amc_filter:
-                df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
-            if cat_filter:
-                df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
+        # Normalize and filter helper
+        def safe_filter(df_local, column, values):
+            if not values or column not in df_local.columns:
+                return df_local
+            norm_col = column + "_norm"
+            if norm_col not in df_local.columns:
+                df_local[norm_col] = df_local[column].astype(str).str.strip().str.lower()
+            vals = [v.lower().strip() for v in values if v]
+            return df_local[df_local[norm_col].apply(lambda x: any(v in x for v in vals))]
 
-            filtered_df = df
+        # Apply filters hierarchically — always include plan
+        df = safe_filter(df, "Plan", plan_filter)
+        df = safe_filter(df, "AMC", amc_filter)
+        df = safe_filter(df, "schemeCategory", cat_filter)
+        df = safe_filter(df, "schemeSubCategory", subcat_filter)
+        df = safe_filter(df, "Option", option_filter)
 
-            # Normalize columns for DB or CSV consistency
-        rename_map = {
-            "category": "schemeCategory",
-            "subcategory": "schemeSubCategory"
-        }
-        filtered_df = filtered_df.rename(columns=rename_map)
+        # Build the dependent dropdown lists dynamically
+        amcs = sorted(df["AMC"].dropna().unique().tolist()) if "AMC" in df.columns else []
+        categories = sorted(df["schemeCategory"].dropna().unique().tolist()) if "schemeCategory" in df.columns else []
+        subcategories = sorted(df["schemeSubCategory"].dropna().unique().tolist()) if "schemeSubCategory" in df.columns else []
+        options = sorted(df["Option"].dropna().unique().tolist()) if "Option" in df.columns else []
 
-        # Safely get column values (handle missing keys gracefully)
-        def safe_list(df, col):
-            return sorted(df[col].dropna().unique().tolist()) if col in df.columns else []
-
-        stats = {
-            "categories": safe_list(filtered_df, "schemeCategory"),
-            "subcategories": safe_list(filtered_df, "schemeSubCategory"),
-            "plans": safe_list(filtered_df, "Plan"),
-            "options": safe_list(filtered_df, "Option"),
-        }
-
-
-        return jsonify(stats)
+        return jsonify({
+            "amcs": amcs,
+            "categories": categories,
+            "subcategories": subcategories,
+            "options": options
+        })
 
     except Exception as e:
-        print("❌ Error in /api/dependent_filters:", str(e))
+        print("❌ Error in /api/dependent_filters:", e)
         traceback.print_exc()
-        return jsonify({"categories": [], "subcategories": [], "plans": [], "options": []}), 500
+        return jsonify({"amcs": [], "categories": [], "subcategories": [], "options": []}), 500
+
 
 # --------------------------------------------------------------------
 # Endpoint: /api/periodic_returns (DB cached with compute fallback)
