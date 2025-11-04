@@ -1,18 +1,44 @@
 import os
 import psycopg2
 from psycopg2.extras import RealDictCursor, Json
+import atexit
 
+# --------------------------------------------------------------------
+# Database connection setup
+# --------------------------------------------------------------------
 DATABASE_URL = os.getenv("DATABASE_URL") or \
     "postgresql://mfreturns_db_user:dTAlnHMqeFfhfLIWDUYCTj6mxXaqYqO3@dpg-d44qjq3ipnbc73apqqug-a/mfreturns_db"
 
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
-# conn = psycopg2.connect(DATABASE_URL)
 cursor = conn.cursor(cursor_factory=RealDictCursor)
+
+# --------------------------------------------------------------------
+# Reconnection logic
+# --------------------------------------------------------------------
+def ensure_connection_alive():
+    """Ensure PostgreSQL connection and cursor are valid; reconnect if dropped."""
+    global conn, cursor
+    try:
+        if conn is None or conn.closed != 0:
+            print("[DB] Connection was closed. Reconnecting...")
+            conn = psycopg2.connect(DATABASE_URL, sslmode="require")
+            cursor = conn.cursor(cursor_factory=RealDictCursor)
+        else:
+            cursor.execute("SELECT 1;")
+            conn.commit()
+    except Exception as e:
+        print(f"[DB] Reconnection triggered due to: {e}")
+        try:
+            conn = psycopg2.connect(DATABASE_URL, sslmode="require")
+            cursor = conn.cursor(cursor_factory=RealDictCursor)
+        except Exception as e2:
+            print(f"[DB] Reconnection failed: {e2}")
 
 # --------------------------------------------------------------------
 # Initialize core tables
 # --------------------------------------------------------------------
 def init_db():
+    ensure_connection_alive()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS fund_returns (
         scheme_code TEXT PRIMARY KEY,
@@ -61,6 +87,7 @@ def init_db():
     conn.commit()
 
 def ensure_results_json_column():
+    ensure_connection_alive()
     cursor.execute("""ALTER TABLE fund_returns ADD COLUMN IF NOT EXISTS results_json JSONB;""")
     conn.commit()
 
@@ -68,6 +95,7 @@ def ensure_results_json_column():
 # Upsert Metadata (schemes CSV)
 # --------------------------------------------------------------------
 def upsert_metadata(records):
+    ensure_connection_alive()
     for s in records:
         cursor.execute("""
         INSERT INTO fund_metadata (scheme_code, scheme_name, amc, category, subcategory, plan, option, type)
@@ -89,6 +117,7 @@ def upsert_metadata(records):
     conn.commit()
 
 def get_schemes_from_db(filters=None):
+    ensure_connection_alive()
     base = "SELECT * FROM fund_metadata WHERE 1=1"
     params = []
     if filters:
@@ -103,6 +132,7 @@ def get_schemes_from_db(filters=None):
 # Filter Cache Helpers
 # --------------------------------------------------------------------
 def upsert_filter_cache(type_, data):
+    ensure_connection_alive()
     cursor.execute("""
     INSERT INTO filter_cache (type, amcs, categories, subcategories, plans, options,
                               total, mutual_funds, etfs, updated_at)
@@ -128,6 +158,7 @@ def upsert_filter_cache(type_, data):
     conn.commit()
 
 def get_filter_cache(type_):
+    ensure_connection_alive()
     cursor.execute("SELECT * FROM filter_cache WHERE type=%s", (type_,))
     return cursor.fetchone()
 
@@ -135,6 +166,7 @@ def get_filter_cache(type_):
 # Return Caching Helpers
 # --------------------------------------------------------------------
 def upsert_fund_results_json(scheme_code, scheme_name, results_obj, meta=None):
+    ensure_connection_alive()
     meta = meta or {}
     cursor.execute("""
     INSERT INTO fund_returns (scheme_code, scheme_name, type, plan, option, updated_at, results_json)
@@ -155,10 +187,12 @@ def upsert_fund_results_json(scheme_code, scheme_name, results_obj, meta=None):
     conn.commit()
 
 def get_precomputed_return_json(code):
+    ensure_connection_alive()
     cursor.execute("SELECT * FROM fund_returns WHERE scheme_code=%s", (code,))
     return cursor.fetchone()
 
 def get_all_cached_returns(limit=200):
+    ensure_connection_alive()
     cursor.execute("""
         SELECT scheme_code, scheme_name, results_json, updated_at
         FROM fund_returns
@@ -168,11 +202,24 @@ def get_all_cached_returns(limit=200):
     return cursor.fetchall()
 
 def safe_upsert(DB, *args, **kwargs):
+    """Wrapper for safe upsert with reconnection handling."""
     try:
         DB.upsert_fund_results_json(*args, **kwargs)
     except psycopg2.OperationalError:
         print("🔁 [DB] Connection dropped, reconnecting...")
-        DB.connect()  # or re-init your connection object
+        ensure_connection_alive()
         DB.upsert_fund_results_json(*args, **kwargs)
     except Exception as e:
         print(f"💾 [DB] upsert failed: {e}")
+
+# --------------------------------------------------------------------
+# Cleanup on exit
+# --------------------------------------------------------------------
+@atexit.register
+def close_db():
+    try:
+        if conn:
+            conn.close()
+            print("[DB] Connection closed cleanly at shutdown.")
+    except Exception as e:
+        print(f"[DB] Error closing connection: {e}")

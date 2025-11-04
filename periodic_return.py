@@ -55,7 +55,7 @@ def xirr(cashflows, dates, guess=0.1):
 # -------------------------
 # Fetch NAV History
 # -------------------------
-def fetch_nav_history(amfi_numeric_code):
+def fetch_nav_history(amfi_numeric_code, session=None):
     """Fetch NAV history and return a cleaned DataFrame indexed by date."""
     url = MFAPI_BASE + str(int(amfi_numeric_code))
     try:

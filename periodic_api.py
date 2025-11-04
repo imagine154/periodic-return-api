@@ -490,6 +490,7 @@ def precompute_all():
 
     import time
     import gc
+    import requests
     from datetime import datetime
 
     try:
@@ -505,6 +506,9 @@ def precompute_all():
 
         print(f"🧮 [{datetime.now().strftime('%H:%M:%S')}] Starting batch precompute: {start_index} → {end_index} / {total_schemes}")
 
+        # ✅ Use persistent session for better performance and stability
+        session = requests.Session()
+
         for idx, code in enumerate(batch_codes, start=start_index):
             try:
                 scheme_name, results = None, None
@@ -512,24 +516,32 @@ def precompute_all():
                 # Retry fetch up to 3 times for unstable mfapi responses
                 for attempt in range(3):
                     try:
-                        nav_df, scheme_name = fetch_nav_history(code)
+                        nav_df, scheme_name = fetch_nav_history(code, session=session)
                         if nav_df is not None and not nav_df.empty:
                             results = calculate_periodic_returns(nav_df)
                             break
                         else:
-                            print(f"⚠️ [{code}] Empty NAV data (attempt {attempt+1}/3). Retrying in 2s...")
-                            time.sleep(2)
+                            wait_time = 2 * (attempt + 1)
+                            print(f"⚠️ [{code}] Empty NAV data (attempt {attempt+1}/3). Retrying in {wait_time}s...")
+                            time.sleep(wait_time)
+                    except requests.exceptions.Timeout:
+                        wait_time = 3 * (attempt + 1)
+                        print(f"⏱️ [{code}] Timeout on attempt {attempt+1}. Retrying in {wait_time}s...")
+                        time.sleep(wait_time)
                     except Exception as e:
+                        wait_time = 2 * (attempt + 1)
                         print(f"⚠️ [{code}] fetch attempt {attempt+1} failed: {e}")
-                        time.sleep(2)
+                        time.sleep(wait_time)
 
                 if results is None:
                     failed.append({"code": code, "reason": "no nav after retries"})
                     continue
 
-                # ✅ Save results to DB (safe with reconnect)
+                # ✅ Save results to DB with auto-reconnect
                 if DB_AVAILABLE and hasattr(DB, "upsert_fund_results_json"):
                     try:
+                        DB.ensure_connection_alive()  # <--- use our new reconnection helper
+
                         row = schemes_df[schemes_df["schemeCode"] == code]
                         meta = {}
                         if not row.empty:
@@ -539,31 +551,10 @@ def precompute_all():
                                 "option": row.iloc[0].get("Option")
                             }
 
-                        try:
-                            DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
-                        except Exception as e:
-                            # Handle dropped DB connection gracefully
-                            if "closed" in str(e).lower() or "ssl" in str(e).lower():
-                                print(f"🔁 [DB] reconnecting after failure for {code}: {e}")
-                                try:
-                                    if hasattr(DB, "conn"):
-                                        DB.conn.close()
-                                    if hasattr(DB, "cursor"):
-                                        DB.cursor.close()
-                                    import psycopg2
-                                    from psycopg2.extras import RealDictCursor, Json
-                                    DB.conn = psycopg2.connect(DB.DATABASE_URL, sslmode="require")
-                                    DB.cursor = DB.conn.cursor(cursor_factory=RealDictCursor)
-                                    DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
-                                except Exception as inner_e:
-                                    print(f"💾 [DB] re-upsert failed for {code}: {inner_e}")
-                                    failed.append({"code": code, "error": str(inner_e)})
-                            else:
-                                print(f"💾 [DB] upsert failed for {code}: {e}")
-                                failed.append({"code": code, "error": str(e)})
+                        DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
 
                     except Exception as e:
-                        print(f"💾 [DB] critical error for {code}: {e}")
+                        print(f"💾 [DB] upsert failed for {code}: {e}")
                         failed.append({"code": code, "error": str(e)})
 
                 processed += 1
@@ -572,11 +563,11 @@ def precompute_all():
                 if processed % 50 == 0:
                     print(f"✅ [{datetime.now().strftime('%H:%M:%S')}] Processed {processed} schemes...")
 
-                # ✅ Free memory aggressively (important for Render)
+                # ✅ Free memory aggressively (important for Render free tier)
                 del nav_df, results
                 gc.collect()
 
-                # ✅ Throttle (to respect mfapi.in rate limit)
+                # ✅ Throttle (respect mfapi.in & Render CPU usage)
                 time.sleep(0.4)
 
             except Exception as e:
@@ -603,7 +594,6 @@ def precompute_all():
         print("❌ Error in /api/precompute_all:", e)
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
-
 
 # --------------------------------------------------------------------
 # Admin Endpoint: /api/precache_filters - compute & store filter cache in DB
