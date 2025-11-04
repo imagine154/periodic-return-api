@@ -8,3 +8,13 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
+
+cronJobs:
+  - name: batch-precompute
+    schedule: "30 0 * * *"  # 6:00 AM IST
+    env: python
+    command: |
+      for i in $(seq 0 500 9000); do
+        curl -X POST "https://periodic-return-api.onrender.com/api/precompute_all?start=$i&batch=500"
+        sleep 60
+      done

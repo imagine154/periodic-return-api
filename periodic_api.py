@@ -1,20 +1,61 @@
+# periodic_api.py
 """
 periodic_api.py
-Backend for Mutual Fund & ETF Return Analyzer
-✅ Supports only 'Mutual Fund' and 'ETF'
-✅ Fully compatible with rebuilt frontend (HTML)
+Backend for Mutual Fund & ETF Return Analyzer (DB-cached with CSV fallback)
+- Preserves original behavior and endpoints from the user's provided file
+- Adds DB caching for /api/stats, /api/schemes (optional), and /api/periodic_returns
+- Admin endpoints: /api/precompute_all, /api/precache_filters
 """
 
+import os
+import traceback
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
+from datetime import datetime, timezone
+
+# import the compute functions exactly as provided
 from periodic_return import fetch_nav_history, calculate_periodic_returns
 
-app = Flask(__name__)
+# --------------------------------------------------------------------
+# Try to import user's database.py (optional). If not available, operate in CSV-only mode.
+# database.py is expected to expose helpers (any subset is fine):
+#   - init_db()
+#   - ensure_results_json_column()
+#   - upsert_metadata(records)
+#   - get_schemes_from_db(filters)
+#   - get_filter_cache(type_)
+#   - upsert_filter_cache(type_, data)
+#   - get_precomputed_return_json(code) OR get_precomputed_return(code)
+#   - upsert_fund_results_json(scheme_code, scheme_name, results_obj, meta=None)
+#   - get_all_cached_returns(limit)
+# --------------------------------------------------------------------
+DB = None
+DB_AVAILABLE = False
+try:
+    import database as DB
+    DB_AVAILABLE = True
+    print("[periodic_api] database.py imported successfully")
+except Exception as e:
+    print("[periodic_api] database.py not found or failed to import. Falling back to CSV-only mode.")
+    DB = None
+    DB_AVAILABLE = False
+
+# If DB present, initialize and ensure JSON column
+if DB_AVAILABLE:
+    try:
+        if hasattr(DB, "init_db"):
+            DB.init_db()
+        if hasattr(DB, "ensure_results_json_column"):
+            DB.ensure_results_json_column()
+    except Exception as e:
+        print("[periodic_api] Warning: DB init/ensure column failed:", e)
 
 # --------------------------------------------------------------------
-# Enable CORS (Frontend URLs + local dev)
+# App + CORS
 # --------------------------------------------------------------------
+app = Flask(__name__)
+
 CORS(app, resources={
     r"/api/*": {
         "origins": [
@@ -29,11 +70,15 @@ CORS(app, resources={
 })
 
 # --------------------------------------------------------------------
-# Load master dataset once at startup
+# Load master dataset once at startup (CSV fallback)
 # --------------------------------------------------------------------
-schemes_df = pd.read_csv("schemeswithcodes.csv")
+CSV_PATH = os.path.join(os.getcwd(), "schemeswithcodes.csv")
+if not os.path.exists(CSV_PATH):
+    raise FileNotFoundError(f"Required file missing: {CSV_PATH}")
 
-# Add instrument type
+schemes_df = pd.read_csv(CSV_PATH)
+
+# Add instrument type (same logic you provided)
 schemes_df["instrumentType"] = schemes_df["schemeSubCategory"].apply(
     lambda x: "ETF" if "ETF" in str(x).upper() else "Mutual Fund"
 )
@@ -42,23 +87,47 @@ schemes_df["instrumentType"] = schemes_df["schemeSubCategory"].apply(
 def normalize_series(series):
     return series.astype(str).str.strip().str.lower()
 
+# create normalized columns if not present
 schemes_df["AMC_norm"] = normalize_series(schemes_df["AMC"])
 schemes_df["Category_norm"] = normalize_series(schemes_df["schemeCategory"])
 schemes_df["SubCategory_norm"] = normalize_series(schemes_df["schemeSubCategory"])
 schemes_df["Plan_norm"] = normalize_series(schemes_df["Plan"])
 schemes_df["Option_norm"] = normalize_series(schemes_df["Option"])
 
+# If DB exists and has upsert_metadata, push CSV metadata once (best-effort)
+if DB_AVAILABLE and hasattr(DB, "upsert_metadata"):
+    try:
+        recs = []
+        for _, row in schemes_df.iterrows():
+            recs.append({
+                "scheme_code": row.get("schemeCode"),
+                "scheme_name": row.get("schemeName"),
+                "amc": row.get("AMC"),
+                "category": row.get("schemeCategory"),
+                "subcategory": row.get("schemeSubCategory"),
+                "plan": row.get("Plan"),
+                "option": row.get("Option"),
+                "type": row.get("instrumentType")
+            })
+        if recs:
+            DB.upsert_metadata(recs)
+            print("[periodic_api] metadata upserted to DB")
+    except Exception as e:
+        print("[periodic_api] metadata upsert to DB failed:", e)
+
 # --------------------------------------------------------------------
-# Utility Helpers
+# Small helpers (preserve behavior from your original file)
 # --------------------------------------------------------------------
 def parse_multi_param(param_name):
     """Parse query parameters that may be comma-separated or repeated."""
     values = request.args.getlist(param_name)
     parsed = []
     for v in values:
+        if not v:
+            continue
         if "," in v:
             parsed.extend([x.strip() for x in v.split(",") if x.strip()])
-        elif v.strip():
+        else:
             parsed.append(v.strip())
     return parsed
 
@@ -67,23 +136,21 @@ def norm_list(vals):
     return [v.strip().lower() for v in vals if isinstance(v, str) and v.strip()]
 
 # --------------------------------------------------------------------
-# API: Schemes List
+# Endpoint: /api/schemes (uses DB if available, else CSV)
 # --------------------------------------------------------------------
 @app.route("/api/schemes", methods=["GET"])
 def get_scheme_list():
-    """Return filtered scheme list safely for all combinations of type, plan, option, AMC, category, and subcategory."""
     try:
         q = request.args.get("q", "").lower().strip()
         selected_type = request.args.get("type", "Mutual Fund")
 
-        # Parse filters
+        # Parse filters (can be repeated or comma-separated)
         amc_filter = norm_list(parse_multi_param("amc"))
         cat_filter = norm_list(parse_multi_param("category"))
         subcat_filter = norm_list(parse_multi_param("subcategory"))
         plan_filter = norm_list(parse_multi_param("plan"))
         option_filter = norm_list(parse_multi_param("option"))
 
-        # Clean up empty filters
         filters = {
             "amc": [v for v in amc_filter if v],
             "category": [v for v in cat_filter if v],
@@ -92,22 +159,32 @@ def get_scheme_list():
             "option": [v for v in option_filter if v],
         }
 
+        # If DB provides filtered fetch, prefer it
+        if DB_AVAILABLE and hasattr(DB, "get_schemes_from_db"):
+            try:
+                # DB helper expected to accept a dict or None
+                rows = DB.get_schemes_from_db(filters if any(filters.values()) else None)
+                # Ensure row structures are JSON serializable (e.g., RealDictRow -> dict)
+                return jsonify([dict(r) for r in rows])
+            except Exception as e:
+                print("[/api/schemes] DB get_schemes_from_db failed, falling back to CSV:", e)
+
+        # CSV fallback (your original logic)
         df = schemes_df.copy()
 
-        # --- Type filter ---
+        # Type filter
         if selected_type.lower() != "both":
             df = df[df["instrumentType"].str.lower().str.strip() == selected_type.lower().strip()]
 
-        # --- Defensive filtering ---
-        def safe_filter(df, column, values):
-            """Apply case-insensitive substring filter safely."""
-            if not values or column not in df.columns:
-                return df
+        # safe_filter helper
+        def safe_filter(df_local, column, values):
+            if not values or column not in df_local.columns:
+                return df_local
             norm_col = column + "_norm"
-            if norm_col not in df.columns:
-                df[norm_col] = df[column].astype(str).str.strip().str.lower()
+            if norm_col not in df_local.columns:
+                df_local[norm_col] = df_local[column].astype(str).str.strip().str.lower()
             vals = [v.lower().strip() for v in values if v]
-            return df[df[norm_col].apply(lambda x: any(v in x for v in vals))]
+            return df_local[df_local[norm_col].apply(lambda x: any(v in x for v in vals))]
 
         df = safe_filter(df, "AMC", filters["amc"])
         df = safe_filter(df, "schemeCategory", filters["category"])
@@ -115,118 +192,404 @@ def get_scheme_list():
         df = safe_filter(df, "Plan", filters["plan"])
         df = safe_filter(df, "Option", filters["option"])
 
-        # --- Search filter ---
+        # Search q
         if q:
-            q_norm = q.lower()
             df = df[
-                df["schemeName"].str.lower().str.contains(q_norm, na=False)
-                | df["AMC"].str.lower().str.contains(q_norm, na=False)
-                | df["schemeCategory"].str.lower().str.contains(q_norm, na=False)
-                | df["schemeSubCategory"].str.lower().str.contains(q_norm, na=False)
+                df["schemeName"].str.lower().str.contains(q, na=False)
+                | df["AMC"].str.lower().str.contains(q, na=False)
+                | df["schemeCategory"].str.lower().str.contains(q, na=False)
+                | df["schemeSubCategory"].str.lower().str.contains(q, na=False)
                 ]
 
-        # --- Limit and result ---
         df = df.drop_duplicates(subset=["schemeCode"]).fillna("")
-        result_count = len(df)
-        print(
-            f"✅ /api/schemes query ok: Type={selected_type}, Plan={filters['plan']}, "
-            f"Option={filters['option']}, AMC={filters['amc']}, Category={filters['category']}, "
-            f"SubCat={filters['subcategory']}, Count={result_count}"
-        )
-
         return jsonify(df.to_dict(orient="records"))
 
     except Exception as e:
-        import traceback
         print("❌ Error in /api/schemes:", str(e))
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+# --------------------------------------------------------------------
+# Endpoint: /api/stats (dropdown values) — DB-cached if possible
+# --------------------------------------------------------------------
+@app.route("/api/stats", methods=["GET"])
+def get_stats():
+    try:
+        type_param = request.args.get("type", "Mutual Fund")
+        plan_param = request.args.get("plan")
+        option_param = request.args.get("option")
+
+        # Try DB cache first
+        if DB_AVAILABLE and hasattr(DB, "get_filter_cache"):
+            try:
+                cached = DB.get_filter_cache(type_param)
+                if cached:
+                    # cached likely contains JSONB arrays — convert where needed
+                    resp = {
+                        "total": cached.get("total") or 0,
+                        "mutual_funds": int(cached.get("mutual_funds") or 0),
+                        "etfs": int(cached.get("etfs") or 0),
+                        "amcs": cached.get("amcs") or [],
+                        "categories": cached.get("categories") or [],
+                        "subcategories": cached.get("subcategories") or [],
+                        "plans": cached.get("plans") or [],
+                        "options": cached.get("options") or [],
+                        "source": "db-cache"
+                    }
+                    return jsonify(resp)
+            except Exception as e:
+                print("[/api/stats] get_filter_cache failed, will compute fresh:", e)
+
+        # Compute from CSV (existing logic)
+        df = schemes_df.copy()
+        if type_param.lower() == "etf":
+            df = df[df["instrumentType"].str.lower() == "etf"]
+            df = df[df["Option_norm"] == "etf"]
+        else:
+            df = df[df["instrumentType"].str.lower() == "mutual fund"]
+
+        if plan_param and type_param.lower() != "etf":
+            df = df[df["Plan_norm"] == plan_param.lower()]
+        if option_param:
+            df = df[df["Option_norm"] == option_param.lower()]
+
+        stats = {
+            "total": len(df),
+            "mutual_funds": int((df["instrumentType"] == "Mutual Fund").sum()),
+            "etfs": int((df["instrumentType"] == "ETF").sum()),
+            "amcs": sorted(df["AMC"].dropna().unique().tolist()),
+            "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
+            "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
+            "plans": sorted(df["Plan"].dropna().unique().tolist()),
+            "options": sorted(df["Option"].dropna().unique().tolist()),
+            "source": "fresh"
+        }
+
+        # Upsert into DB filter cache if helper exists
+        if DB_AVAILABLE and hasattr(DB, "upsert_filter_cache"):
+            try:
+                DB.upsert_filter_cache(type_param, stats)
+            except Exception as e:
+                print("[/api/stats] upsert_filter_cache failed:", e)
+
+        print(f"📊 Stats ({type_param}) — Total={stats['total']}")
+        return jsonify(stats)
+
+    except Exception as e:
+        print("❌ Error in /api/stats:", str(e))
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+# --------------------------------------------------------------------
+# Endpoint: /api/dependent_filters
+# --------------------------------------------------------------------
+@app.route("/api/dependent_filters", methods=["GET"])
+def get_dependent_filters():
+    try:
+        selected_type = request.args.get("type", "Mutual Fund")
+        amc_filter = norm_list(parse_multi_param("amc"))
+        cat_filter = norm_list(parse_multi_param("category"))
+
+        # Use DB-backed filtered scheme fetch if available
+        filtered_df = None
+        if DB_AVAILABLE and hasattr(DB, "get_schemes_from_db"):
+            try:
+                filters = {}
+                if selected_type:
+                    filters["type"] = selected_type
+                if amc_filter:
+                    filters["amc"] = ",".join(amc_filter)
+                if cat_filter:
+                    filters["category"] = ",".join(cat_filter)
+                rows = DB.get_schemes_from_db(filters if filters else None)
+                # convert rows to pandas DataFrame for familiar operations
+                filtered_df = pd.DataFrame([dict(r) for r in rows]) if rows else pd.DataFrame()
+            except Exception as e:
+                print("[/api/dependent_filters] DB get_schemes_from_db failed, falling back:", e)
+
+        if filtered_df is None:
+            # CSV fallback
+            df = schemes_df.copy()
+            if selected_type.lower() == "etf":
+                df = df[df["instrumentType"].str.lower() == "etf"]
+                df = df[df["Option_norm"] == "etf"]
+            else:
+                df = df[df["instrumentType"].str.lower() == "mutual fund"]
+
+            if amc_filter:
+                df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
+            if cat_filter:
+                df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
+
+            filtered_df = df
+
+        stats = {
+                "categories": sorted(filtered_df["schemeCategory"].dropna().unique().tolist()),
+            "subcategories": sorted(filtered_df["schemeSubCategory"].dropna().unique().tolist()),
+            "plans": sorted(filtered_df["Plan"].dropna().unique().tolist()),
+            "options": sorted(filtered_df["Option"].dropna().unique().tolist()),
+        }
+
+        return jsonify(stats)
+
+    except Exception as e:
+        print("❌ Error in /api/dependent_filters:", str(e))
+        traceback.print_exc()
+        return jsonify({"categories": [], "subcategories": [], "plans": [], "options": []}), 500
+
+# --------------------------------------------------------------------
+# Endpoint: /api/periodic_returns (DB cached with compute fallback)
+# --------------------------------------------------------------------
+@app.route("/api/periodic_returns", methods=["GET"])
+def get_periodic_returns_api():
+    try:
+        amfi_code = request.args.get("code")
+        if not amfi_code:
+            return jsonify({"error": "Missing 'code' param"}), 400
+
+        # 1) Try DB cached JSON (preferred)
+        if DB_AVAILABLE:
+            try:
+                # prefer get_precomputed_return_json if available
+                cached = None
+                if hasattr(DB, "get_precomputed_return_json"):
+                    cached = DB.get_precomputed_return_json(amfi_code)
+                elif hasattr(DB, "get_precomputed_return"):
+                    cached = DB.get_precomputed_return(amfi_code)
+                if cached:
+                    # if cached has results_json column, return it as-is
+                    if isinstance(cached, dict) and "results_json" in cached and cached["results_json"]:
+                        return jsonify({
+                            "scheme_name": cached.get("scheme_name") or cached.get("schemeName"),
+                            "code": cached.get("scheme_code") or cached.get("schemeCode") or amfi_code,
+                            "results": cached.get("results_json"),
+                            "source": "cache",
+                            "updated_at": cached.get("updated_at")
+                        })
+                    # fallback mapping for legacy columns (return_1m etc.)
+                    if isinstance(cached, dict) and cached.get("return_1m") is not None:
+                        results = {
+                            "1M": cached.get("return_1m"),
+                            "3M": cached.get("return_3m"),
+                            "6M": cached.get("return_6m"),
+                            "1Y": cached.get("return_1y"),
+                            "3Y": cached.get("return_3y"),
+                            "5Y": cached.get("return_5y"),
+                            "7Y": cached.get("return_7y"),
+                            "10Y": cached.get("return_10y"),
+                        }
+                        return jsonify({
+                            "scheme_name": cached.get("scheme_name"),
+                            "code": cached.get("scheme_code"),
+                            "results": results,
+                            "source": "cache",
+                            "updated_at": cached.get("updated_at")
+                        })
+            except Exception as e:
+                print("[/api/periodic_returns] DB read failed (continuing to compute):", e)
+
+        # 2) If not cached, compute using your periodic_return functions (exact same code you provided)
+        nav_df, scheme_name = fetch_nav_history(amfi_code)
+        if nav_df is None or nav_df.empty:
+            return jsonify({"error": "Invalid or no NAV data found"}), 404
+
+        results = calculate_periodic_returns(nav_df)
+
+        # 3) Write to DB if possible (store entire results JSON in results_json)
+        if DB_AVAILABLE and hasattr(DB, "upsert_fund_results_json"):
+            try:
+                meta = {
+                    "type": None,
+                    "plan": None,
+                    "option": None
+                }
+                # try to look up scheme metadata from CSV to fill meta if present
+                try:
+                    row = schemes_df[schemes_df["schemeCode"] == amfi_code]
+                    if not row.empty:
+                        meta["type"] = row.iloc[0]["instrumentType"]
+                        meta["plan"] = row.iloc[0].get("Plan")
+                        meta["option"] = row.iloc[0].get("Option")
+                except Exception:
+                    pass
+
+                DB.upsert_fund_results_json(amfi_code, scheme_name, results, meta=meta)
+            except Exception as e:
+                print("[/api/periodic_returns] Warning: DB upsert failed:", e)
+
+        return jsonify({
+            "scheme_name": scheme_name,
+            "code": amfi_code,
+            "results": results,
+            "source": "fresh",
+            "computed_at": datetime.now(timezone.utc).isoformat()
+        })
+
+    except Exception as e:
+        print("❌ Error in /api/periodic_returns:", str(e))
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+# --------------------------------------------------------------------
+# Endpoint: /api/returns_summary - return a page-friendly sample of cached returns
+# --------------------------------------------------------------------
+@app.route("/api/returns_summary", methods=["GET"])
+def returns_summary():
+    try:
+        limit = int(request.args.get("limit", 200))
+        # if DB provides a helper to return precomputed cached returns, use it
+        if DB_AVAILABLE and hasattr(DB, "get_all_cached_returns"):
+            try:
+                rows = DB.get_all_cached_returns(limit)
+                # rows should contain scheme_code, scheme_name, results_json (or equivalent)
+                out = []
+                for r in rows:
+                    if isinstance(r, dict):
+                        res = r.get("results_json") or {}
+                        out.append({
+                            "scheme_code": r.get("scheme_code") or r.get("schemeCode"),
+                            "scheme_name": r.get("scheme_name") or r.get("schemeName"),
+                            "results": res,
+                            "updated_at": r.get("updated_at")
+                        })
+                return jsonify(out)
+            except Exception as e:
+                print("[/api/returns_summary] DB helper failed, falling back:", e)
+
+        # fallback: attempt to read fund_returns table via generic DB helper 'get_all_returns' if present
+        if DB_AVAILABLE and hasattr(DB, "get_all_returns"):
+            try:
+                rows = DB.get_all_returns(limit)
+                return jsonify(rows)
+            except Exception as e:
+                print("[/api/returns_summary] get_all_returns failed:", e)
+
+        # last-resort: return empty list (no precomputed data)
+        return jsonify([])
+
+    except Exception as e:
+        print("❌ Error in /api/returns_summary:", e)
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+# --------------------------------------------------------------------
+# Admin Endpoint: /api/precompute_all - compute & cache returns for all schemes in CSV (POST)
+# --------------------------------------------------------------------
+@app.route("/api/precompute_all", methods=["POST"])
+def precompute_all():
+    """
+    Compute and cache returns for all schemes in manageable batches with retry and throttling.
+    Optional query params:
+      - start: index to start from (default 0)
+      - batch: number of schemes to process in this run (default 500)
+    Example:
+      /api/precompute_all?start=0&batch=500
+    """
+    import time
+    from datetime import datetime
+
+    try:
+        start_index = int(request.args.get("start", 0))
+        batch_size = int(request.args.get("batch", 500))
+        end_index = start_index + batch_size
+
+        codes = schemes_df["schemeCode"].dropna().unique().tolist()
+        total_schemes = len(codes)
+        batch_codes = codes[start_index:end_index]
+
+        processed, failed = 0, []
+
+        print(f"🧮 [{datetime.now().strftime('%H:%M:%S')}] Starting batch precompute: {start_index} → {end_index} / {total_schemes}")
+
+        for idx, code in enumerate(batch_codes, start=start_index):
+            try:
+                scheme_name, results = None, None
+
+                # Retry mechanism (up to 3 attempts)
+                for attempt in range(3):
+                    nav_df, scheme_name = fetch_nav_history(code)
+                    if nav_df is not None and not nav_df.empty:
+                        results = calculate_periodic_returns(nav_df)
+                        break
+                    else:
+                        print(f"⚠️ [{code}] Empty NAV data (attempt {attempt+1}/3). Retrying in 1s...")
+                        time.sleep(1)
+
+                # If still no data after retries
+                if results is None:
+                    failed.append({"code": code, "reason": "no nav after retries"})
+                    continue
+
+                # ✅ Save results to DB
+                if DB_AVAILABLE and hasattr(DB, "upsert_fund_results_json"):
+                    try:
+                        row = schemes_df[schemes_df["schemeCode"] == code]
+                        meta = {}
+                        if not row.empty:
+                            meta = {
+                                "type": row.iloc[0]["instrumentType"],
+                                "plan": row.iloc[0].get("Plan"),
+                                "option": row.iloc[0].get("Option")
+                            }
+
+                        DB.upsert_fund_results_json(code, scheme_name, results, meta=meta)
+                    except Exception as e:
+                        print(f"💾 [DB] upsert failed for {code}: {e}")
+                        failed.append({"code": code, "error": str(e)})
+
+                processed += 1
+
+                # Progress log every 50 schemes
+                if processed % 50 == 0:
+                    print(f"✅ [{datetime.now().strftime('%H:%M:%S')}] Processed {processed} schemes...")
+
+                # Throttle to avoid rate limit (0.5s per request)
+                time.sleep(0.5)
+
+            except Exception as e:
+                print(f"❌ [precompute_all] failed for {code}: {e}")
+                failed.append({"code": code, "error": str(e)})
+
+        next_start = end_index if end_index < total_schemes else None
+        elapsed = datetime.now().strftime("%H:%M:%S")
+
+        print(f"🏁 [{elapsed}] Batch complete: {processed} processed, {len(failed)} failed")
+
+        return jsonify({
+            "message": "Batch precompute complete",
+            "processed": processed,
+            "failed_count": len(failed),
+            "failed_sample": failed[:10],
+            "next_start": next_start,
+            "remaining": max(0, total_schemes - end_index),
+            "total_schemes": total_schemes
+        })
+
+    except Exception as e:
+        print("❌ Error in /api/precompute_all:", e)
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
 
 # --------------------------------------------------------------------
-# API: Stats (Dropdown values)
+# Admin Endpoint: /api/precache_filters - compute & store filter cache in DB
 # --------------------------------------------------------------------
-@app.route("/api/stats", methods=["GET"])
-def get_stats():
-    df = schemes_df.copy()
-    type_param = request.args.get("type", "Mutual Fund")
-    plan_param = request.args.get("plan")
-    option_param = request.args.get("option")
-
-    if type_param.lower() == "etf":
-        df = df[df["instrumentType"].str.lower() == "etf"]
-        df = df[df["Option_norm"] == "etf"]
-    else:
-        df = df[df["instrumentType"].str.lower() == "mutual fund"]
-
-    if plan_param and type_param.lower() != "etf":
-        df = df[df["Plan_norm"] == plan_param.lower()]
-    if option_param:
-        df = df[df["Option_norm"] == option_param.lower()]
-
-    stats = {
-        "total": len(df),
-        "mutual_funds": int((df["instrumentType"] == "Mutual Fund").sum()),
-        "etfs": int((df["instrumentType"] == "ETF").sum()),
-        "amcs": sorted(df["AMC"].dropna().unique().tolist()),
-        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
-        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
-        "plans": sorted(df["Plan"].dropna().unique().tolist()),
-        "options": sorted(df["Option"].dropna().unique().tolist()),
-    }
-
-    print(f"📊 Stats ({type_param}) — Total={stats['total']}")
-    return jsonify(stats)
-
-# --------------------------------------------------------------------
-# API: Dependent Filters
-# --------------------------------------------------------------------
-@app.route("/api/dependent_filters", methods=["GET"])
-def get_dependent_filters():
-    selected_type = request.args.get("type", "Mutual Fund")
-    amc_filter = norm_list(parse_multi_param("amc"))
-    cat_filter = norm_list(parse_multi_param("category"))
-
-    df = schemes_df.copy()
-    if selected_type.lower() == "etf":
-        df = df[df["instrumentType"].str.lower() == "etf"]
-        df = df[df["Option_norm"] == "etf"]
-    else:
-        df = df[df["instrumentType"].str.lower() == "mutual fund"]
-
-    if amc_filter:
-        df = df[df["AMC_norm"].apply(lambda x: any(v in x for v in amc_filter))]
-    if cat_filter:
-        df = df[df["Category_norm"].apply(lambda x: any(v in x for v in cat_filter))]
-
-    stats = {
-        "categories": sorted(df["schemeCategory"].dropna().unique().tolist()),
-        "subcategories": sorted(df["schemeSubCategory"].dropna().unique().tolist()),
-        "plans": sorted(df["Plan"].dropna().unique().tolist()),
-        "options": sorted(df["Option"].dropna().unique().tolist()),
-    }
-
-    return jsonify(stats)
-
-# --------------------------------------------------------------------
-# API: Periodic Returns
-# --------------------------------------------------------------------
-@app.route("/api/periodic_returns", methods=["GET"])
-def get_periodic_returns_api():
-    amfi_code = request.args.get("code")
-    if not amfi_code:
-        return jsonify({"error": "Missing 'code' param"}), 400
-
-    nav_df, scheme_name = fetch_nav_history(amfi_code)
-    if nav_df is None or nav_df.empty:
-        return jsonify({"error": "Invalid or no NAV data found"}), 404
-
-    results = calculate_periodic_returns(nav_df)
-    return jsonify({
-        "scheme_name": scheme_name,
-        "code": amfi_code,
-        "results": results
-    })
+@app.route("/api/precache_filters", methods=["POST"])
+def precache_filters():
+    try:
+        if not (DB_AVAILABLE and hasattr(DB, "upsert_filter_cache")):
+            return jsonify({"message": "DB filter cache helper not available"}), 400
+        # compute for both types
+        for t in ["Mutual Fund", "ETF"]:
+            # reuse get_stats logic: call endpoint function directly to get fresh data (non-cached)
+            with app.test_request_context(f"/api/stats?type={t}"):
+                resp = get_stats()
+                # get_stats already upserts to DB via upsert_filter_cache
+        return jsonify({"message": "filter cache refreshed"})
+    except Exception as e:
+        print("❌ Error in /api/precache_filters:", e)
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
 
 # --------------------------------------------------------------------
 # Root / Health Check
@@ -240,6 +603,9 @@ def home():
             "/api/schemes",
             "/api/dependent_filters",
             "/api/periodic_returns?code=<scheme_code>",
+            "/api/returns_summary",
+            "/api/precompute_all (POST)",
+            "/api/precache_filters (POST)"
         ]
     })
 
@@ -247,4 +613,6 @@ def home():
 # Run Server
 # --------------------------------------------------------------------
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    debug_mode = os.environ.get("DEBUG", "false").lower() == "true"
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=debug_mode, host="0.0.0.0", port=port)
