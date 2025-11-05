@@ -159,24 +159,66 @@ def get_scheme_list():
             "option": [v for v in option_filter if v],
         }
 
+        # Helper to normalise a row (DB row or CSV row) into frontend shape
+        def normalise_row(r):
+            # r can be a dict (DB RealDictRow) or a pandas Series (CSV)
+            def get_field(keys, default=""):
+                for k in keys:
+                    if isinstance(r, dict):
+                        if k in r and r[k] is not None:
+                            return r[k]
+                    else:
+                        # pandas Series
+                        if k in r.index and pd.notna(r[k]):
+                            return r[k]
+                return default
+
+            scheme_code = str(get_field(["schemeCode", "scheme_code", "scheme_code".lower()], "")).strip()
+            scheme_name = str(get_field(["schemeName", "scheme_name", "scheme_name".lower()], "")).strip()
+            amc = str(get_field(["AMC", "amc"], "")).strip()
+            category = str(get_field(["schemeCategory", "category"], "")).strip()
+            subcategory = str(get_field(["schemeSubCategory", "subcategory"], "")).strip()
+            plan = str(get_field(["Plan", "plan"], "")).strip()
+            option = str(get_field(["Option", "option"], "")).strip()
+
+            label = scheme_name or scheme_code
+            if amc:
+                label = f"{label} ({amc})"
+
+            return {
+                "value": scheme_code,
+                "label": label,
+                "schemeCode": scheme_code,
+                "schemeName": scheme_name,
+                "amc": amc,
+                "category": category,
+                "subcategory": subcategory,
+                "plan": plan,
+                "option": option
+            }
+
         # If DB provides filtered fetch, prefer it
         if DB_AVAILABLE and hasattr(DB, "get_schemes_from_db"):
             try:
-                # DB helper expected to accept a dict or None
-                rows = DB.get_schemes_from_db(filters if any(filters.values()) else {})
-                # Ensure row structures are JSON serializable (e.g., RealDictRow -> dict)
-                return jsonify(rows if isinstance(rows, list) else [dict(rows)])
+                rows = DB.get_schemes_from_db(filters if any(filters.values()) else None)
+                # Normalize all rows and return
+                out = [normalise_row(dict(r)) for r in rows]
+                # optional: apply search q (in case DB helper didn't)
+                if q:
+                    q_lower = q.lower()
+                    out = [o for o in out if q_lower in (o.get("schemeName") or "").lower() or q_lower in (o.get("amc") or "").lower()]
+                return jsonify(out)
             except Exception as e:
                 print("[/api/schemes] DB get_schemes_from_db failed, falling back to CSV:", e)
 
-        # CSV fallback (your original logic)
+        # CSV fallback
         df = schemes_df.copy()
 
         # Type filter
         if selected_type.lower() != "both":
             df = df[df["instrumentType"].str.lower().str.strip() == selected_type.lower().strip()]
 
-        # safe_filter helper
+        # safe_filter helper for CSV
         def safe_filter(df_local, column, values):
             if not values or column not in df_local.columns:
                 return df_local
@@ -192,8 +234,9 @@ def get_scheme_list():
         df = safe_filter(df, "Plan", filters["plan"])
         df = safe_filter(df, "Option", filters["option"])
 
-        # Search q
+        # Search q across CSV columns
         if q:
+            q = q.lower()
             df = df[
                 df["schemeName"].str.lower().str.contains(q, na=False)
                 | df["AMC"].str.lower().str.contains(q, na=False)
@@ -201,13 +244,19 @@ def get_scheme_list():
                 | df["schemeSubCategory"].str.lower().str.contains(q, na=False)
                 ]
 
+        # Drop duplicates and normalize rows
         df = df.drop_duplicates(subset=["schemeCode"]).fillna("")
-        return jsonify(df.to_dict(orient="records"))
+        out = []
+        for _, row in df.iterrows():
+            out.append(normalise_row(row))
+
+        return jsonify(out)
 
     except Exception as e:
         print("❌ Error in /api/schemes:", str(e))
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
+
 
 # --------------------------------------------------------------------
 # Endpoint: /api/stats (dropdown values) — DB-cached if possible
