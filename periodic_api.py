@@ -95,25 +95,30 @@ schemes_df["Plan_norm"] = normalize_series(schemes_df["Plan"])
 schemes_df["Option_norm"] = normalize_series(schemes_df["Option"])
 
 # If DB exists and has upsert_metadata, push CSV metadata once (best-effort)
-if DB_AVAILABLE and hasattr(DB, "upsert_metadata"):
+if DB_AVAILABLE and hasattr(DB, "upsert_metadata") and hasattr(DB, "count_metadata"):
     try:
-        recs = []
-        for _, row in schemes_df.iterrows():
-            recs.append({
-                "scheme_code": row.get("schemeCode"),
-                "scheme_name": row.get("schemeName"),
-                "amc": row.get("AMC"),
-                "category": row.get("schemeCategory"),
-                "subcategory": row.get("schemeSubCategory"),
-                "plan": row.get("Plan"),
-                "option": row.get("Option"),
-                "type": row.get("instrumentType")
-            })
-        if recs:
-            DB.upsert_metadata(recs)
-            print("[periodic_api] metadata upserted to DB")
+        current_count = DB.count_metadata()
+        if current_count == 0:
+            recs = []
+            for _, row in schemes_df.iterrows():
+                recs.append({
+                    "scheme_code": row.get("schemeCode"),
+                    "scheme_name": row.get("schemeName"),
+                    "amc": row.get("AMC"),
+                    "category": row.get("schemeCategory"),
+                    "subcategory": row.get("schemeSubCategory"),
+                    "plan": row.get("Plan"),
+                    "option": row.get("Option"),
+                    "type": row.get("instrumentType")
+                })
+            if recs:
+                DB.upsert_metadata(recs)
+                print(f"[periodic_api] metadata initialized in DB (count={len(recs)})")
+        else:
+            print(f"[periodic_api] metadata already loaded (count={current_count}), skipping upsert.")
     except Exception as e:
-        print("[periodic_api] metadata upsert to DB failed:", e)
+        print("[periodic_api] metadata upsert check failed:", e)
+
 
 # --------------------------------------------------------------------
 # Small helpers (preserve behavior from your original file)
@@ -584,7 +589,7 @@ def precompute_all():
 
     try:
         start_index = int(request.args.get("start", 0))
-        batch_size = int(request.args.get("batch", 100))
+        batch_size = min(int(request.args.get("batch", 100)), 10)
         end_index = start_index + batch_size
 
         # Split into sub-batches of 20 to avoid Render timeout

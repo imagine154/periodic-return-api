@@ -171,6 +171,18 @@ class Database:
             data.get("etfs")
         ))
         self.conn.commit()
+    # ----------------------------------------------------------------
+    # Metadata count helper
+    # ----------------------------------------------------------------
+    def count_metadata(self):
+        try:
+            self.cursor.execute("SELECT COUNT(*) FROM fund_metadata;")
+            row = self.cursor.fetchone()
+            return row["count"] if isinstance(row, dict) else row[0]
+        except Exception as e:
+            print("[DB] count_metadata failed:", e)
+            return 0
+
 
 # ----------------------------------------------------------------
 # Initialize DB Singleton
@@ -194,3 +206,6 @@ def get_filter_cache(type_):
 
 def upsert_filter_cache(type_, data):
     DB.upsert_filter_cache(type_, data)
+
+def count_metadata():
+    return DB.count_metadata()

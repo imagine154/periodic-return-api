@@ -135,6 +135,25 @@ def calculate_periodic_returns(nav_df):
     if nav_df is None or nav_df.empty:
         return {}
 
+    # 🧹 Ensure datetime index (fixes 'int - timedelta' issue)
+    if "date" in nav_df.columns:
+        nav_df["date"] = pd.to_datetime(nav_df["date"], errors="coerce")
+        nav_df = nav_df.dropna(subset=["date"]).sort_values("date")
+        nav_df = nav_df.set_index("date")
+
+    if not pd.api.types.is_datetime64_any_dtype(nav_df.index):
+        try:
+            nav_df.index = pd.to_datetime(nav_df.index, errors="coerce")
+        except Exception as e:
+            print(f"⚠️ NAV index could not be converted to datetime: {e}")
+            return {}
+
+    nav_df = nav_df[~nav_df.index.isna()]
+    if nav_df.empty:
+        print("⚠️ Empty NAV data after date normalization.")
+        return {}
+
+    # ✅ Core computation
     end_date = nav_df.index[-1]
     first_date = nav_df.index[0]
     results = {}
