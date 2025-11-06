@@ -183,6 +183,19 @@ class Database:
             print("[DB] count_metadata failed:", e)
             return 0
 
+    def get_precomputed_return_json(self, scheme_code):
+        """Fetch precomputed returns JSON or legacy columns from DB."""
+        self.ensure_connection_alive()
+        self.cursor.execute("""
+            SELECT scheme_code, scheme_name, results_json, updated_at,
+                   return_1m, return_3m, return_6m, return_1y,
+                   return_3y, return_5y, return_7y, return_10y
+            FROM fund_returns
+            WHERE scheme_code = %s
+            LIMIT 1;
+        """, (scheme_code,))
+        return self.cursor.fetchone()
+
 
 # ----------------------------------------------------------------
 # Initialize DB Singleton
@@ -209,3 +222,7 @@ def upsert_filter_cache(type_, data):
 
 def count_metadata():
     return DB.count_metadata()
+
+def get_precomputed_return_json(scheme_code):
+    return DB.get_precomputed_return_json(scheme_code)
+
