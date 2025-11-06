@@ -164,6 +164,10 @@ def get_scheme_list():
             "option": [v for v in option_filter if v],
         }
 
+        # Include type for DB path (so DB filtering respects Mutual Fund vs ETF)
+        if selected_type and selected_type.lower() != "both":
+            filters["type"] = selected_type
+
         # Helper to normalise a row (DB row or CSV row) into frontend shape
         def normalise_row(r):
             # r can be a dict (DB RealDictRow) or a pandas Series (CSV)
@@ -205,7 +209,7 @@ def get_scheme_list():
         # If DB provides filtered fetch, prefer it
         if DB_AVAILABLE and hasattr(DB, "get_schemes_from_db"):
             try:
-                rows = DB.get_schemes_from_db(filters if any(filters.values()) else None)
+                rows = DB.get_schemes_from_db(filters)
                 # Normalize all rows and return
                 out = [normalise_row(dict(r)) for r in rows]
                 # optional: apply search q (in case DB helper didn't)
@@ -363,6 +367,10 @@ def get_dependent_filters():
             "option": option_filter
         }
 
+        # Ensure DB path respects selected type
+        if selected_type and selected_type.lower() != "both":
+            filters["type"] = selected_type
+
         df = None
 
         # ✅ Prefer DB if available
@@ -372,6 +380,9 @@ def get_dependent_filters():
                 df = pd.DataFrame(rows)
                 if not df.empty:
                     print(f"[/api/dependent_filters] Using DB metadata — {len(df)} records")
+                    # Apply type filter defensively if column present
+                    if "type" in df.columns and selected_type and selected_type.lower() != "both":
+                        df = df[df["type"].astype(str).str.lower() == selected_type.lower()]
             except Exception as e:
                 print(f"[/api/dependent_filters] DB metadata fetch failed: {e}")
 

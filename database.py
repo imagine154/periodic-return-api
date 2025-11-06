@@ -3,7 +3,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor, Json
 
 DATABASE_URL = os.getenv("DATABASE_URL") or \
-    "postgresql://mfreturns_db_user:dTAlnHMqeFfhfLIWDUYCTj6mxXaqYqO3@dpg-d44qjq3ipnbc73apqqug-a/mfreturns_db"
+               "postgresql://mfreturns_db_user:dTAlnHMqeFfhfLIWDUYCTj6mxXaqYqO3@dpg-d44qjq3ipnbc73apqqug-a/mfreturns_db"
 
 class Database:
     def __init__(self):
@@ -44,42 +44,42 @@ class Database:
     # ----------------------------------------------------------------
     def init_db(self):
         self.cursor.execute("""
-        CREATE TABLE IF NOT EXISTS fund_metadata (
-            scheme_code TEXT PRIMARY KEY,
-            scheme_name TEXT,
-            amc TEXT,
-            category TEXT,
-            subcategory TEXT,
-            plan TEXT,
-            option TEXT,
-            type TEXT
-        );
-        """)
+                            CREATE TABLE IF NOT EXISTS fund_metadata (
+                                                                         scheme_code TEXT PRIMARY KEY,
+                                                                         scheme_name TEXT,
+                                                                         amc TEXT,
+                                                                         category TEXT,
+                                                                         subcategory TEXT,
+                                                                         plan TEXT,
+                                                                         option TEXT,
+                                                                         type TEXT
+                            );
+                            """)
         self.cursor.execute("""
-        CREATE TABLE IF NOT EXISTS fund_returns (
-            scheme_code TEXT PRIMARY KEY,
-            scheme_name TEXT,
-            type TEXT,
-            plan TEXT,
-            option TEXT,
-            updated_at TIMESTAMP DEFAULT NOW(),
-            results_json JSONB
-        );
-        """)
+                            CREATE TABLE IF NOT EXISTS fund_returns (
+                                                                        scheme_code TEXT PRIMARY KEY,
+                                                                        scheme_name TEXT,
+                                                                        type TEXT,
+                                                                        plan TEXT,
+                                                                        option TEXT,
+                                                                        updated_at TIMESTAMP DEFAULT NOW(),
+                                results_json JSONB
+                                );
+                            """)
         self.cursor.execute("""
-        CREATE TABLE IF NOT EXISTS filter_cache (
-            type TEXT PRIMARY KEY,
-            amcs JSONB,
-            categories JSONB,
-            subcategories JSONB,
-            plans JSONB,
-            options JSONB,
-            total INT,
-            mutual_funds INT,
-            etfs INT,
-            updated_at TIMESTAMP DEFAULT NOW()
-        );
-        """)
+                            CREATE TABLE IF NOT EXISTS filter_cache (
+                                                                        type TEXT PRIMARY KEY,
+                                                                        amcs JSONB,
+                                                                        categories JSONB,
+                                                                        subcategories JSONB,
+                                                                        plans JSONB,
+                                                                        options JSONB,
+                                                                        total INT,
+                                                                        mutual_funds INT,
+                                                                        etfs INT,
+                                                                        updated_at TIMESTAMP DEFAULT NOW()
+                                );
+                            """)
         self.conn.commit()
         print("[DB] Tables initialized")
 
@@ -93,27 +93,27 @@ class Database:
             return
         for s in records:
             self.cursor.execute("""
-            INSERT INTO fund_metadata (scheme_code, scheme_name, amc, category, subcategory, plan, option, type)
-            VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
-            ON CONFLICT (scheme_code)
+                                INSERT INTO fund_metadata (scheme_code, scheme_name, amc, category, subcategory, plan, option, type)
+                                VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+                                    ON CONFLICT (scheme_code)
             DO UPDATE SET
-              scheme_name=EXCLUDED.scheme_name,
-              amc=EXCLUDED.amc,
-              category=EXCLUDED.category,
-              subcategory=EXCLUDED.subcategory,
-              plan=EXCLUDED.plan,
-              option=EXCLUDED.option,
-              type=EXCLUDED.type;
-            """, (
-                s.get("scheme_code"),
-                s.get("scheme_name"),
-                s.get("amc"),
-                s.get("category"),
-                s.get("subcategory"),
-                s.get("plan"),
-                s.get("option"),
-                s.get("type")
-            ))
+                                    scheme_name=EXCLUDED.scheme_name,
+                                                       amc=EXCLUDED.amc,
+                                                       category=EXCLUDED.category,
+                                                       subcategory=EXCLUDED.subcategory,
+                                                       plan=EXCLUDED.plan,
+               option=EXCLUDED.option,
+                                                       type=EXCLUDED.type;
+                                """, (
+                                    s.get("scheme_code"),
+                                    s.get("scheme_name"),
+                                    s.get("amc"),
+                                    s.get("category"),
+                                    s.get("subcategory"),
+                                    s.get("plan"),
+                                    s.get("option"),
+                                    s.get("type")
+                                ))
         self.conn.commit()
         print(f"[DB] Metadata upserted — total: {len(records)} schemes")
 
@@ -125,15 +125,27 @@ class Database:
         base = "SELECT * FROM fund_metadata WHERE 1=1"
         params = []
 
+        def like_any_clause(column, values):
+            return f" AND LOWER({column}) LIKE ANY(%s)", [f"%{x.lower()}%" for x in values]
+
         if filters:
-            for k, v in filters.items():
-                if v and isinstance(v, list):
-                    # handle multiple filter values (IN clause)
-                    base += f" AND LOWER({k}) = ANY(%s)"
-                    params.append([x.lower() for x in v])
-                elif v:
-                    base += f" AND LOWER({k}) LIKE %s"
-                    params.append(f"%{v.lower()}%")
+            # Type: equality match (Mutual Fund / ETF)
+            tval = filters.get("type")
+            if tval:
+                base += " AND LOWER(type) = %s"
+                params.append(tval.lower())
+
+            # For other string filters, use LIKE ANY for partial, case-insensitive matches
+            for k in ["amc", "category", "subcategory", "plan", "option"]:
+                v = filters.get(k)
+                if v:
+                    if isinstance(v, list):
+                        clause, arr = like_any_clause(k, v)
+                        base += clause
+                        params.append(arr)
+                    else:
+                        base += f" AND LOWER({k}) LIKE %s"
+                        params.append(f"%{v.lower()}%")
 
         self.cursor.execute(base, params)
         return self.cursor.fetchall()
@@ -145,31 +157,31 @@ class Database:
     def upsert_filter_cache(self, type_, data):
         """Cache dropdowns and totals."""
         self.cursor.execute("""
-        INSERT INTO filter_cache (type, amcs, categories, subcategories, plans, options,
-                                  total, mutual_funds, etfs, updated_at)
-        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,NOW())
-        ON CONFLICT (type)
+                            INSERT INTO filter_cache (type, amcs, categories, subcategories, plans, options,
+                                                      total, mutual_funds, etfs, updated_at)
+                            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,NOW())
+                                ON CONFLICT (type)
         DO UPDATE SET
-            amcs=EXCLUDED.amcs,
-            categories=EXCLUDED.categories,
-            subcategories=EXCLUDED.subcategories,
-            plans=EXCLUDED.plans,
-            options=EXCLUDED.options,
-            total=EXCLUDED.total,
-            mutual_funds=EXCLUDED.mutual_funds,
-            etfs=EXCLUDED.etfs,
-            updated_at=NOW();
-        """, (
-            type_,
-            Json(data.get("amcs")),
-            Json(data.get("categories")),
-            Json(data.get("subcategories")),
-            Json(data.get("plans")),
-            Json(data.get("options")),
-            data.get("total"),
-            data.get("mutual_funds"),
-            data.get("etfs")
-        ))
+                                amcs=EXCLUDED.amcs,
+                                               categories=EXCLUDED.categories,
+                                               subcategories=EXCLUDED.subcategories,
+                                               plans=EXCLUDED.plans,
+                                               options=EXCLUDED.options,
+                                               total=EXCLUDED.total,
+                                               mutual_funds=EXCLUDED.mutual_funds,
+                                               etfs=EXCLUDED.etfs,
+                                               updated_at=NOW();
+                            """, (
+                                type_,
+                                Json(data.get("amcs")),
+                                Json(data.get("categories")),
+                                Json(data.get("subcategories")),
+                                Json(data.get("plans")),
+                                Json(data.get("options")),
+                                data.get("total"),
+                                data.get("mutual_funds"),
+                                data.get("etfs")
+                            ))
         self.conn.commit()
     # ----------------------------------------------------------------
     # Metadata count helper
@@ -187,13 +199,13 @@ class Database:
         """Fetch precomputed returns JSON or legacy columns from DB."""
         self.ensure_connection_alive()
         self.cursor.execute("""
-            SELECT scheme_code, scheme_name, results_json, updated_at,
-                   return_1m, return_3m, return_6m, return_1y,
-                   return_3y, return_5y, return_7y, return_10y
-            FROM fund_returns
-            WHERE scheme_code = %s
-            LIMIT 1;
-        """, (scheme_code,))
+                            SELECT scheme_code, scheme_name, results_json, updated_at,
+                                   return_1m, return_3m, return_6m, return_1y,
+                                   return_3y, return_5y, return_7y, return_10y
+                            FROM fund_returns
+                            WHERE scheme_code = %s
+                                LIMIT 1;
+                            """, (scheme_code,))
         return self.cursor.fetchone()
 
 
