@@ -86,7 +86,7 @@ def fetch_nav_history(amfi_numeric_code, session=None):
 # SIP Simulation
 # -------------------------
 def simulate_sip(nav_df, start_date, end_date):
-    """Simulate monthly SIP investment and compute portfolio value."""
+    """Simulate monthly SIP investment and compute portfolio value (auto-adjusts for stock splits)."""
     if nav_df is None or nav_df.empty:
         return None, None, None, None
 
@@ -102,6 +102,24 @@ def simulate_sip(nav_df, start_date, end_date):
             continue
 
     units, cashflows, dates = [], [], []
+
+    # --- Detect stock splits dynamically ---
+    nav_series = nav_df["nav"].sort_index().values
+    split_factor = 1.0
+    for i in range(1, len(nav_series)):
+        prev, curr = nav_series[i - 1], nav_series[i]
+        if prev > 0 and curr > 0:
+            ratio = prev / curr
+            # detect clean power-of-10 or 2 ratios (approximate to avoid float issues)
+            for possible in [2, 5, 10, 50, 100]:
+                if abs(ratio - possible) / possible < 0.05:  # within 5% tolerance
+                    split_factor *= possible
+                    print(f"🔧 Detected stock split ×{possible} at index {i} (NAV {prev:.2f} → {curr:.2f})")
+                    # scale later NAVs upward to maintain continuity
+                    nav_df.loc[nav_df.index[i]:, "nav"] *= possible
+                    break
+
+    # --- SIP simulation (normal logic) ---
     for d in sip_dates:
         df_sel = nav_df[nav_df.index >= d]
         if df_sel.empty:
@@ -109,7 +127,6 @@ def simulate_sip(nav_df, start_date, end_date):
         nav = float(df_sel["nav"].iloc[0])
         units.append(SIP_AMOUNT / nav)
         cashflows.append(-SIP_AMOUNT)
-        # ✅ Keep pandas Timestamp (no to_pydatetime()) to maintain precision
         dates.append(df_sel.index[0])
 
     if not units:
@@ -125,6 +142,7 @@ def simulate_sip(nav_df, start_date, end_date):
     dates.append(nav_df.index[-1])
 
     return total_invested, current_value, dates, cashflows
+
 
 
 # -------------------------
