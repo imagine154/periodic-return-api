@@ -186,27 +186,16 @@ class Database:
         self.conn.commit()
 
     def get_top_performers(self, investment_type, categories, sort_by, plan, option):
-        """
-        Fetch top 2 performing funds for each category.
-        - investment_type: 'Mutual Fund' or 'ETF'
-        - categories: list of category strings (e.g. ['Debt Scheme', ...])
-        - sort_by: period key as string like '3Y','5Y','10Y'
-        - plan: string or None
-        - option: string
-        """
+        """Fetch top 2 performing funds for each category."""
         self.ensure_connection_alive()
 
-        # Build optional plan filter and adjust params accordingly
         plan_clause = "AND fm.plan = %s" if plan else ""
-        # We'll prepare params list dynamically to avoid placeholder mismatch
-        # Note: we'll use the same sort_by placeholder in two places (extract and ORDER BY)
         query = f"""
             WITH ranked_funds AS (
                 SELECT
                     fr.scheme_code,
                     fm.scheme_name,
                     fm.category,
-                    -- convert empty strings to NULL first, then to float
                     NULLIF(fr.results_json ->> %s, '')::float AS return_value,
                     ROW_NUMBER() OVER (
                         PARTITION BY fm.category
@@ -219,32 +208,26 @@ class Database:
                     AND fm.category = ANY(%s)
                     {plan_clause}
                     AND fm.option = %s
-                    -- note: do not filter out rows here; we'll filter return_value later
             )
             SELECT
                 scheme_code,
                 scheme_name,
                 category,
-                ROUND(return_value, 2) AS "return"
+                ROUND(return_value::numeric, 2) AS "return"
             FROM ranked_funds
             WHERE rn <= 2
               AND return_value IS NOT NULL
             ORDER BY category, rn;
         """
 
-        # Build params in the exact order of placeholders
-        params = []
-        # placeholders: %s (sort_by), %s (sort_by), %s (investment_type), %s (categories), optional plan, %s (option)
-        params.extend([sort_by, sort_by, investment_type, categories])
+        params = [sort_by, sort_by, investment_type, categories]
         if plan:
             params.append(plan)
         params.append(option)
 
-        # Execute and return rows
-        # Add small debug prints temporarily if needed
-        # print("DEBUG: get_top_performers params:", params, "query sort_by:", sort_by)
         self.cursor.execute(query, tuple(params))
         return self.cursor.fetchall()
+
 
 
 
