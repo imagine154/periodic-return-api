@@ -581,32 +581,6 @@ def returns_summary():
         return jsonify({"error": str(e)}), 500
 
 # --------------------------------------------------------------------
-# Endpoint: /api/top_performers - return top N funds for a category
-# --------------------------------------------------------------------
-@app.route("/api/top_performers", methods=["GET"])
-def top_performers():
-    try:
-        category = request.args.get("category")
-        if not category:
-            return jsonify({"error": "Missing 'category' parameter"}), 400
-
-        sort_by = request.args.get("sort_by", "1Y")
-        plan = request.args.get("plan", "Direct")
-        option = request.args.get("option", "Growth")
-        limit = int(request.args.get("limit", 10))
-
-        if DB_AVAILABLE and hasattr(DB, "get_top_performers"):
-            results = DB.get_top_performers(category, sort_by, plan, option, limit)
-            return jsonify(results)
-        else:
-            return jsonify({"error": "Database connection not available or method not found"}), 500
-
-    except Exception as e:
-        print("❌ Error in /api/top_performers:", str(e))
-        traceback.print_exc()
-        return jsonify({"error": str(e)}), 500
-
-# --------------------------------------------------------------------
 # Admin Endpoint: /api/precompute_all - compute & cache returns for all schemes in CSV (POST)
 # --------------------------------------------------------------------
 @app.route("/api/precompute_all", methods=["POST"])
@@ -780,7 +754,6 @@ def home():
             "/api/dependent_filters",
             "/api/periodic_returns?code=<scheme_code>",
             "/api/returns_summary",
-            "/api/top_performers?category=<category>",
             "/api/precompute_all (POST)",
             "/api/precache_filters (POST)"
         ]
