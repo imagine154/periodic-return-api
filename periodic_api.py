@@ -586,7 +586,7 @@ def returns_summary():
 def top_performers():
     try:
         investment_type = request.args.get("type", "Mutual Fund")
-        plan = "Direct" if investment_type == "Mutual Fund" else "ETF"
+        plan = "Direct" if investment_type == "Mutual Fund" else None
         option = "Growth" if investment_type == "Mutual Fund" else "ETF"
 
         categories = (
