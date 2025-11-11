@@ -183,6 +183,36 @@ class Database:
                                 data.get("etfs")
                             ))
         self.conn.commit()
+
+    def get_top_performers(self, category, sort_by='1Y', plan='direct', option='growth', limit=10):
+        """
+        Fetch top performing funds by joining returns and metadata.
+        """
+        self.ensure_connection_alive()
+        query = """
+            SELECT
+                fr.scheme_code,
+                fm.scheme_name,
+                fm.amc,
+                fm.category,
+                fm.subcategory,
+                fr.results_json
+            FROM fund_returns fr
+            JOIN fund_metadata fm ON fr.scheme_code = fm.scheme_code
+            WHERE
+                fm.category = %s
+                AND fm.plan = %s
+                AND fm.option = %s
+                AND fr.results_json IS NOT NULL
+                AND fr.results_json ->> %s IS NOT NULL
+            ORDER BY
+                (fr.results_json ->> %s)::float DESC
+            LIMIT %s;
+        """
+        params = (category, plan, option, sort_by, sort_by, limit)
+        self.cursor.execute(query, params)
+        return self.cursor.fetchall()
+
     # ----------------------------------------------------------------
     # Metadata count helper
     # ----------------------------------------------------------------
@@ -238,3 +268,5 @@ def count_metadata():
 def get_precomputed_return_json(scheme_code):
     return DB.get_precomputed_return_json(scheme_code)
 
+def get_top_performers(category, sort_by='1Y', plan='direct', option='growth', limit=10):
+    return DB.get_top_performers(category, sort_by, plan, option, limit)
