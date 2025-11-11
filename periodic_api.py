@@ -30,10 +30,9 @@ from periodic_return import fetch_nav_history, calculate_periodic_returns
 #   - upsert_fund_results_json(scheme_code, scheme_name, results_obj, meta=None)
 #   - get_all_cached_returns(limit)
 # --------------------------------------------------------------------
-DB = None
 DB_AVAILABLE = False
 try:
-    import database as DB
+    from database import DB
     DB_AVAILABLE = True
     print("[periodic_api] database.py imported successfully")
 except Exception as e:

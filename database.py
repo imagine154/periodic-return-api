@@ -272,6 +272,3 @@ def count_metadata():
 
 def get_precomputed_return_json(scheme_code):
     return DB.get_precomputed_return_json(scheme_code)
-
-def get_top_performers(investment_type, categories, sort_by, plan, option):
-    return DB.get_top_performers(investment_type, categories, sort_by, plan, option)
