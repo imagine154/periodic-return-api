@@ -183,6 +183,41 @@ class Database:
                                 data.get("etfs")
                             ))
         self.conn.commit()
+
+def get_top_performers(self, investment_type, categories, sort_by, plan, option):
+    """Fetch top 2 performing funds for a list of categories."""
+    self.ensure_connection_alive()
+    query = """
+            WITH ranked_funds AS (
+                SELECT
+                    fr.scheme_code,
+                    fm.scheme_name,
+                    fm.category,
+                    (fr.results_json ->> %s)::float AS return_value,
+                    ROW_NUMBER() OVER(PARTITION BY fm.category ORDER BY (fr.results_json ->> %s)::float DESC) AS rn
+                FROM fund_returns fr
+                         JOIN fund_metadata fm ON fr.scheme_code = fm.scheme_code
+                WHERE
+                    fm.type = %s
+                  AND fm.category = ANY(%s)
+                  AND fm.plan = %s
+                  AND fm.option = %s
+                  AND fr.results_json IS NOT NULL
+                  AND fr.results_json ->> %s IS NOT NULL
+                )
+            SELECT
+                scheme_code,
+                scheme_name,
+                category,
+                return_value AS "return"
+            FROM ranked_funds
+            WHERE rn <= 2; \
+            """
+    params = (sort_by, sort_by, investment_type, categories, plan, option, sort_by)
+    self.cursor.execute(query, params)
+    return self.cursor.fetchall()
+
+
     # ----------------------------------------------------------------
     # Metadata count helper
     # ----------------------------------------------------------------
@@ -238,3 +273,5 @@ def count_metadata():
 def get_precomputed_return_json(scheme_code):
     return DB.get_precomputed_return_json(scheme_code)
 
+def get_top_performers(investment_type, categories, sort_by, plan, option):
+    return DB.get_top_performers(investment_type, categories, sort_by, plan, option)

@@ -581,6 +581,51 @@ def returns_summary():
         return jsonify({"error": str(e)}), 500
 
 # --------------------------------------------------------------------
+# Endpoint: /api/top_performers - return top N funds for each category
+# --------------------------------------------------------------------
+@app.route("/api/top_performers", methods=["GET"])
+def top_performers():
+    try:
+        investment_type = request.args.get("type", "Mutual Fund")
+        plan = "Direct" if investment_type == "Mutual Fund" else "ETF"
+        option = "Growth" if investment_type == "Mutual Fund" else "ETF"
+
+        categories = (
+            ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme", "Hybrid Scheme", "Index Funds", "Solution Oriented Scheme"]
+            if investment_type == "Mutual Fund"
+            else ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme"]
+        )
+
+        if not (DB_AVAILABLE and hasattr(DB, "get_top_performers")):
+            return jsonify({"error": "Database not ready"}), 500
+
+        results = {}
+        for period in ["3Y", "5Y", "10Y"]:
+            period_results = {}
+            db_results = DB.get_top_performers(investment_type, categories, period, plan, option)
+            if not db_results:
+                continue
+
+            for row in db_results:
+                category = row["category"]
+                if category not in period_results:
+                    period_results[category] = []
+                period_results[category].append({
+                    "scheme_name": row["scheme_name"],
+                    "return": float(row["return"]) if row["return"] else None
+                })
+
+            results[period] = period_results
+
+        return jsonify(results)
+
+    except Exception as e:
+        print("❌ Error in /api/top_performers:", str(e))
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
+
+
+# --------------------------------------------------------------------
 # Admin Endpoint: /api/precompute_all - compute & cache returns for all schemes in CSV (POST)
 # --------------------------------------------------------------------
 @app.route("/api/precompute_all", methods=["POST"])
@@ -754,6 +799,7 @@ def home():
             "/api/dependent_filters",
             "/api/periodic_returns?code=<scheme_code>",
             "/api/returns_summary",
+            "/api/top_performers?type=<investment_type>",
             "/api/precompute_all (POST)",
             "/api/precache_filters (POST)"
         ]
