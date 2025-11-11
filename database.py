@@ -211,11 +211,12 @@ class Database:
                     category,
                     return_value AS "return"
                 FROM ranked_funds
-                WHERE rn <= 2;
-                """
+                WHERE rn <= 2; \
+        """
         params = (sort_by, sort_by, investment_type, categories, plan, option, sort_by)
         self.cursor.execute(query, params)
         return self.cursor.fetchall()
+
 
 
     # ----------------------------------------------------------------

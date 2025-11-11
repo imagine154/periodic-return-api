@@ -586,14 +586,18 @@ def returns_summary():
 def top_performers():
     try:
         investment_type = request.args.get("type", "Mutual Fund")
-        plan = "Direct" if investment_type == "Mutual Fund" else None
-        option = "Growth" if investment_type == "Mutual Fund" else "ETF"
 
-        categories = (
-            ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme", "Hybrid Scheme", "Index Funds", "Solution Oriented Scheme"]
-            if investment_type == "Mutual Fund"
-            else ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme"]
-        )
+        if investment_type == "Mutual Fund":
+            plan = "Direct"
+            option = "Growth"
+            categories = [
+                "Debt Scheme", "Equity Scheme", "Gold & Silver Scheme",
+                "Hybrid Scheme", "Index Funds", "Solution Oriented Scheme"
+            ]
+        else:  # ETF
+            plan = "ETF"  # ✅ your DB stores plan as ETF, not NULL
+            option = "ETF"
+            categories = ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme"]
 
         if not (DB_AVAILABLE and hasattr(DB, "get_top_performers")):
             return jsonify({"error": "Database not ready"}), 500
@@ -622,6 +626,7 @@ def top_performers():
         print("❌ Error in /api/top_performers:", str(e))
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
+
 
 
 # --------------------------------------------------------------------
