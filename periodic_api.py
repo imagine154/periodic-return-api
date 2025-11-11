@@ -9,10 +9,11 @@ Backend for Mutual Fund & ETF Return Analyzer (DB-cached with CSV fallback)
 
 import os
 import traceback
+from datetime import datetime, timezone
+
+import pandas as pd
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import pandas as pd
-from datetime import datetime, timezone
 
 # import the compute functions exactly as provided
 from periodic_return import fetch_nav_history, calculate_periodic_returns
@@ -595,8 +596,8 @@ def top_performers():
                 "Hybrid Scheme", "Index Funds", "Solution Oriented Scheme"
             ]
         else:  # ETF
-            plan = "ETF"  # ✅ your DB stores plan as ETF, not NULL
-            option = "ETF"
+            plan = "Direct"     # ✅ Corrected
+            option = "ETF"      # ✅ Corrected
             categories = ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme"]
 
         if not (DB_AVAILABLE and hasattr(DB, "get_top_performers")):
@@ -605,7 +606,9 @@ def top_performers():
         results = {}
         for period in ["3Y", "5Y", "10Y"]:
             period_results = {}
-            db_results = DB.get_top_performers(investment_type, categories, period, plan, option)
+            db_results = DB.get_top_performers(
+                investment_type, categories, period, plan, option
+            )
             if not db_results:
                 continue
 
