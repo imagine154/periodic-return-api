@@ -587,7 +587,6 @@ def returns_summary():
 def top_performers():
     try:
         investment_type = request.args.get("type", "Mutual Fund")
-
         if investment_type == "Mutual Fund":
             plan = "Direct"
             option = "Growth"
@@ -595,9 +594,10 @@ def top_performers():
                 "Debt Scheme", "Equity Scheme", "Gold & Silver Scheme",
                 "Hybrid Scheme", "Index Funds", "Solution Oriented Scheme"
             ]
-        else:  # ETF
-            plan = "Direct"     # ✅ Corrected
-            option = "ETF"      # ✅ Corrected
+        else:
+            # use DB-real plan for ETFs (your DB shows Direct)
+            plan = "Direct"
+            option = "ETF"
             categories = ["Debt Scheme", "Equity Scheme", "Gold & Silver Scheme"]
 
         if not (DB_AVAILABLE and hasattr(DB, "get_top_performers")):
@@ -605,25 +605,26 @@ def top_performers():
 
         results = {}
         for period in ["3Y", "5Y", "10Y"]:
+            db_rows = DB.get_top_performers(investment_type, categories, period, plan, option)
             period_results = {}
-            db_results = DB.get_top_performers(
-                investment_type, categories, period, plan, option
-            )
-            if not db_results:
-                continue
-
-            for row in db_results:
+            for row in db_rows:
+                # row is likely a tuple/dict depending on cursor settings - adapt accordingly
+                # assume cursor.fetchall() returns list of dict-like rows (psycopg2.extras.RealDictCursor)
                 category = row["category"]
                 if category not in period_results:
                     period_results[category] = []
                 period_results[category].append({
                     "scheme_name": row["scheme_name"],
-                    "return": float(row["return"]) if row["return"] else None
+                    "return": float(row["return"]) if row["return"] is not None else None
                 })
-
-            results[period] = period_results
+            if period_results:
+                results[period] = period_results
 
         return jsonify(results)
+
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({"error": str(e)}), 500
 
     except Exception as e:
         print("❌ Error in /api/top_performers:", str(e))
